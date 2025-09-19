@@ -433,6 +433,114 @@
                 margin: 20px 15px;
             }
         }
+
+        /* Additional Purchase Options Styles */
+        .additional-options-section {
+            background: rgba(0,0,0,0.5);
+            padding: 50px 20px;
+            margin: 50px 30px;
+            border-radius: 15px;
+            border: 3px solid #8B4513;
+            text-align: center;
+            box-shadow: 0 8px 30px rgba(139,69,19,0.2);
+        }
+
+        .additional-options-title {
+            font-family: 'Cinzel', serif;
+            font-size: 2.5rem;
+            color: #DAA520;
+            margin-bottom: 15px;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.8);
+        }
+
+        .additional-options-subtitle {
+            font-size: 1.1rem;
+            color: #f4f1e8;
+            margin-bottom: 40px;
+            max-width: 600px;
+            margin-left: auto;
+            margin-right: auto;
+            line-height: 1.6;
+        }
+
+        .additional-options {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .option-card {
+            background: rgba(218,165,32,0.05);
+            padding: 30px 25px;
+            border-radius: 12px;
+            border: 2px solid rgba(218,165,32,0.2);
+            transition: all 0.3s ease;
+            cursor: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='32' height='32' viewBox='0 0 32 32'%3E%3Cdefs%3E%3Cstyle%3E@keyframes flame-option%7B0%25%7Btransform:scale(1) rotate(0deg);opacity:1%7D25%25%7Btransform:scale(1.1) rotate(2deg);opacity:0.95%7D50%25%7Btransform:scale(0.9) rotate(-1deg);opacity:1%7D75%25%7Btransform:scale(1.05) rotate(1deg);opacity:0.9%7D100%25%7Btransform:scale(1) rotate(0deg);opacity:1%7D%7D%3C/style%3E%3C/defs%3E%3Cg transform='translate(16,16)'%3E%3Cpath d='M-1,-12 L1,-12 L1,8 L-1,8 Z' fill='%23c0c0c0' stroke='%23ffd700' stroke-width='0.5'/%3E%3Crect x='-2' y='8' width='4' height='4' fill='%238b4513' stroke='%23daa520' stroke-width='0.5'/%3E%3Cellipse cx='0' cy='-14' rx='3' ry='4' fill='%23ff4500' opacity='0.8'%3E%3CanimateTransform attributeName='transform' type='scale' values='1,1;1.2,0.8;0.8,1.2;1.1,0.9;1,1' dur='0.6s' repeatCount='indefinite'/%3E%3C/ellipse%3E%3Cellipse cx='0' cy='-16' rx='2' ry='3' fill='%23ff6347' opacity='0.9'%3E%3CanimateTransform attributeName='transform' type='scale' values='1,1;0.8,1.3;1.3,0.7;0.9,1.1;1,1' dur='0.5s' repeatCount='indefinite'/%3E%3C/ellipse%3E%3Cellipse cx='0' cy='-18' rx='1.5' ry='2.5' fill='%23ffd700' opacity='1'%3E%3CanimateTransform attributeName='transform' type='scale' values='1,1;1.4,0.6;0.6,1.4;1.2,0.8;1,1' dur='0.4s' repeatCount='indefinite'/%3E%3C/ellipse%3E%3C/g%3E%3C/svg%3E"), pointer;
+        }
+
+        .option-card:hover {
+            transform: translateY(-5px);
+            border-color: #FFD700;
+            box-shadow: 0 10px 30px rgba(218,165,32,0.3);
+            background: rgba(218,165,32,0.1);
+        }
+
+        .option-icon {
+            font-size: 3rem;
+            margin-bottom: 20px;
+        }
+
+        .option-name {
+            font-family: 'Cinzel', serif;
+            font-size: 1.4rem;
+            color: #FFD700;
+            margin-bottom: 15px;
+        }
+
+        .option-description {
+            font-size: 0.95rem;
+            color: #f4f1e8;
+            margin-bottom: 25px;
+            line-height: 1.5;
+        }
+
+        .option-button {
+            display: inline-block;
+            padding: 12px 25px;
+            background: linear-gradient(135deg, #8B4513, #DAA520);
+            color: #f4f1e8;
+            text-decoration: none;
+            border-radius: 8px;
+            font-weight: 600;
+            font-size: 1rem;
+            border: 2px solid #B8860B;
+            transition: all 0.3s ease;
+        }
+
+        .option-button:hover {
+            transform: translateY(-2px);
+            background: linear-gradient(135deg, #DAA520, #FFD700);
+            color: #2c1810;
+            box-shadow: 0 5px 15px rgba(218,165,32,0.4);
+        }
+
+        @media (max-width: 768px) {
+            .additional-options {
+                grid-template-columns: 1fr;
+                gap: 20px;
+            }
+
+            .additional-options-section {
+                margin: 30px 15px;
+                padding: 30px 20px;
+            }
+
+            .additional-options-title {
+                font-size: 2rem;
+            }
+        }
     </style>
 </head>
 <body>
@@ -601,6 +709,38 @@
                 <button onclick="alert('Crypto payment integration coming soon! Contact the Alchemist for wallet details.')" class="payment-button">
                     Pay with Crypto - $27
                 </button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Additional Purchase Options -->
+    <section class="additional-options-section">
+        <h2 class="additional-options-title">🌐 Additional Purchase Options</h2>
+        <p class="additional-options-subtitle">
+            Choose from multiple platforms to get your Alchemist Pack. All options include instant access to both books.
+        </p>
+
+        <div class="additional-options">
+            <div class="option-card">
+                <div class="option-icon">🛒</div>
+                <h3 class="option-name">Gumroad Store</h3>
+                <p class="option-description">
+                    Digital marketplace for creators. Secure checkout with instant download and creator support.
+                </p>
+                <a href="https://alchimondestones.gumroad.com/" target="_blank" rel="noopener noreferrer" class="option-button">
+                    Shop on Gumroad
+                </a>
+            </div>
+
+            <div class="option-card">
+                <div class="option-icon">📚</div>
+                <h3 class="option-name">Amazon Kindle</h3>
+                <p class="option-description">
+                    Available on Amazon for Kindle readers. Professional formatting with Kindle Unlimited options.
+                </p>
+                <a href="https://www.amazon.ca/dp/B0FRJJL5HX" target="_blank" rel="noopener noreferrer" class="option-button">
+                    Get on Amazon
+                </a>
             </div>
         </div>
     </section>
