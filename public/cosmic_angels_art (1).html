@@ -1,0 +1,1360 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Archangelic Symbolism Research Portal</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Crimson+Text:ital,wght@0,400;0,600;1,400&display=swap" rel="stylesheet">
+    
+    <style>
+        :root {
+            --primary-blue: #1e40af;
+            --secondary-blue: #3b82f6;
+            --accent-gold: #d97706;
+            --deep-purple: #581c87;
+            --sage-green: #059669;
+            --neutral-gray: #374151;
+            --light-gray: #f3f4f6;
+            --white: #ffffff;
+            --text-primary: #111827;
+            --text-secondary: #6b7280;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Inter', sans-serif;
+            background: var(--light-gray);
+            color: var(--text-primary);
+            line-height: 1.6;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        /* Header */
+        .header {
+            background: linear-gradient(135deg, var(--primary-blue), var(--deep-purple));
+            color: white;
+            padding: 60px 0;
+            text-align: center;
+        }
+
+        .main-title {
+            font-size: clamp(2.5rem, 6vw, 4rem);
+            font-weight: 700;
+            margin-bottom: 20px;
+        }
+
+        .subtitle {
+            font-size: 1.2rem;
+            opacity: 0.9;
+            font-weight: 300;
+        }
+
+        /* Navigation */
+        .nav {
+            background: var(--white);
+            padding: 20px 0;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+
+        .nav-container {
+            display: flex;
+            justify-content: center;
+            gap: 30px;
+            flex-wrap: wrap;
+        }
+
+        .nav-link {
+            color: var(--text-secondary);
+            text-decoration: none;
+            padding: 10px 20px;
+            border-radius: 8px;
+            transition: all 0.3s ease;
+            font-weight: 500;
+        }
+
+        .nav-link:hover, .nav-link.active {
+            color: var(--primary-blue);
+            background: rgba(30, 64, 175, 0.1);
+        }
+
+        /* Main Content */
+        .main-content {
+            padding: 60px 0;
+        }
+
+        .section {
+            margin-bottom: 80px;
+            background: var(--white);
+            border-radius: 12px;
+            padding: 40px;
+            box-shadow: 0 4px 20px rgba(0,0,0,0.08);
+        }
+
+        .section-title {
+            font-size: 2.5rem;
+            font-weight: 700;
+            color: var(--primary-blue);
+            margin-bottom: 20px;
+            border-bottom: 3px solid var(--accent-gold);
+            padding-bottom: 15px;
+        }
+
+        .section-description {
+            font-size: 1.1rem;
+            color: var(--text-secondary);
+            margin-bottom: 40px;
+            line-height: 1.8;
+        }
+
+        /* Research Framework */
+        .research-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: 30px;
+            margin: 40px 0;
+        }
+
+        .research-card {
+            background: var(--light-gray);
+            border: 1px solid #e5e7eb;
+            border-radius: 12px;
+            padding: 30px;
+            transition: all 0.3s ease;
+        }
+
+        .research-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 30px rgba(0,0,0,0.12);
+            border-color: var(--secondary-blue);
+        }
+
+        .card-title {
+            font-size: 1.4rem;
+            font-weight: 600;
+            color: var(--primary-blue);
+            margin-bottom: 15px;
+        }
+
+        .card-content {
+            color: var(--text-secondary);
+            line-height: 1.7;
+        }
+
+        /* Archangel Analysis */
+        .archangel-analysis {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 25px;
+            margin: 40px 0;
+        }
+
+        .archangel-card {
+            border: 2px solid transparent;
+            border-radius: 15px;
+            padding: 25px;
+            transition: all 0.3s ease;
+            background: linear-gradient(135deg, #f8fafc, #e2e8f0);
+        }
+
+        .archangel-card.michael { border-color: #dc2626; }
+        .archangel-card.gabriel { border-color: #2563eb; }
+        .archangel-card.raphael { border-color: #059669; }
+        .archangel-card.camael { border-color: #dc2626; }
+        .archangel-card.sachiel { border-color: #7c3aed; }
+        .archangel-card.anael { border-color: #ec4899; }
+        .archangel-card.cassiel { border-color: #6b7280; }
+
+        .archangel-name {
+            font-size: 1.3rem;
+            font-weight: 700;
+            margin-bottom: 10px;
+        }
+
+        .archangel-attributes {
+            margin: 15px 0;
+        }
+
+        .attribute-tag {
+            display: inline-block;
+            background: var(--primary-blue);
+            color: white;
+            padding: 4px 12px;
+            border-radius: 15px;
+            font-size: 0.85rem;
+            margin: 2px;
+            font-weight: 500;
+        }
+
+        .archangel-description {
+            font-size: 0.95rem;
+            color: var(--text-secondary);
+            margin-top: 15px;
+        }
+
+        /* Symbolic Framework */
+        .symbolic-framework {
+            background: rgba(88, 28, 135, 0.05);
+            border-left: 5px solid var(--deep-purple);
+            padding: 30px;
+            margin: 30px 0;
+            border-radius: 0 12px 12px 0;
+        }
+
+        .framework-title {
+            font-size: 1.3rem;
+            font-weight: 600;
+            color: var(--deep-purple);
+            margin-bottom: 15px;
+        }
+
+        .framework-list {
+            list-style: none;
+            padding: 0;
+        }
+
+        .framework-list li {
+            padding: 8px 0;
+            border-bottom: 1px solid rgba(88, 28, 135, 0.1);
+        }
+
+        .framework-list li:last-child {
+            border-bottom: none;
+        }
+
+        /* Seraphim Analysis */
+        .seraphim-section {
+            background: linear-gradient(135deg, rgba(239, 68, 68, 0.05), rgba(251, 191, 36, 0.05));
+            border: 2px solid var(--accent-gold);
+            border-radius: 15px;
+            padding: 40px;
+            margin: 40px 0;
+        }
+
+        .seraphim-title {
+            font-size: 2rem;
+            color: var(--accent-gold);
+            margin-bottom: 20px;
+            text-align: center;
+        }
+
+        .wing-analysis {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 20px;
+            margin: 30px 0;
+        }
+
+        .wing-pair {
+            background: white;
+            padding: 20px;
+            border-radius: 10px;
+            border-left: 4px solid var(--accent-gold);
+        }
+
+        .wing-function {
+            font-weight: 600;
+            color: var(--accent-gold);
+            margin-bottom: 8px;
+        }
+
+        .wing-description {
+            font-size: 0.95rem;
+            color: var(--text-secondary);
+        }
+
+        /* Research Tools */
+        .research-tools {
+            background: rgba(5, 150, 105, 0.05);
+            border: 2px solid var(--sage-green);
+            border-radius: 15px;
+            padding: 40px;
+            margin: 40px 0;
+        }
+
+        .tools-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 20px;
+            margin: 30px 0;
+        }
+
+        .tool-button {
+            background: var(--sage-green);
+            color: white;
+            text-decoration: none;
+            padding: 15px 20px;
+            border-radius: 8px;
+            text-align: center;
+            font-weight: 500;
+            transition: all 0.3s ease;
+        }
+
+        .tool-button:hover {
+            background: #047857;
+            transform: translateY(-2px);
+        }
+
+        /* Data Tables */
+        .data-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 30px 0;
+            background: white;
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.08);
+        }
+
+        .data-table th {
+            background: var(--primary-blue);
+            color: white;
+            padding: 15px;
+            text-align: left;
+            font-weight: 600;
+        }
+
+        .data-table td {
+            padding: 12px 15px;
+            border-bottom: 1px solid #e5e7eb;
+        }
+
+        .data-table tr:hover {
+            background: rgba(30, 64, 175, 0.05);
+        }
+
+        /* References */
+        .references {
+            background: var(--light-gray);
+            padding: 30px;
+            border-radius: 12px;
+            margin: 40px 0;
+        }
+
+        .reference-item {
+            margin: 10px 0;
+            padding: 10px 0;
+            border-bottom: 1px solid #d1d5db;
+            font-size: 0.95rem;
+        }
+
+        .reference-item:last-child {
+            border-bottom: none;
+        }
+
+        /* Interactive Elements */
+        .interactive-panel {
+            background: white;
+            border: 1px solid #e5e7eb;
+            border-radius: 12px;
+            padding: 30px;
+            margin: 30px 0;
+        }
+
+        .analysis-input {
+            width: 100%;
+            padding: 12px;
+            border: 1px solid #d1d5db;
+            border-radius: 8px;
+            margin: 10px 0;
+            font-family: inherit;
+        }
+
+        .analyze-btn {
+            background: var(--primary-blue);
+            color: white;
+            border: none;
+            padding: 12px 25px;
+            border-radius: 8px;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+
+        .analyze-btn:hover {
+            background: var(--secondary-blue);
+            transform: translateY(-2px);
+        }
+
+        .output-panel {
+            background: var(--light-gray);
+            border-radius: 8px;
+            padding: 20px;
+            margin-top: 20px;
+            min-height: 100px;
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .research-grid,
+            .archangel-analysis,
+            .wing-analysis {
+                grid-template-columns: 1fr;
+            }
+            
+            .nav-container {
+                flex-direction: column;
+                gap: 10px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <div class="container">
+            <h1 class="main-title">Archangelic Symbolism Research Portal</h1>
+            <p class="subtitle">Academic Analysis of Celestial Hierarchies and Symbolic Systems</p>
+        </div>
+    </header>
+
+    <!-- Navigation -->
+    <nav class="nav">
+        <div class="container">
+            <div class="nav-container">
+                <a href="#overview" class="nav-link active">Research Overview</a>
+                <a href="#framework" class="nav-link">Theoretical Framework</a>
+                <a href="#archangels" class="nav-link">Archangel Analysis</a>
+                <a href="#seraphim" class="nav-link">Seraphim Studies</a>
+                <a href="#tools" class="nav-link">Research Tools</a>
+                <a href="#references" class="nav-link">Bibliography</a>
+            </div>
+        </div>
+    </nav>
+
+    <main class="main-content">
+        <div class="container">
+            
+            <!-- Research Overview -->
+            <section id="overview" class="section">
+                <h2 class="section-title">Research Overview</h2>
+                <p class="section-description">
+                    This portal examines archangelic symbolism through interdisciplinary lenses, analyzing how celestial hierarchies 
+                    function as symbolic systems across theological, anthropological, and cultural contexts. The research focuses 
+                    on pattern recognition, symbolic meaning, and cross-cultural manifestations.
+                </p>
+
+                <div class="research-grid">
+                    <div class="research-card">
+                        <h3 class="card-title">Theological Foundations</h3>
+                        <div class="card-content">
+                            Analysis of archangelic hierarchies in primary religious texts, examining roles, attributes, 
+                            and symbolic functions within cosmic order systems.
+                        </div>
+                    </div>
+
+                    <div class="research-card">
+                        <h3 class="card-title">Anthropological Perspectives</h3>
+                        <div class="card-content">
+                            Cross-cultural study of how celestial hierarchies reflect human organizational structures 
+                            and psychological archetypes across different civilizations.
+                        </div>
+                    </div>
+
+                    <div class="research-card">
+                        <h3 class="card-title">Symbolic Analysis</h3>
+                        <div class="card-content">
+                            Examination of recurring symbols, attributes, and iconographic elements associated 
+                            with each archangel across artistic and literary traditions.
+                        </div>
+                    </div>
+
+                    <div class="research-card">
+                        <h3 class="card-title">Cultural Manifestations</h3>
+                        <div class="card-content">
+                            Documentation of how archangelic symbolism appears in art, literature, music, 
+                            and contemporary media across different cultural contexts.
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Theoretical Framework -->
+            <section id="framework" class="section">
+                <h2 class="section-title">Theoretical Framework</h2>
+                <p class="section-description">
+                    The research employs multiple theoretical approaches to understand archangelic symbolism 
+                    as a complex meaning-making system.
+                </p>
+
+                <div class="symbolic-framework">
+                    <h3 class="framework-title">Primary Research Methodologies</h3>
+                    <ul class="framework-list">
+                        <li><strong>Structural Analysis:</strong> Examining hierarchical relationships and functional roles</li>
+                        <li><strong>Symbolic Interpretation:</strong> Decoding iconographic elements and their meanings</li>
+                        <li><strong>Comparative Study:</strong> Cross-referencing symbols across different traditions</li>
+                        <li><strong>Historical Context:</strong> Tracing evolution of archangelic concepts over time</li>
+                        <li><strong>Phenomenological Approach:</strong> Understanding experiential aspects of symbolic encounters</li>
+                    </ul>
+                </div>
+
+                <div class="symbolic-framework">
+                    <h3 class="framework-title">Key Research Questions</h3>
+                    <ul class="framework-list">
+                        <li>How do archangelic hierarchies reflect cosmic order concepts?</li>
+                        <li>What psychological functions do celestial archetypes serve?</li>
+                        <li>How do symbolic attributes relate to functional roles?</li>
+                        <li>What patterns emerge across different cultural interpretations?</li>
+                        <li>How do contemporary representations modify traditional symbolism?</li>
+                    </ul>
+                </div>
+            </section>
+
+            <!-- Archangel Analysis -->
+            <section id="archangels" class="section">
+                <h2 class="section-title">Seven Archangels: Functional Analysis</h2>
+                <p class="section-description">
+                    Systematic examination of the seven primary archangels, their symbolic attributes, 
+                    functional roles, and cross-cultural representations.
+                </p>
+
+                <div class="archangel-analysis">
+                    <div class="archangel-card michael">
+                        <h3 class="archangel-name">Michael</h3>
+                        <div class="archangel-attributes">
+                            <span class="attribute-tag">Protection</span>
+                            <span class="attribute-tag">Warfare</span>
+                            <span class="attribute-tag">Justice</span>
+                            <span class="attribute-tag">Leadership</span>
+                        </div>
+                        <div class="archangel-description">
+                            Primary symbols: Sword, shield, scales. Functions as divine protector and military commander. 
+                            Represents cosmic justice and defense against chaos. Cross-cultural parallels include 
+                            warrior deities and protective spirits.
+                        </div>
+                    </div>
+
+                    <div class="archangel-card gabriel">
+                        <h3 class="archangel-name">Gabriel</h3>
+                        <div class="archangel-attributes">
+                            <span class="attribute-tag">Communication</span>
+                            <span class="attribute-tag">Revelation</span>
+                            <span class="attribute-tag">Prophecy</span>
+                            <span class="attribute-tag">Guidance</span>
+                        </div>
+                        <div class="archangel-description">
+                            Primary symbols: Trumpet, lily, scroll. Functions as divine messenger and herald. 
+                            Represents communication between divine and human realms. Associated with prophetic 
+                            revelation and spiritual guidance across traditions.
+                        </div>
+                    </div>
+
+                    <div class="archangel-card raphael">
+                        <h3 class="archangel-name">Raphael</h3>
+                        <div class="archangel-attributes">
+                            <span class="attribute-tag">Healing</span>
+                            <span class="attribute-tag">Medicine</span>
+                            <span class="attribute-tag">Travel</span>
+                            <span class="attribute-tag">Compassion</span>
+                        </div>
+                        <div class="archangel-description">
+                            Primary symbols: Caduceus, fish, staff. Functions as divine healer and guide. 
+                            Represents restoration, wholeness, and safe passage. Medical symbolism appears 
+                            consistently across cultural interpretations.
+                        </div>
+                    </div>
+
+                    <div class="archangel-card camael">
+                        <h3 class="archangel-name">Camael</h3>
+                        <div class="archangel-attributes">
+                            <span class="attribute-tag">Strength</span>
+                            <span class="attribute-tag">Courage</span>
+                            <span class="attribute-tag">Divine Power</span>
+                            <span class="attribute-tag">Purification</span>
+                        </div>
+                        <div class="archangel-description">
+                            Primary symbols: Fire, sword, red coloration. Functions as divine strength and purifier. 
+                            Represents transformative power and spiritual courage. Fire symbolism connects to 
+                            purification and transformation themes.
+                        </div>
+                    </div>
+
+                    <div class="archangel-card sachiel">
+                        <h3 class="archangel-name">Sachiel</h3>
+                        <div class="archangel-attributes">
+                            <span class="attribute-tag">Wisdom</span>
+                            <span class="attribute-tag">Prosperity</span>
+                            <span class="attribute-tag">Justice</span>
+                            <span class="attribute-tag">Abundance</span>
+                        </div>
+                        <div class="archangel-description">
+                            Primary symbols: Crown, scepter, purple. Functions as divine treasurer and wisdom keeper. 
+                            Represents spiritual and material abundance guided by divine wisdom. Royal symbolism 
+                            emphasizes governance and proper stewardship.
+                        </div>
+                    </div>
+
+                    <div class="archangel-card anael">
+                        <h3 class="archangel-name">Anael</h3>
+                        <div class="archangel-attributes">
+                            <span class="attribute-tag">Love</span>
+                            <span class="attribute-tag">Beauty</span>
+                            <span class="attribute-tag">Harmony</span>
+                            <span class="attribute-tag">Relationships</span>
+                        </div>
+                        <div class="archangel-description">
+                            Primary symbols: Rose, dove, green coloration. Functions as divine harmonizer and 
+                            love facilitator. Represents divine love manifested in relationships and beauty. 
+                            Nature symbolism connects to growth and harmonious relationships.
+                        </div>
+                    </div>
+
+                    <div class="archangel-card cassiel">
+                        <h3 class="archangel-name">Cassiel</h3>
+                        <div class="archangel-attributes">
+                            <span class="attribute-tag">Time</span>
+                            <span class="attribute-tag">Patience</span>
+                            <span class="attribute-tag">Solitude</span>
+                            <span class="attribute-tag">Contemplation</span>
+                        </div>
+                        <div class="archangel-description">
+                            Primary symbols: Hourglass, silver, dragon. Functions as divine timekeeper and 
+                            contemplative guide. Represents patience, divine timing, and deep reflection. 
+                            Temporal symbolism emphasizes cosmic order and proper timing.
+                        </div>
+                    </div>
+                </div>
+
+                <table class="data-table">
+                    <thead>
+                        <tr>
+                            <th>Archangel</th>
+                            <th>Primary Function</th>
+                            <th>Key Symbols</th>
+                            <th>Associated Colors</th>
+                            <th>Planetary Association</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Michael</td>
+                            <td>Protection & Justice</td>
+                            <td>Sword, Shield, Scales</td>
+                            <td>Red, Gold</td>
+                            <td>Sun</td>
+                        </tr>
+                        <tr>
+                            <td>Gabriel</td>
+                            <td>Communication & Revelation</td>
+                            <td>Trumpet, Lily, Scroll</td>
+                            <td>Blue, Silver</td>
+                            <td>Moon</td>
+                        </tr>
+                        <tr>
+                            <td>Raphael</td>
+                            <td>Healing & Guidance</td>
+                            <td>Caduceus, Fish, Staff</td>
+                            <td>Green, Yellow</td>
+                            <td>Mercury</td>
+                        </tr>
+                        <tr>
+                            <td>Camael</td>
+                            <td>Strength & Purification</td>
+                            <td>Fire, Sword, Lightning</td>
+                            <td>Red, Orange</td>
+                            <td>Mars</td>
+                        </tr>
+                        <tr>
+                            <td>Sachiel</td>
+                            <td>Wisdom & Prosperity</td>
+                            <td>Crown, Scepter, Books</td>
+                            <td>Purple, Blue</td>
+                            <td>Jupiter</td>
+                        </tr>
+                        <tr>
+                            <td>Anael</td>
+                            <td>Love & Harmony</td>
+                            <td>Rose, Dove, Heart</td>
+                            <td>Green, Pink</td>
+                            <td>Venus</td>
+                        </tr>
+                        <tr>
+                            <td>Cassiel</td>
+                            <td>Time & Contemplation</td>
+                            <td>Hourglass, Dragon, Cloak</td>
+                            <td>Black, Silver</td>
+                            <td>Saturn</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </section>
+
+            <!-- Seraphim Studies -->
+            <section id="seraphim" class="section">
+                <div class="seraphim-section">
+                    <h2 class="seraphim-title">Seraphim: The Six-Winged Beings</h2>
+                    <p class="section-description">
+                        Analysis of the Seraphim as described in primary texts, focusing on their symbolic 
+                        structure and theological significance within celestial hierarchies.
+                    </p>
+
+                    <div class="wing-analysis">
+                        <div class="wing-pair">
+                            <h4 class="wing-function">Wings Covering Face</h4>
+                            <div class="wing-description">
+                                Symbolic representation of humility before divine presence. Theological interpretation 
+                                suggests recognition of divine transcendence and appropriate reverence.
+                            </div>
+                        </div>
+
+                        <div class="wing-pair">
+                            <h4 class="wing-function">Wings Covering Feet</h4>
+                            <div class="wing-description">
+                                Symbol of modesty and service orientation. Represents acknowledgment of position 
+                                within cosmic hierarchy and dedication to divine service.
+                            </div>
+                        </div>
+
+                        <div class="wing-pair">
+                            <h4 class="wing-function">Wings for Flying</h4>
+                            <div class="wing-description">
+                                Represents active participation in divine will and cosmic order. Symbolizes movement 
+                                through spiritual dimensions and execution of divine commands.
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="symbolic-framework">
+                        <h3 class="framework-title">Seraphim Symbolic Analysis</h3>
+                        <ul class="framework-list">
+                            <li><strong>Fire Symbolism:</strong> Purification, transformation, divine energy</li>
+                            <li><strong>Six-Wing Structure:</strong> Perfect balance of humility, service, and action</li>
+                            <li><strong>Vocal Function:</strong> "Holy, Holy, Holy" - threefold divine acknowledgment</li>
+                            <li><strong>Positioning:</strong> Closest to divine throne - ultimate spiritual proximity</li>
+                        </ul>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Research Tools -->
+            <section id="tools" class="section">
+                <div class="research-tools">
+                    <h2 class="section-title">Research Tools & Analysis</h2>
+                    <p class="section-description">
+                        Interactive tools for analyzing archangelic symbolism and generating research materials.
+                    </p>
+
+                    <div class="interactive-panel">
+                        <h3>Symbolic Pattern Analyzer</h3>
+                        <label for="symbolInput">Enter symbolic element or theme:</label>
+                        <input type="text" id="symbolInput" class="analysis-input" placeholder="e.g., sword, fire, healing, protection">
+                        
+                        <label for="contextSelect">Analysis context:</label>
+                        <select id="contextSelect" class="analysis-input">
+                            <option value="theological">Theological</option>
+                            <option value="anthropological">Anthropological</option>
+                            <option value="cultural">Cultural</option>
+                            <option value="psychological">Psychological</option>
+                        </select>
+                        
+                        <button class="analyze-btn" onclick="analyzeSymbol()">Analyze Pattern</button>
+                        
+                        <div id="analysisOutput" class="output-panel">
+                            Analysis results will appear here...
+                        </div>
+                    </div>
+
+                    <div class="tools-grid">
+                        <a href="#" class="tool-button" onclick="downloadResearchGuide()">Research Guide</a>
+                        <a href="#" class="tool-button" onclick="generateComparison()">Comparative Analysis</a>
+                        <a href="#" class="tool-button" onclick="createBibliography()">Bibliography Generator</a>
+                        <a href="#" class="tool-button" onclick="exportData()">Export Dataset</a>
+                    </div>
+                </div>
+            </section>
+
+            <!-- References -->
+            <section id="references" class="section">
+                <h2 class="section-title">Academic Bibliography</h2>
+                <div class="references">
+                    <div class="reference-item">
+                        <strong>Davidson, Gustav.</strong> <em>A Dictionary of Angels: Including the Fallen Angels.</em> Free Press, 1967.
+                    </div>
+                    <div class="reference-item">
+                        <strong>Pseudo-Dionysius.</strong> <em>The Celestial Hierarchy.</em> Translated by Colm Luibhéid. Paulist Press, 1987.
+                    </div>
+                    <div class="reference-item">
+                        <strong>Keck, David.</strong> <em>Angels and Angelology in the Middle Ages.</em> Oxford University Press, 1998.
+                    </div>
+                    <div class="reference-item">
+                        <strong>Marshall, Peter.</strong> <em>The Philosophy of Symbolic Forms.</em> Yale University Press, 1996.
+                    </div>
+                    <div class="reference-item">
+                        <strong>Eliade, Mircea.</strong> <em>Patterns in Comparative Religion.</em> University of Chicago Press, 1958.
+                    </div>
+                    <div class="reference-item">
+                        <strong>Jung, Carl Gustav.</strong> <em>The Archetypes and the Collective Unconscious.</em> Princeton University Press, 1969.
+                    </div>
+                    <div class="reference-item">
+                        <strong>Campbell, Joseph.</strong> <em>The Hero with a Thousand Faces.</em> Pantheon Books, 1949.
+                    </div>
+                    <div class="reference-item">
+                        <strong>Scholem, Gershom.</strong> <em>Major Trends in Jewish Mysticism.</em> Schocken Books, 1946.
+                    </div>
+                    <div class="reference-item">
+                        <strong>Peers, Glenn.</strong> <em>Subtle Bodies: Representing Angels in Byzantium.</em> University of California Press, 2001.
+                    </div>
+                    <div class="reference-item">
+                        <strong>McDannell, Colleen, and Bernhard Lang.</strong> <em>Heaven: A History.</em> Yale University Press, 1988.
+                    </div>
+                    <div class="reference-item">
+                        <strong>Boustan, Ra'anan S.</strong> <em>From Martyr to Mystic: Rabbinic Martyrology and the Making of Merkavah Mysticism.</em> Mohr Siebeck, 2005.
+                    </div>
+                </div>
+            </section>
+        </div>
+    </main>
+
+    <script>
+        // Navigation functionality
+        document.querySelectorAll('.nav-link').forEach(link => {
+            link.addEventListener('click', function(e) {
+                e.preventDefault();
+                const targetId = this.getAttribute('href').substring(1);
+                const targetElement = document.getElementById(targetId);
+                
+                if (targetElement) {
+                    const offsetTop = targetElement.getBoundingClientRect().top + window.pageYOffset - 100;
+                    window.scrollTo({
+                        top: offsetTop,
+                        behavior: 'smooth'
+                    });
+                    
+                    document.querySelectorAll('.nav-link').forEach(nav => nav.classList.remove('active'));
+                    this.classList.add('active');
+                }
+            });
+        });
+
+        // Symbol analysis database
+        const symbolDatabase = {
+            theological: {
+                'sword': 'Divine justice and spiritual warfare. Represents the word of God as a discerning force. Cross-references: Ephesians 6:17, Hebrews 4:12.',
+                'fire': 'Purification, divine presence, and transformative power. Associated with theophanic experiences and sanctification processes.',
+                'healing': 'Divine restoration and wholeness. Connected to concepts of spiritual and physical renewal through divine intervention.',
+                'protection': 'Divine guardianship and shelter. Theological framework includes concepts of divine providence and angelic ministry.',
+                'trumpet': 'Divine communication and eschatological announcement. Associated with prophetic revelation and cosmic events.',
+                'wings': 'Spiritual mobility and divine covering. Represents protection, swiftness in divine service, and transcendence of physical limitations.'
+            },
+            anthropological: {
+                'sword': 'Cross-cultural symbol of authority, justice, and protective power. Found in warrior deities across civilizations.',
+                'fire': 'Universal symbol of transformation, purification, and divine energy. Appears in shamanic and religious traditions globally.',
+                'healing': 'Medical and spiritual restoration archetype. Present in healer figures across cultures (shamans, medicine people, divine physicians).',
+                'protection': 'Guardian archetype manifesting in protective deities, ancestral spirits, and tutelary figures across cultures.',
+                'trumpet': 'Communication between realms archetype. Found in herald figures, divine messengers, and ceremonial instruments.',
+                'wings': 'Flight and transcendence symbolism. Universal association with spiritual beings, soul travel, and divine messengers.'
+            },
+            cultural: {
+                'sword': 'Medieval chivalric symbolism, Arthurian legends, Japanese katana traditions. Modern: superhero iconography, military honors.',
+                'fire': 'Olympic torch, eternal flames, Prometheus myth. Modern: innovation metaphors, passion symbolism, energy representations.',
+                'healing': 'Medical caduceus, Red Cross symbolism, traditional medicine systems. Modern: healthcare branding, wellness movements.',
+                'protection': 'Shield heraldry, amulet traditions, guardian statues. Modern: security systems, insurance symbolism, safety protocols.',
+                'trumpet': 'Military signals, royal announcements, jazz traditions. Modern: communication technology, alert systems, celebration.',
+                'wings': 'Aviation symbolism, corporate logos, freedom representations. Modern: airline branding, energy drink marketing, speed concepts.'
+            },
+            psychological: {
+                'sword': 'Jungian interpretation: discrimination function, cutting through illusion, masculine assertiveness archetype.',
+                'fire': 'Transformation symbol, libido energy, passionate emotion. Associated with both creative and destructive psychological forces.',
+                'healing': 'Integration archetype, wholeness seeking, restoration of psychological balance and health.',
+                'protection': 'Safety needs (Maslow), defensive mechanisms, parental archetype, secure attachment symbolism.',
+                'trumpet': 'Communication archetype, voice-finding, announcement of psychological breakthroughs or realizations.',
+                'wings': 'Freedom seeking, transcendence desire, escape from limitations, elevation of consciousness.'
+            }
+        };
+
+        function analyzeSymbol() {
+            const symbolInput = document.getElementById('symbolInput').value.toLowerCase().trim();
+            const context = document.getElementById('contextSelect').value;
+            const outputDiv = document.getElementById('analysisOutput');
+            
+            if (!symbolInput) {
+                outputDiv.innerHTML = '<p style="color: #dc2626;">Please enter a symbolic element to analyze.</p>';
+                return;
+            }
+
+            const analysis = symbolDatabase[context][symbolInput];
+            
+            if (analysis) {
+                outputDiv.innerHTML = `
+                    <h4 style="color: var(--primary-blue); margin-bottom: 15px;">
+                        ${context.charAt(0).toUpperCase() + context.slice(1)} Analysis: "${symbolInput}"
+                    </h4>
+                    <p style="line-height: 1.7;">${analysis}</p>
+                    <div style="margin-top: 20px; padding: 15px; background: rgba(30, 64, 175, 0.1); border-radius: 8px;">
+                        <strong>Research Suggestion:</strong> Consider cross-referencing this symbol with the other analytical frameworks for comprehensive understanding.
+                    </div>
+                `;
+            } else {
+                const availableSymbols = Object.keys(symbolDatabase[context]).join(', ');
+                outputDiv.innerHTML = `
+                    <p style="color: #dc2626; margin-bottom: 15px;">
+                        Symbol "${symbolInput}" not found in ${context} database.
+                    </p>
+                    <p><strong>Available symbols:</strong> ${availableSymbols}</p>
+                `;
+            }
+        }
+
+        function downloadResearchGuide() {
+            const guide = `# Archangelic Symbolism Research Guide
+
+## Research Methodology
+
+### 1. Theoretical Frameworks
+- **Structural Analysis:** Examine hierarchical relationships and functional roles
+- **Symbolic Interpretation:** Decode iconographic elements and their meanings  
+- **Comparative Study:** Cross-reference symbols across different traditions
+- **Historical Context:** Trace evolution of concepts over time
+- **Phenomenological Approach:** Understand experiential aspects
+
+### 2. Primary Research Areas
+
+#### Theological Analysis
+- Source text examination (canonical and apocryphal)
+- Doctrinal development across traditions
+- Liturgical and devotional contexts
+- Mystical and esoteric interpretations
+
+#### Anthropological Perspectives  
+- Cross-cultural celestial hierarchy comparisons
+- Archetypal pattern recognition
+- Social function of religious symbolism
+- Ritual and ceremonial contexts
+
+#### Cultural Manifestations
+- Artistic representations across periods
+- Literary depictions and evolution
+- Modern media adaptations
+- Popular culture interpretations
+
+### 3. Data Collection Methods
+
+#### Primary Sources
+- Religious texts and commentaries
+- Historical manuscripts and documents
+- Artistic works and iconography
+- Liturgical and ritual materials
+
+#### Secondary Sources
+- Academic research and analysis
+- Comparative religious studies
+- Anthropological field studies
+- Art historical investigations
+
+### 4. Analysis Framework
+
+#### Symbol Mapping
+- Visual iconography documentation
+- Attribute correlation analysis
+- Cross-traditional comparison
+- Evolution tracking over time
+
+#### Functional Analysis
+- Role definition within hierarchies
+- Relationship mapping between entities
+- Sphere of influence documentation
+- Interaction pattern identification
+
+### 5. Documentation Standards
+
+#### Citation Requirements
+- Primary source authentication
+- Cross-reference verification
+- Cultural context specification
+- Translation note inclusion
+
+#### Data Organization
+- Systematic categorization
+- Cross-indexing implementation
+- Version control maintenance
+- Accessibility formatting
+
+## Seven Archangels Research Template
+
+### Michael - The Protector
+**Primary Attributes:** Protection, Justice, Warfare
+**Key Symbols:** Sword, Shield, Scales, Armor
+**Cultural Variations:** [Document specific traditions]
+**Research Notes:** [Your observations and analysis]
+
+### Gabriel - The Messenger
+**Primary Attributes:** Communication, Revelation, Prophecy
+**Key Symbols:** Trumpet, Lily, Scroll, Wings
+**Cultural Variations:** [Document specific traditions]
+**Research Notes:** [Your observations and analysis]
+
+### Raphael - The Healer
+**Primary Attributes:** Healing, Medicine, Travel, Guidance
+**Key Symbols:** Caduceus, Fish, Staff, Green vestments
+**Cultural Variations:** [Document specific traditions]
+**Research Notes:** [Your observations and analysis]
+
+### Camael - The Strength
+**Primary Attributes:** Divine Power, Courage, Purification
+**Key Symbols:** Fire, Red coloration, Sword, Lightning
+**Cultural Variations:** [Document specific traditions]
+**Research Notes:** [Your observations and analysis]
+
+### Sachiel - The Prosperity
+**Primary Attributes:** Wisdom, Prosperity, Justice, Abundance
+**Key Symbols:** Crown, Scepter, Purple, Books
+**Cultural Variations:** [Document specific traditions]
+**Research Notes:** [Your observations and analysis]
+
+### Anael - The Love
+**Primary Attributes:** Love, Beauty, Harmony, Relationships
+**Key Symbols:** Rose, Dove, Green/Pink, Heart
+**Cultural Variations:** [Document specific traditions]
+**Research Notes:** [Your observations and analysis]
+
+### Cassiel - The Solitude
+**Primary Attributes:** Time, Patience, Contemplation, Solitude
+**Key Symbols:** Hourglass, Dragon, Black/Silver, Cloak
+**Cultural Variations:** [Document specific traditions]
+**Research Notes:** [Your observations and analysis]
+
+## Seraphim Analysis Framework
+
+### Structural Elements
+- Six-wing configuration symbolism
+- Positional significance (throne proximity)
+- Vocal function ("Holy, Holy, Holy")
+- Fire symbolism interpretation
+
+### Wing Function Analysis
+1. **Face-covering wings:** Humility and reverence
+2. **Feet-covering wings:** Modesty and service
+3. **Flying wings:** Action and divine mission
+
+### Cross-Cultural Parallels
+- Winged beings in other traditions
+- Fire deities and purification symbols
+- Hierarchical proximity concepts
+- Worship and praise archetypes
+
+## Research Questions for Investigation
+
+### Primary Questions
+1. How do archangelic hierarchies reflect cosmic order concepts?
+2. What psychological functions do celestial archetypes serve?
+3. How do symbolic attributes relate to functional roles?
+4. What patterns emerge across different cultural interpretations?
+5. How do contemporary representations modify traditional symbolism?
+
+### Secondary Questions
+1. What role does gender symbolism play in archangelic representation?
+2. How do color associations function across different traditions?
+3. What is the relationship between planetary associations and attributes?
+4. How do modern interpretations reflect contemporary spiritual needs?
+5. What can archangelic symbolism reveal about human organizational psychology?
+
+## Recommended Bibliography
+
+### Primary Sources
+- Biblical texts (canonical and deuterocanonical)
+- Quranic references and Islamic traditions
+- Jewish mystical texts (Kabbalah, Merkavah)
+- Early Christian writings and Church Fathers
+
+### Academic Resources
+- Davidson, Gustav. "A Dictionary of Angels"
+- Pseudo-Dionysius. "The Celestial Hierarchy"
+- Jung, Carl Gustav. "The Archetypes and the Collective Unconscious"
+- Eliade, Mircea. "Patterns in Comparative Religion"
+
+### Contemporary Analysis
+- McDannell & Lang. "Heaven: A History"
+- Peers, Glenn. "Subtle Bodies: Representing Angels in Byzantium"
+- Boustan, Ra'anan S. "From Martyr to Mystic"
+
+Generated: ${new Date().toISOString()}`;
+            
+            downloadFile(guide, 'archangelic-symbolism-research-guide.md', 'text/markdown');
+        }
+
+        function generateComparison() {
+            const comparison = `# Comparative Analysis: Archangelic Symbolism
+
+## Cross-Traditional Comparison Matrix
+
+| Archangel | Christian | Islamic | Jewish | Esoteric | Modern |
+|-----------|-----------|---------|--------|----------|--------|
+| Michael | Warrior Saint | Mika'il | Mikha'el | Solar Force | Protector Archetype |
+| Gabriel | Annunciation | Jibril | Gavri'el | Lunar Force | Messenger Archetype |
+| Raphael | Healer Guide | Israfil* | Rafa'el | Mercury Force | Healer Archetype |
+| Camael | Divine Strength | - | Khamuel | Mars Force | Strength Archetype |
+| Sachiel | Abundance | - | Tzadqiel | Jupiter Force | Wisdom Archetype |
+| Anael | Divine Love | - | Haniel | Venus Force | Love Archetype |
+| Cassiel | Time Keeper | - | Kafziel | Saturn Force | Time Archetype |
+
+*Note: Islamic tradition has different archangel configurations
+
+## Symbolic Pattern Analysis
+
+### Universal Symbols
+- **Wings:** Transcendence, spiritual mobility, divine nature
+- **Light:** Divine presence, illumination, truth revelation
+- **Weapons:** Spiritual warfare, justice, protection
+- **Natural Elements:** Fire (purification), Water (healing), Air (communication)
+
+### Cultural Variations
+- **Color Symbolism:** Varies significantly across traditions
+- **Attribute Focus:** Different aspects emphasized in different cultures
+- **Hierarchical Position:** Ranking systems vary between traditions
+- **Gender Representation:** Cultural attitudes reflected in depictions
+
+## Functional Role Comparison
+
+### Protection Function
+- **Michael:** Direct combat, divine justice
+- **Camael:** Inner strength, courage building
+- **Cassiel:** Long-term protection, patience in adversity
+
+### Communication Function
+- **Gabriel:** Divine-human communication
+- **Raphael:** Guidance and direction
+- **Sachiel:** Wisdom transmission
+
+### Healing/Restoration Function
+- **Raphael:** Physical and spiritual healing
+- **Anael:** Relationship harmony and restoration
+- **Michael:** Justice as healing force
+
+## Evolution Over Time
+
+### Ancient Period
+- Primarily functional roles
+- Minimal personal characteristics
+- Focus on cosmic hierarchy
+
+### Medieval Period
+- Detailed personal attributes
+- Elaborate iconographic systems
+- Integration with philosophical systems
+
+### Modern Period
+- Psychological interpretation
+- Personal relationship emphasis
+- Therapeutic and self-help applications
+
+## Research Implications
+
+### Academic Significance
+1. Pattern recognition across cultures reveals universal symbolic needs
+2. Evolution shows adaptation to changing spiritual requirements
+3. Functional analysis provides insight into human psychological archetypes
+
+### Methodological Considerations
+1. Source material varies significantly in reliability
+2. Cultural translation issues affect interpretation
+3. Modern adaptations may obscure historical meanings
+
+Generated: ${new Date().toISOString()}`;
+            
+            downloadFile(comparison, 'archangelic-comparative-analysis.md', 'text/markdown');
+        }
+
+        function createBibliography() {
+            const bibliography = `# Archangelic Symbolism Research Bibliography
+
+## Primary Sources
+
+### Biblical and Religious Texts
+- *The Holy Bible* (various translations). Focus: Daniel 8-12, Revelation, Tobit.
+- *The Quran*. Translated by M.A.S. Abdel Haleem. Oxford University Press, 2005.
+- *The Book of Enoch*. Translated by R.H. Charles. SPCK Publishing, 1917.
+- *The Testament of Solomon*. Translated by Chester Charlton McCown. J.C. Hinrichs, 1922.
+
+### Historical Documents
+- Pseudo-Dionysius the Areopagite. *The Celestial Hierarchy*. Translated by Colm Luibhéid. Paulist Press, 1987.
+- Gregory the Great. *Homilies on the Gospels*. Translated by David Hurst. Cistercian Publications, 1990.
+- Thomas Aquinas. *Summa Theologiae*. Second Part of the Second Part, Questions 1-33. Cambridge University Press, 2006.
+
+## Secondary Sources
+
+### Academic Monographs
+- Davidson, Gustav. *A Dictionary of Angels: Including the Fallen Angels*. Free Press, 1967.
+- Keck, David. *Angels and Angelology in the Middle Ages*. Oxford University Press, 1998.
+- McDannell, Colleen, and Bernhard Lang. *Heaven: A History*. Yale University Press, 1988.
+- Peers, Glenn. *Subtle Bodies: Representing Angels in Byzantium*. University of California Press, 2001.
+- Boustan, Ra'anan S. *From Martyr to Mystic: Rabbinic Martyrology and the Making of Merkavah Mysticism*. Mohr Siebeck, 2005.
+
+### Anthropological Studies
+- Eliade, Mircea. *Patterns in Comparative Religion*. University of Chicago Press, 1958.
+- Campbell, Joseph. *The Hero with a Thousand Faces*. Pantheon Books, 1949.
+- Douglas, Mary. *Purity and Danger: An Analysis of Concepts of Pollution and Taboo*. Routledge, 1966.
+
+### Psychological Analysis
+- Jung, Carl Gustav. *The Archetypes and the Collective Unconscious*. Princeton University Press, 1969.
+- Hillman, James. *Re-Visioning Psychology*. Harper & Row, 1975.
+- Moore, Thomas. *Care of the Soul*. HarperCollins, 1992.
+
+### Art Historical Studies
+- Mâle, Émile. *Religious Art in France: The Late Middle Ages*. Princeton University Press, 1986.
+- Hamburger, Jeffrey F. *The Visual and the Visionary: Art and Female Spirituality in Late Medieval Germany*. Zone Books, 1998.
+- Pentcheva, Bissera V. *Icons and Power: The Mother of God in Byzantium*. Pennsylvania State University Press, 2006.
+
+## Journal Articles
+
+### Religious Studies
+- Russell, Jeffrey Burton. "The Prince of Darkness: Evil and the Power of Good in History." *Journal of Religious History* 12, no. 2 (1982): 125-140.
+- Himmelfarb, Martha. "Revelation and Rapture: The Transformation of the Visionary in the Ascent Apocalypses." *Journal for the Study of Judaism* 27, no. 1 (1996): 1-19.
+- Reed, Annette Yoshiko. "The Trickery of the Fallen Angels and the Demonic Mimesis of the Divine." *Journal of Early Christian Studies* 12, no. 2 (2004): 141-171.
+
+### Anthropological Studies
+- Boyer, Pascal. "What Makes Anthropomorphism Natural: Intuitive Ontology and Cultural Representations." *Journal of the Royal Anthropological Institute* 2, no. 1 (1996): 83-97.
+- Whitehouse, Harvey. "Rites of Terror: Emotion, Metaphor and Memory in Melanesian Initiation Cults." *Journal of the Royal Anthropological Institute* 2, no. 4 (1996): 703-715.
+
+### Psychology and Symbolism
+- Stevens, Anthony. "The Archetypes." *Jung: A Very Short Introduction*. Oxford University Press, 2001.
+- Neumann, Erich. "The Great Mother: An Analysis of the Archetype." *Bollingen Series* 47. Princeton University Press, 1963.
+
+## Digital Resources
+
+### Databases
+- ATLA Religion Database. American Theological Library Association.
+- Index Islamicus. Brill Academic Publishers.
+- RAMBI: Index of Articles on Jewish Studies. Hebrew University of Jerusalem.
+
+### Online Archives
+- Internet Sacred Text Archive (sacred-texts.com)
+- Digital Manuscripts at Cambridge University Library
+- Vatican Apostolic Archive (Digital Collections)
+
+## Research Tools and Software
+
+### Text Analysis
+- NVivo (Qualitative Data Analysis)
+- ATLAS.ti (Qualitative Research)
+- Voyant Tools (Text Analysis)
+
+### Citation Management
+- Zotero (Open Source)
+- EndNote (Thomson Reuters)
+- Mendeley (Academic Reference Manager)
+
+## Conference Proceedings
+
+### Recent Academic Conferences
+- American Academy of Religion Annual Meeting Proceedings (2020-2024)
+- Society of Biblical Literature International Meeting Papers (2019-2024)
+- International Association for the History of Religions World Congress (2020)
+
+Generated: ${new Date().toISOString()}`;
+            
+            downloadFile(bibliography, 'archangelic-symbolism-bibliography.md', 'text/markdown');
+        }
+
+        function exportData() {
+            const dataset = {
+                archangels: [
+                    {
+                        name: "Michael",
+                        attributes: ["Protection", "Justice", "Warfare", "Leadership"],
+                        symbols: ["Sword", "Shield", "Scales", "Armor"],
+                        colors: ["Red", "Gold"],
+                        planet: "Sun",
+                        element: "Fire",
+                        direction: "South"
+                    },
+                    {
+                        name: "Gabriel",
+                        attributes: ["Communication", "Revelation", "Prophecy", "Guidance"],
+                        symbols: ["Trumpet", "Lily", "Scroll", "Wings"],
+                        colors: ["Blue", "Silver"],
+                        planet: "Moon",
+                        element: "Water",
+                        direction: "West"
+                    },
+                    {
+                        name: "Raphael",
+                        attributes: ["Healing", "Medicine", "Travel", "Compassion"],
+                        symbols: ["Caduceus", "Fish", "Staff", "Green vestments"],
+                        colors: ["Green", "Yellow"],
+                        planet: "Mercury",
+                        element: "Air",
+                        direction: "East"
+                    },
+                    {
+                        name: "Camael",
+                        attributes: ["Strength", "Courage", "Divine Power", "Purification"],
+                        symbols: ["Fire", "Sword", "Lightning", "Red coloration"],
+                        colors: ["Red", "Orange"],
+                        planet: "Mars",
+                        element: "Fire",
+                        direction: "South"
+                    },
+                    {
+                        name: "Sachiel",
+                        attributes: ["Wisdom", "Prosperity", "Justice", "Abundance"],
+                        symbols: ["Crown", "Scepter", "Books", "Purple vestments"],
+                        colors: ["Purple", "Blue"],
+                        planet: "Jupiter",
+                        element: "Air",
+                        direction: "Northeast"
+                    },
+                    {
+                        name: "Anael",
+                        attributes: ["Love", "Beauty", "Harmony", "Relationships"],
+                        symbols: ["Rose", "Dove", "Heart", "Green/Pink"],
+                        colors: ["Green", "Pink"],
+                        planet: "Venus",
+                        element: "Earth",
+                        direction: "Southeast"
+                    },
+                    {
+                        name: "Cassiel",
+                        attributes: ["Time", "Patience", "Contemplation", "Solitude"],
+                        symbols: ["Hourglass", "Dragon", "Cloak", "Black/Silver"],
+                        colors: ["Black", "Silver"],
+                        planet: "Saturn",
+                        element: "Earth",
+                        direction: "Northwest"
+                    }
+                ],
+                seraphim: {
+                    description: "Six-winged beings closest to divine throne",
+                    wing_functions: [
+                        { pair: 1, function: "Cover face", meaning: "Humility before divine presence" },
+                        { pair: 2, function: "Cover feet", meaning: "Modesty and service orientation" },
+                        { pair: 3, function: "Flying", meaning: "Active participation in divine will" }
+                    ],
+                    symbolism: ["Fire", "Purification", "Divine energy", "Worship", "Praise"]
+                }
+            };
+            
+            const jsonData = JSON.stringify(dataset, null, 2);
+            downloadFile(jsonData, 'archangelic-symbolism-dataset.json', 'application/json');
+        }
+
+        function downloadFile(content, filename, mimeType) {
+            const blob = new Blob([content], { type: mimeType });
+            const url = URL.createObjectURL(blob);
+            const a = document.createElement('a');
+            a.href = url;
+            a.download = filename;
+            a.click();
+            URL.revokeObjectURL(url);
+        }
+
+        // Initialize keyboard shortcut for analysis
+        document.getElementById('symbolInput').addEventListener('keypress', function(e) {
+            if (e.key === 'Enter') {
+                analyzeSymbol();
+            }
+        });
+    </script>
+</body>
+</html>

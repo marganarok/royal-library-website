@@ -1,0 +1,986 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Creative Grimoire: Eldritch Art Gallery</title>
+    <meta name="description" content="Professional occult art, mystical certificates, and eldritch designs for games, films, and collectors.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;500;600;700&family=Crimson+Text:ital,wght@0,400;0,600;1,400&family=Playfair+Display:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
+    
+    <style>
+        :root {
+            --primary-dark: #0a0a0a;
+            --secondary-dark: #1a1625;
+            --tertiary-dark: #2d1b4e;
+            --accent-gold: #d4af37;
+            --accent-purple: #6b46c1;
+            --accent-crimson: #dc2626;
+            --accent-green: #059669;
+            --text-light: #f8f9fa;
+            --text-muted: #9ca3af;
+            --parchment: #f7f3e9;
+            --ink-dark: #2c1810;
+            --mystic-blue: #1e40af;
+            
+            --gradient-mystical: linear-gradient(135deg, var(--primary-dark), var(--secondary-dark), var(--tertiary-dark));
+            --gradient-gold: linear-gradient(45deg, var(--accent-gold), #fbbf24, var(--accent-gold));
+            --gradient-parchment: linear-gradient(135deg, #f7f3e9, #fef3c7, #f7f3e9);
+            
+            --shadow-deep: 0 20px 40px rgba(0, 0, 0, 0.4);
+            --shadow-mystical: 0 0 30px rgba(107, 70, 193, 0.4);
+            --shadow-gold: 0 0 20px rgba(212, 175, 55, 0.5);
+            --shadow-crimson: 0 0 25px rgba(220, 38, 38, 0.4);
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Crimson Text', serif;
+            line-height: 1.6;
+            color: var(--text-light);
+            background: var(--gradient-mystical);
+            overflow-x: hidden;
+        }
+
+        .cosmic-background {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: -1;
+            background: 
+                radial-gradient(circle at 20% 80%, rgba(107, 70, 193, 0.3) 0%, transparent 50%),
+                radial-gradient(circle at 80% 20%, rgba(212, 175, 55, 0.2) 0%, transparent 50%),
+                radial-gradient(circle at 40% 40%, rgba(220, 38, 38, 0.2) 0%, transparent 50%);
+            animation: cosmicShift 30s ease-in-out infinite alternate;
+        }
+
+        @keyframes cosmicShift {
+            0% { transform: scale(1) rotate(0deg); }
+            100% { transform: scale(1.05) rotate(1deg); }
+        }
+
+        .container {
+            max-width: 1400px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        /* Header */
+        .header {
+            text-align: center;
+            padding: 60px 0 40px;
+            position: relative;
+        }
+
+        .main-title {
+            font-family: 'Cinzel', serif;
+            font-size: clamp(2.5rem, 6vw, 4.5rem);
+            font-weight: 700;
+            background: var(--gradient-gold);
+            -webkit-background-clip: text;
+            background-clip: text;
+            -webkit-text-fill-color: transparent;
+            margin-bottom: 15px;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+            animation: titleGlow 4s ease-in-out infinite alternate;
+        }
+
+        @keyframes titleGlow {
+            0% { filter: drop-shadow(0 0 5px rgba(212, 175, 55, 0.5)); }
+            100% { filter: drop-shadow(0 0 15px rgba(212, 175, 55, 0.8)); }
+        }
+
+        .subtitle {
+            font-family: 'Playfair Display', serif;
+            font-size: clamp(1rem, 2.5vw, 1.5rem);
+            font-style: italic;
+            color: var(--text-muted);
+            margin-bottom: 30px;
+        }
+
+        .professional-badge {
+            display: inline-block;
+            background: var(--gradient-gold);
+            color: var(--primary-dark);
+            padding: 8px 20px;
+            border-radius: 25px;
+            font-weight: 600;
+            font-size: 0.9rem;
+            margin-bottom: 30px;
+            box-shadow: var(--shadow-gold);
+        }
+
+        /* Navigation */
+        .nav {
+            background: rgba(10, 10, 10, 0.95);
+            backdrop-filter: blur(15px);
+            padding: 15px 0;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+            border-bottom: 2px solid var(--accent-gold);
+        }
+
+        .nav-container {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 25px;
+        }
+
+        .nav-item {
+            color: var(--text-light);
+            text-decoration: none;
+            font-weight: 600;
+            padding: 10px 18px;
+            border-radius: 20px;
+            transition: all 0.3s ease;
+            border: 1px solid transparent;
+            font-size: 0.95rem;
+        }
+
+        .nav-item:hover, .nav-item.active {
+            background: var(--gradient-gold);
+            color: var(--primary-dark);
+            border-color: var(--accent-gold);
+            transform: translateY(-2px);
+            box-shadow: var(--shadow-gold);
+        }
+
+        /* Featured Gallery */
+        .featured-section {
+            padding: 60px 0;
+            background: rgba(26, 22, 37, 0.3);
+            margin: 40px 0;
+            border-radius: 20px;
+        }
+
+        .section-title {
+            font-family: 'Cinzel', serif;
+            font-size: clamp(2rem, 4vw, 3rem);
+            text-align: center;
+            margin-bottom: 50px;
+            color: var(--accent-gold);
+            position: relative;
+        }
+
+        .section-title::after {
+            content: '';
+            display: block;
+            width: 80px;
+            height: 3px;
+            background: var(--gradient-gold);
+            margin: 15px auto;
+            border-radius: 2px;
+        }
+
+        /* Art Gallery Grid */
+        .gallery-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: 30px;
+            margin: 50px 0;
+        }
+
+        .art-card {
+            background: var(--gradient-parchment);
+            color: var(--ink-dark);
+            border-radius: 15px;
+            overflow: hidden;
+            box-shadow: var(--shadow-deep);
+            transition: all 0.4s ease;
+            border: 3px solid var(--accent-gold);
+            cursor: pointer;
+            position: relative;
+        }
+
+        .art-card:hover {
+            transform: translateY(-8px) scale(1.02);
+            box-shadow: var(--shadow-deep), var(--shadow-gold);
+        }
+
+        .art-preview {
+            width: 100%;
+            height: 250px;
+            background: var(--secondary-dark);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 4rem;
+            color: var(--accent-gold);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .art-preview::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: 
+                radial-gradient(circle at 30% 30%, rgba(212, 175, 55, 0.2) 0%, transparent 50%),
+                radial-gradient(circle at 70% 70%, rgba(107, 70, 193, 0.2) 0%, transparent 50%);
+            animation: artGlow 6s ease-in-out infinite alternate;
+        }
+
+        @keyframes artGlow {
+            0% { opacity: 0.5; transform: rotate(0deg); }
+            100% { opacity: 0.8; transform: rotate(2deg); }
+        }
+
+        .art-info {
+            padding: 25px;
+        }
+
+        .art-title {
+            font-family: 'Cinzel', serif;
+            font-size: 1.4rem;
+            color: var(--accent-purple);
+            margin-bottom: 10px;
+            font-weight: 600;
+        }
+
+        .art-description {
+            font-size: 1rem;
+            line-height: 1.6;
+            margin-bottom: 15px;
+            color: var(--ink-dark);
+        }
+
+        .art-specs {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 15px;
+            font-size: 0.9rem;
+            color: var(--accent-purple);
+        }
+
+        .art-price {
+            font-family: 'Cinzel', serif;
+            font-size: 1.3rem;
+            font-weight: 700;
+            color: var(--accent-crimson);
+            text-align: right;
+        }
+
+        .art-tags {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 8px;
+            margin-top: 15px;
+        }
+
+        .art-tag {
+            background: var(--accent-purple);
+            color: white;
+            padding: 4px 10px;
+            border-radius: 12px;
+            font-size: 0.8rem;
+            font-weight: 500;
+        }
+
+        /* Process Section */
+        .process-section {
+            padding: 60px 0;
+            background: rgba(107, 70, 193, 0.1);
+            margin: 40px 0;
+            border-radius: 20px;
+        }
+
+        .process-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 30px;
+            margin: 40px 0;
+        }
+
+        .process-step {
+            background: rgba(10, 10, 10, 0.7);
+            color: var(--text-light);
+            padding: 30px;
+            border-radius: 15px;
+            text-align: center;
+            border: 2px solid var(--accent-gold);
+            transition: all 0.3s ease;
+        }
+
+        .process-step:hover {
+            background: rgba(10, 10, 10, 0.9);
+            transform: translateY(-5px);
+            box-shadow: var(--shadow-mystical);
+        }
+
+        .process-icon {
+            font-size: 3rem;
+            margin-bottom: 20px;
+            color: var(--accent-gold);
+        }
+
+        .process-title {
+            font-family: 'Cinzel', serif;
+            font-size: 1.2rem;
+            color: var(--accent-gold);
+            margin-bottom: 15px;
+        }
+
+        /* Testimonials */
+        .testimonial-section {
+            padding: 60px 0;
+            text-align: center;
+        }
+
+        .testimonial {
+            background: rgba(212, 175, 55, 0.1);
+            border-left: 5px solid var(--accent-gold);
+            padding: 30px;
+            margin: 30px 0;
+            border-radius: 0 15px 15px 0;
+            font-style: italic;
+            font-size: 1.1rem;
+            max-width: 800px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .testimonial-author {
+            text-align: right;
+            margin-top: 15px;
+            font-weight: 600;
+            color: var(--accent-gold);
+        }
+
+        /* Services Section */
+        .services-section {
+            padding: 60px 0;
+            background: rgba(220, 38, 38, 0.1);
+            margin: 40px 0;
+            border-radius: 20px;
+        }
+
+        .services-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+            margin: 40px 0;
+        }
+
+        .service-card {
+            background: var(--gradient-parchment);
+            color: var(--ink-dark);
+            padding: 30px;
+            border-radius: 15px;
+            box-shadow: var(--shadow-deep);
+            border: 2px solid var(--accent-crimson);
+            transition: all 0.3s ease;
+        }
+
+        .service-card:hover {
+            transform: translateY(-5px);
+            box-shadow: var(--shadow-deep), var(--shadow-crimson);
+        }
+
+        .service-title {
+            font-family: 'Cinzel', serif;
+            font-size: 1.5rem;
+            color: var(--accent-crimson);
+            margin-bottom: 15px;
+        }
+
+        .service-price {
+            font-family: 'Cinzel', serif;
+            font-size: 1.4rem;
+            color: var(--accent-purple);
+            font-weight: 700;
+            margin-top: 20px;
+        }
+
+        /* CTA Section */
+        .cta-section {
+            text-align: center;
+            padding: 80px 0;
+            background: var(--gradient-mystical);
+            margin: 40px 0;
+            border-radius: 20px;
+            border: 3px solid var(--accent-gold);
+        }
+
+        .cta-button {
+            display: inline-block;
+            background: var(--gradient-gold);
+            color: var(--primary-dark);
+            padding: 15px 35px;
+            border-radius: 30px;
+            font-weight: 700;
+            font-size: 1.1rem;
+            text-decoration: none;
+            transition: all 0.3s ease;
+            box-shadow: var(--shadow-gold);
+            margin: 10px;
+        }
+
+        .cta-button:hover {
+            transform: translateY(-3px) scale(1.05);
+            box-shadow: var(--shadow-gold), 0 10px 20px rgba(212, 175, 55, 0.3);
+        }
+
+        .cta-secondary {
+            background: transparent;
+            color: var(--accent-gold);
+            border: 2px solid var(--accent-gold);
+        }
+
+        .cta-secondary:hover {
+            background: var(--accent-gold);
+            color: var(--primary-dark);
+        }
+
+        /* Footer */
+        .footer {
+            background: var(--primary-dark);
+            padding: 40px 0;
+            margin-top: 80px;
+            border-top: 3px solid var(--accent-gold);
+            text-align: center;
+        }
+
+        .footer-content {
+            color: var(--text-muted);
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .gallery-grid {
+                grid-template-columns: 1fr;
+            }
+            
+            .nav-container {
+                gap: 15px;
+            }
+            
+            .nav-item {
+                padding: 8px 12px;
+                font-size: 0.85rem;
+            }
+            
+            .art-preview {
+                height: 200px;
+                font-size: 3rem;
+            }
+        }
+
+        /* Loading Animation */
+        .loading-overlay {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: var(--primary-dark);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            z-index: 1000;
+            transition: opacity 0.5s ease;
+        }
+
+        .mystical-loader {
+            width: 60px;
+            height: 60px;
+            border: 4px solid transparent;
+            border-top: 4px solid var(--accent-gold);
+            border-radius: 50%;
+            animation: spin 1s linear infinite;
+        }
+
+        @keyframes spin {
+            0% { transform: rotate(0deg); }
+            100% { transform: rotate(360deg); }
+        }
+
+        .hidden {
+            opacity: 0;
+            pointer-events: none;
+        }
+
+        /* Special Effects */
+        .glowing-border {
+            position: relative;
+        }
+
+        .glowing-border::before {
+            content: '';
+            position: absolute;
+            top: -2px;
+            left: -2px;
+            right: -2px;
+            bottom: -2px;
+            background: var(--gradient-gold);
+            border-radius: inherit;
+            z-index: -1;
+            animation: borderGlow 3s ease-in-out infinite alternate;
+        }
+
+        @keyframes borderGlow {
+            0% { opacity: 0.5; }
+            100% { opacity: 1; }
+        }
+    </style>
+</head>
+<body>
+    <!-- Loading Overlay -->
+    <div class="loading-overlay" id="loadingOverlay">
+        <div class="mystical-loader"></div>
+    </div>
+
+    <!-- Cosmic Background -->
+    <div class="cosmic-background"></div>
+
+    <!-- Header -->
+    <header class="header">
+        <div class="container">
+            <h1 class="main-title">The Creative Grimoire</h1>
+            <p class="subtitle">Professional Eldritch Art & Mystical Design</p>
+            <div class="professional-badge">✨ Master of Digital Conjuration</div>
+        </div>
+    </header>
+
+    <!-- Navigation -->
+    <nav class="nav">
+        <div class="container">
+            <div class="nav-container">
+                <a href="#gallery" class="nav-item active">Gallery</a>
+                <a href="#process" class="nav-item">My Process</a>
+                <a href="#services" class="nav-item">Commission Work</a>
+                <a href="#testimonials" class="nav-item">Reviews</a>
+                <a href="#contact" class="nav-item">Contact</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Featured Gallery Section -->
+    <section id="gallery" class="featured-section">
+        <div class="container">
+            <h2 class="section-title">Featured Artworks</h2>
+            
+            <div class="gallery-grid">
+                <!-- Eldritch Certificate Collection -->
+                <div class="art-card glowing-border">
+                    <div class="art-preview">🎓</div>
+                    <div class="art-info">
+                        <h3 class="art-title">Eldritch Academy Certificates</h3>
+                        <p class="art-description">Professionally crafted mystical certificates featuring intricate creatures, ornate borders, and authentic aging effects. Perfect for RPGs, horror games, or occult-themed projects.</p>
+                        <div class="art-specs">
+                            <span>High-res PNG/PDF</span>
+                            <span>Custom text available</span>
+                        </div>
+                        <div class="art-price">$25 - $75</div>
+                        <div class="art-tags">
+                            <span class="art-tag">RPG Props</span>
+                            <span class="art-tag">Horror</span>
+                            <span class="art-tag">Custom Text</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Mandala Collection -->
+                <div class="art-card">
+                    <div class="art-preview">🕸️</div>
+                    <div class="art-info">
+                        <h3 class="art-title">Cosmic Horror Mandalas</h3>
+                        <p class="art-description">Sacred geometry meets eldritch terror. Intricate mandala designs surrounded by otherworldly creatures and mystical symbols. Wall art that transforms any space.</p>
+                        <div class="art-specs">
+                            <span>Print-ready quality</span>
+                            <span>Multiple sizes</span>
+                        </div>
+                        <div class="art-price">$15 - $45</div>
+                        <div class="art-tags">
+                            <span class="art-tag">Wall Art</span>
+                            <span class="art-tag">Mandala</span>
+                            <span class="art-tag">Cosmic Horror</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Grimoire Pages Collection -->
+                <div class="art-card">
+                    <div class="art-preview">📜</div>
+                    <div class="art-info">
+                        <h3 class="art-title">Illuminated Grimoire Pages</h3>
+                        <p class="art-description">Authentic-looking ancient texts with detailed illustrations, mystical symbols, and scholarly annotations. Based on extensive historical research and traditional techniques.</p>
+                        <div class="art-specs">
+                            <span>Historically accurate</span>
+                            <span>Printable format</span>
+                        </div>
+                        <div class="art-price">$30 - $100</div>
+                        <div class="art-tags">
+                            <span class="art-tag">Historical</span>
+                            <span class="art-tag">Educational</span>
+                            <span class="art-tag">Occult</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Character Portraits -->
+                <div class="art-card">
+                    <div class="art-preview">👁️</div>
+                    <div class="art-info">
+                        <h3 class="art-title">Eldritch Entity Portraits</h3>
+                        <p class="art-description">Detailed portraits of otherworldly beings and cosmic horrors. Each piece captures the alien beauty and terror of entities beyond human comprehension.</p>
+                        <div class="art-specs">
+                            <span>Ultra detailed</span>
+                            <span>Concept art quality</span>
+                        </div>
+                        <div class="art-price">$50 - $150</div>
+                        <div class="art-tags">
+                            <span class="art-tag">Concept Art</span>
+                            <span class="art-tag">Character Design</span>
+                            <span class="art-tag">Horror</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Interactive Scenes -->
+                <div class="art-card">
+                    <div class="art-preview">🌌</div>
+                    <div class="art-info">
+                        <h3 class="art-title">Mystical Scene Compositions</h3>
+                        <p class="art-description">Cinematic scenes blending reality with supernatural elements. Perfect for book covers, album art, or film concept work. Each piece tells a complete story.</p>
+                        <div class="art-specs">
+                            <span>Cinematic quality</span>
+                            <span>Narrative focused</span>
+                        </div>
+                        <div class="art-price">$100 - $300</div>
+                        <div class="art-tags">
+                            <span class="art-tag">Book Covers</span>
+                            <span class="art-tag">Album Art</span>
+                            <span class="art-tag">Cinematic</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Digital Tools -->
+                <div class="art-card">
+                    <div class="art-preview">⚙️</div>
+                    <div class="art-info">
+                        <h3 class="art-title">Occult Symbol Generator</h3>
+                        <p class="art-description">Interactive digital tool for creating custom mystical symbols and sigils. Based on traditional grimoire methodologies with modern digital precision.</p>
+                        <div class="art-specs">
+                            <span>Interactive tool</span>
+                            <span>Unlimited use</span>
+                        </div>
+                        <div class="art-price">$75 - $200</div>
+                        <div class="art-tags">
+                            <span class="art-tag">Digital Tool</span>
+                            <span class="art-tag">Generator</span>
+                            <span class="art-tag">Interactive</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Process Section -->
+    <section id="process" class="process-section">
+        <div class="container">
+            <h2 class="section-title">The Conjuration Process</h2>
+            
+            <div class="process-grid">
+                <div class="process-step">
+                    <div class="process-icon">📚</div>
+                    <div class="process-title">Deep Research</div>
+                    <p>Extensive study of historical grimoires, sacred texts, and ancient civilizations to ensure authenticity and cultural accuracy in every piece.</p>
+                </div>
+
+                <div class="process-step">
+                    <div class="process-icon">🎨</div>
+                    <div class="process-title">Artistic Foundation</div>
+                    <p>Hand-crafted base artwork combining traditional techniques with digital precision, creating unique visual elements that serve as creative seeds.</p>
+                </div>
+
+                <div class="process-step">
+                    <div class="process-icon">🤖</div>
+                    <div class="process-title">AI Collaboration</div>
+                    <p>Strategic partnership with AI systems, using carefully crafted prompts and iterative refinement to achieve impossible detail and consistency.</p>
+                </div>
+
+                <div class="process-step">
+                    <div class="process-icon">✨</div>
+                    <div class="process-title">Mystical Synthesis</div>
+                    <p>Final composition and enhancement, where all elements unite into cohesive artworks that capture both historical authenticity and modern appeal.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section id="services" class="services-section">
+        <div class="container">
+            <h2 class="section-title">Commission Services</h2>
+            
+            <div class="services-grid">
+                <div class="service-card">
+                    <h3 class="service-title">Custom Certificates</h3>
+                    <p>Personalized mystical certificates for your RPG campaigns, special events, or creative projects. Each piece tailored to your specific needs with custom text and thematic elements.</p>
+                    <div class="service-price">Starting at $150</div>
+                </div>
+
+                <div class="service-card">
+                    <h3 class="service-title">Book Cover Art</h3>
+                    <p>Professional cover designs for horror, fantasy, and occult literature. Cinematic compositions that capture the essence of your story and attract your target audience.</p>
+                    <div class="service-price">$300 - $800</div>
+                </div>
+
+                <div class="service-card">
+                    <h3 class="service-title">Game Asset Collections</h3>
+                    <p>Complete visual asset packages for indie games, including UI elements, character portraits, environmental art, and promotional materials.</p>
+                    <div class="service-price">$500 - $2000</div>
+                </div>
+
+                <div class="service-card">
+                    <h3 class="service-title">Educational Materials</h3>
+                    <p>Historically accurate illustrations for academic publications, museums, and educational content. Combining scholarly research with engaging visual storytelling.</p>
+                    <div class="service-price">$200 - $1000</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials Section -->
+    <section id="testimonials" class="testimonial-section">
+        <div class="container">
+            <h2 class="section-title">Client Testimonials</h2>
+            
+            <div class="testimonial">
+                "The level of detail and historical accuracy in these pieces is incredible. Perfect for our horror RPG campaign - our players were completely immersed in the world these certificates helped create."
+                <div class="testimonial-author">— D&D Campaign Director</div>
+            </div>
+
+            <div class="testimonial">
+                "Professional quality work that exceeded all expectations. The combination of artistic skill and deep research knowledge is rare in today's market. Highly recommended for any serious project."
+                <div class="testimonial-author">— Independent Game Developer</div>
+            </div>
+
+            <div class="testimonial">
+                "Absolutely stunning artwork that captures the perfect balance between beautiful and unsettling. These pieces have become centerpieces in our horror-themed exhibitions."
+                <div class="testimonial-author">— Gallery Curator</div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="cta-section">
+        <div class="container">
+            <h2 class="section-title">Ready to Commission Your Vision?</h2>
+            <p style="font-size: 1.2rem; margin-bottom: 40px; color: var(--text-muted);">
+                Let's collaborate to bring your creative vision to life with professional eldritch artistry
+            </p>
+            
+            <a href="#contact" class="cta-button">Start Your Commission</a>
+            <a href="#gallery" class="cta-button cta-secondary">Browse More Work</a>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer id="contact" class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <h3 style="font-family: 'Cinzel', serif; color: var(--accent-gold); margin-bottom: 20px;">Contact & Commission Info</h3>
+                
+                <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 30px; margin: 30px 0;">
+                    <div>
+                        <h4 style="color: var(--accent-gold); margin-bottom: 10px;">Commission Process</h4>
+                        <p>1. Initial consultation & concept discussion<br>
+                        2. Research phase & visual references<br>
+                        3. Draft creation & client feedback<br>
+                        4. Final refinement & delivery</p>
+                    </div>
+                    
+                    <div>
+                        <h4 style="color: var(--accent-gold); margin-bottom: 10px;">Turnaround Times</h4>
+                        <p>• Simple certificates: 3-5 days<br>
+                        • Complex compositions: 1-2 weeks<br>
+                        • Large collections: 2-4 weeks<br>
+                        • Rush orders: +50% fee</p>
+                    </div>
+                    
+                    <div>
+                        <h4 style="color: var(--accent-gold); margin-bottom: 10px;">File Formats</h4>
+                        <p>• High-resolution PNG (300+ DPI)<br>
+                        • Vector formats when applicable<br>
+                        • Print-ready PDF files<br>
+                        • Web-optimized versions</p>
+                    </div>
+                </div>
+                
+                <div style="margin: 40px 0; padding: 30px; background: rgba(212, 175, 55, 0.1); border-radius: 15px; border: 1px solid var(--accent-gold);">
+                    <h4 style="color: var(--accent-gold); margin-bottom: 15px; text-align: center;">Ready to Start Your Project?</h4>
+                    <p style="text-align: center; margin-bottom: 20px;">Professional eldritch artistry for discerning clients who appreciate the intersection of historical authenticity and cutting-edge digital craftsmanship.</p>
+                    <div style="text-align: center;">
+                        <a href="mailto:commissions@creativegrimoire.com" style="color: var(--accent-gold); text-decoration: none; font-weight: 600; font-size: 1.1rem;">📧 commissions@creativegrimoire.com</a>
+                    </div>
+                </div>
+                
+                <p style="color: var(--text-muted); font-size: 0.9rem; margin-top: 30px; text-align: center;">
+                    © 2024 The Creative Grimoire. Professional occult artistry & mystical design services.<br>
+                    Specializing in historically-informed digital conjuration for games, films, and collectors.
+                </p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Loading animation
+        window.addEventListener('load', function() {
+            setTimeout(() => {
+                document.getElementById('loadingOverlay').classList.add('hidden');
+            }, 1200);
+        });
+
+        // Smooth scrolling navigation
+        document.querySelectorAll('.nav-item, .cta-button').forEach(item => {
+            item.addEventListener('click', function(e) {
+                const href = this.getAttribute('href');
+                if (href && href.startsWith('#')) {
+                    e.preventDefault();
+                    const targetId = href.substring(1);
+                    const targetElement = document.getElementById(targetId);
+                    
+                    if (targetElement) {
+                        const offsetTop = targetElement.getBoundingClientRect().top + window.pageYOffset - 80;
+                        window.scrollTo({
+                            top: offsetTop,
+                            behavior: 'smooth'
+                        });
+                        
+                        // Update active nav item
+                        document.querySelectorAll('.nav-item').forEach(nav => nav.classList.remove('active'));
+                        if (this.classList.contains('nav-item')) {
+                            this.classList.add('active');
+                        }
+                    }
+                }
+            });
+        });
+
+        // Art card interactions
+        document.querySelectorAll('.art-card').forEach(card => {
+            card.addEventListener('click', function() {
+                // Create a modal or detailed view
+                const title = this.querySelector('.art-title').textContent;
+                const description = this.querySelector('.art-description').textContent;
+                const price = this.querySelector('.art-price').textContent;
+                
+                // Simple alert for demo - replace with proper modal
+                alert(`${title}\n\n${description}\n\nPrice: ${price}\n\nContact us for commission details!`);
+            });
+        });
+
+        // Intersection Observer for scroll animations
+        const observerOptions = {
+            threshold: 0.1,
+            rootMargin: '0px 0px -50px 0px'
+        };
+
+        const observer = new IntersectionObserver(function(entries) {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.style.opacity = '1';
+                    entry.target.style.transform = 'translateY(0)';
+                }
+            });
+        }, observerOptions);
+
+        // Observe elements for scroll animations
+        document.querySelectorAll('.art-card, .process-step, .service-card').forEach(el => {
+            el.style.opacity = '0';
+            el.style.transform = 'translateY(30px)';
+            el.style.transition = 'opacity 0.8s ease, transform 0.8s ease';
+            observer.observe(el);
+        });
+
+        // Parallax effect for cosmic background
+        window.addEventListener('scroll', function() {
+            const scrolled = window.pageYOffset;
+            const cosmic = document.querySelector('.cosmic-background');
+            const rate = scrolled * -0.2;
+            cosmic.style.transform = `translateY(${rate}px)`;
+        });
+
+        // Dynamic pricing calculator (optional enhancement)
+        function calculateCommissionPrice(complexity, timeline, customization) {
+            const basePrice = {
+                simple: 150,
+                moderate: 300,
+                complex: 600,
+                cinematic: 1200
+            };
+            
+            const rushMultiplier = timeline === 'rush' ? 1.5 : 1;
+            const customMultiplier = customization === 'high' ? 1.3 : 1;
+            
+            return Math.round(basePrice[complexity] * rushMultiplier * customMultiplier);
+        }
+
+        // Add hover sound effects (optional)
+        document.querySelectorAll('.art-card, .cta-button').forEach(element => {
+            element.addEventListener('mouseenter', function() {
+                // You could add subtle sound effects here
+                this.style.transition = 'all 0.3s cubic-bezier(0.4, 0, 0.2, 1)';
+            });
+        });
+
+        // Gallery filter functionality (for future expansion)
+        function filterGallery(category) {
+            const cards = document.querySelectorAll('.art-card');
+            cards.forEach(card => {
+                const tags = card.querySelectorAll('.art-tag');
+                let hasCategory = false;
+                
+                tags.forEach(tag => {
+                    if (tag.textContent.toLowerCase().includes(category.toLowerCase())) {
+                        hasCategory = true;
+                    }
+                });
+                
+                if (category === 'all' || hasCategory) {
+                    card.style.display = 'block';
+                    card.style.opacity = '1';
+                } else {
+                    card.style.opacity = '0.3';
+                }
+            });
+        }
+
+        // Contact form validation (if you add a form later)
+        function validateCommissionForm(formData) {
+            const required = ['name', 'email', 'projectType', 'description'];
+            const missing = required.filter(field => !formData[field]);
+            
+            if (missing.length > 0) {
+                alert(`Please fill in: ${missing.join(', ')}`);
+                return false;
+            }
+            
+            const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+            if (!emailRegex.test(formData.email)) {
+                alert('Please enter a valid email address');
+                return false;
+            }
+            
+            return true;
+        }
+    </script>
+</body>
+</html>
