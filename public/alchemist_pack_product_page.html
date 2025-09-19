@@ -541,6 +541,135 @@
                 font-size: 2rem;
             }
         }
+
+        /* YouTube Shorts Section Styles */
+        .shorts-section {
+            background: rgba(0,0,0,0.4);
+            padding: 40px 20px;
+            margin: 40px 30px;
+            border-radius: 15px;
+            border: 2px solid #DAA520;
+            text-align: center;
+            box-shadow: 0 8px 30px rgba(139,69,19,0.2);
+        }
+
+        .shorts-title {
+            font-family: 'Cinzel', serif;
+            font-size: 2.2rem;
+            color: #FFD700;
+            margin-bottom: 10px;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.8);
+        }
+
+        .shorts-subtitle {
+            font-size: 1rem;
+            color: #f4f1e8;
+            margin-bottom: 30px;
+            opacity: 0.9;
+        }
+
+        .shorts-container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .shorts-box {
+            background: rgba(218,165,32,0.05);
+            border-radius: 12px;
+            border: 2px solid rgba(218,165,32,0.3);
+            padding: 20px;
+            max-width: 350px;
+            box-shadow: 0 5px 20px rgba(218,165,32,0.2);
+            transition: all 0.3s ease;
+        }
+
+        .shorts-box:hover {
+            transform: translateY(-3px);
+            border-color: #FFD700;
+            box-shadow: 0 8px 30px rgba(218,165,32,0.3);
+        }
+
+        .shorts-header {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-bottom: 15px;
+            gap: 10px;
+        }
+
+        .shorts-icon {
+            font-size: 1.5rem;
+        }
+
+        .shorts-name {
+            font-family: 'Cinzel', serif;
+            font-size: 1.2rem;
+            color: #FFD700;
+            margin: 0;
+        }
+
+        .shorts-video {
+            margin-bottom: 15px;
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.3);
+        }
+
+        .shorts-video iframe {
+            border-radius: 8px;
+            display: block;
+        }
+
+        .shorts-footer {
+            text-align: center;
+        }
+
+        .shorts-link {
+            display: inline-block;
+            padding: 8px 16px;
+            background: linear-gradient(135deg, #DC3545, #FF6B6B);
+            color: #ffffff;
+            text-decoration: none;
+            border-radius: 6px;
+            font-size: 0.9rem;
+            font-weight: 600;
+            border: 1px solid #B02A37;
+            transition: all 0.3s ease;
+        }
+
+        .shorts-link:hover {
+            transform: translateY(-1px);
+            background: linear-gradient(135deg, #FF6B6B, #DC3545);
+            box-shadow: 0 3px 10px rgba(220,53,69,0.4);
+        }
+
+        @media (max-width: 768px) {
+            .shorts-section {
+                margin: 20px 15px;
+                padding: 30px 15px;
+            }
+
+            .shorts-title {
+                font-size: 1.8rem;
+            }
+
+            .shorts-box {
+                max-width: 100%;
+                padding: 15px;
+            }
+
+            .shorts-video iframe {
+                width: 100%;
+                height: 400px;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .shorts-video iframe {
+                height: 350px;
+            }
+        }
     </style>
 </head>
 <body>
@@ -741,6 +870,51 @@
                 <a href="https://www.amazon.ca/dp/B0FRJJL5HX" target="_blank" rel="noopener noreferrer" class="option-button">
                     Get on Amazon
                 </a>
+            </div>
+
+            <div class="option-card">
+                <div class="option-icon">🎨</div>
+                <h3 class="option-name">Patreon Support</h3>
+                <p class="option-description">
+                    Support ongoing alchemical research and get exclusive content. Join the creator community.
+                </p>
+                <a href="https://www.patreon.com/c/alchemists468" target="_blank" rel="noopener noreferrer" class="option-button">
+                    Support on Patreon
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- YouTube Shorts Section -->
+    <section class="shorts-section">
+        <h2 class="shorts-title">⚡ Alchemical Insights</h2>
+        <p class="shorts-subtitle">
+            Quick transformative wisdom from the Alchemist's forge.
+        </p>
+
+        <div class="shorts-container">
+            <div class="shorts-box">
+                <div class="shorts-header">
+                    <div class="shorts-icon">🎬</div>
+                    <h3 class="shorts-name">Featured Short</h3>
+                </div>
+                <div class="shorts-video">
+                    <iframe
+                        width="315"
+                        height="560"
+                        src="https://www.youtube.com/embed/FedEOkkq1xc"
+                        title="YouTube video player"
+                        frameborder="0"
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                        allowfullscreen
+                        loading="lazy">
+                    </iframe>
+                </div>
+                <div class="shorts-footer">
+                    <a href="https://www.youtube.com/shorts/FedEOkkq1xc" target="_blank" rel="noopener noreferrer" class="shorts-link">
+                        Watch on YouTube ↗
+                    </a>
+                </div>
             </div>
         </div>
     </section>
