@@ -255,6 +255,361 @@
             }
         }
 
+        /* ===== ALCHEMIST PACK SECTION ===== */
+        .pack-section {
+            background: linear-gradient(135deg, #0a0806 0%, #1a1410 30%, #2c1810 70%, #3d2518 100%);
+            padding: 60px 20px;
+            margin: 40px 30px;
+            border-radius: 25px;
+            border: 4px solid #DAA520;
+            box-shadow: 0 20px 50px rgba(218,165,32,0.3);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .pack-section::before {
+            content: '';
+            position: absolute;
+            top: -30%;
+            left: -30%;
+            width: 160%;
+            height: 160%;
+            background: radial-gradient(circle, rgba(218,165,32,0.05) 0%, transparent 60%);
+            animation: pack-glow 30s linear infinite;
+        }
+
+        @keyframes pack-glow {
+            from { transform: rotate(0deg); }
+            to { transform: rotate(360deg); }
+        }
+
+        .pack-container {
+            max-width: 1400px;
+            margin: 0 auto;
+            position: relative;
+            z-index: 2;
+        }
+
+        .pack-header {
+            text-align: center;
+            margin-bottom: 50px;
+            position: relative;
+        }
+
+        .pack-title {
+            font-family: 'Cinzel', serif;
+            font-size: clamp(2.5rem, 5vw, 4rem);
+            color: #FFD700;
+            margin-bottom: 30px;
+            text-shadow: 3px 3px 8px rgba(0,0,0,0.9);
+            letter-spacing: 1px;
+        }
+
+        .pack-price-badge {
+            display: inline-flex;
+            flex-direction: column;
+            align-items: center;
+            background: linear-gradient(135deg, #DAA520, #FFD700);
+            padding: 20px 40px;
+            border-radius: 20px;
+            box-shadow: 0 10px 30px rgba(218,165,32,0.4);
+            border: 3px solid #B8860B;
+        }
+
+        .price {
+            font-family: 'Cinzel', serif;
+            font-size: 3rem;
+            font-weight: 700;
+            color: #2c1810;
+            text-shadow: 2px 2px 4px rgba(255,255,255,0.3);
+        }
+
+        .price-label {
+            font-size: 0.9rem;
+            color: #2c1810;
+            font-weight: 600;
+            letter-spacing: 1px;
+            opacity: 0.9;
+        }
+
+        .pack-content {
+            display: grid;
+            grid-template-columns: 2fr 1fr;
+            gap: 50px;
+            align-items: start;
+        }
+
+        .pack-main {
+            display: grid;
+            grid-template-columns: 1fr 300px;
+            gap: 40px;
+            align-items: start;
+        }
+
+        .pack-description {
+            background: rgba(0,0,0,0.7);
+            padding: 30px;
+            border-radius: 15px;
+            border: 2px solid #DAA520;
+        }
+
+        .pack-subtitle {
+            font-family: 'Cinzel', serif;
+            font-size: 1.8rem;
+            color: #FFD700;
+            margin-bottom: 20px;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.8);
+        }
+
+        .pack-text {
+            font-size: 1.1rem;
+            line-height: 1.7;
+            color: #f4f1e8;
+            margin-bottom: 30px;
+        }
+
+        .pack-features {
+            display: grid;
+            gap: 20px;
+        }
+
+        .feature-item {
+            display: flex;
+            align-items: flex-start;
+            gap: 15px;
+            background: rgba(218,165,32,0.1);
+            padding: 20px;
+            border-radius: 10px;
+            border: 1px solid rgba(218,165,32,0.3);
+            transition: all 0.3s ease;
+        }
+
+        .feature-item:hover {
+            transform: translateX(10px);
+            background: rgba(218,165,32,0.2);
+            border-color: #FFD700;
+        }
+
+        .feature-icon {
+            font-size: 1.8rem;
+            min-width: 40px;
+            text-align: center;
+        }
+
+        .feature-content h4 {
+            font-family: 'Cinzel', serif;
+            font-size: 1.1rem;
+            color: #FFD700;
+            margin-bottom: 8px;
+        }
+
+        .feature-content p {
+            font-size: 0.95rem;
+            color: #f4f1e8;
+            line-height: 1.5;
+        }
+
+        .pack-visual {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .pack-image {
+            position: relative;
+            width: 250px;
+            height: 250px;
+            background: radial-gradient(circle, rgba(218,165,32,0.2) 0%, rgba(139,69,19,0.8) 100%);
+            border-radius: 50%;
+            border: 3px solid #DAA520;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            box-shadow: 0 15px 40px rgba(218,165,32,0.3);
+        }
+
+        .alchemical-symbol {
+            font-size: 6rem;
+            z-index: 2;
+            position: relative;
+        }
+
+        .floating-elements {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+        }
+
+        .element {
+            position: absolute;
+            font-size: 2rem;
+            animation: float 6s ease-in-out infinite;
+        }
+
+        .element.fire {
+            top: 10%;
+            left: 20%;
+            animation-delay: 0s;
+        }
+
+        .element.water {
+            top: 20%;
+            right: 15%;
+            animation-delay: 1.5s;
+        }
+
+        .element.earth {
+            bottom: 20%;
+            right: 20%;
+            animation-delay: 3s;
+        }
+
+        .element.air {
+            bottom: 15%;
+            left: 15%;
+            animation-delay: 4.5s;
+        }
+
+        @keyframes float {
+            0%, 100% { transform: translateY(0px) rotate(0deg); }
+            25% { transform: translateY(-10px) rotate(5deg); }
+            50% { transform: translateY(-20px) rotate(0deg); }
+            75% { transform: translateY(-10px) rotate(-5deg); }
+        }
+
+        .pack-cta {
+            grid-column: 1 / -1;
+            margin-top: 40px;
+        }
+
+        .cta-content {
+            background: linear-gradient(135deg, rgba(218,165,32,0.1), rgba(139,69,19,0.8));
+            padding: 40px;
+            border-radius: 20px;
+            border: 3px solid #DAA520;
+            text-align: center;
+            box-shadow: 0 15px 40px rgba(218,165,32,0.2);
+        }
+
+        .cta-title {
+            font-family: 'Cinzel', serif;
+            font-size: 2.2rem;
+            color: #FFD700;
+            margin-bottom: 15px;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.8);
+        }
+
+        .cta-text {
+            font-size: 1.1rem;
+            color: #f4f1e8;
+            margin-bottom: 30px;
+            line-height: 1.6;
+        }
+
+        .cta-buttons {
+            display: flex;
+            gap: 20px;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+
+        .cta-button {
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+            padding: 15px 30px;
+            border-radius: 12px;
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 1rem;
+            transition: all 0.4s ease;
+            cursor: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='32' height='32' viewBox='0 0 32 32'%3E%3Cdefs%3E%3Cstyle%3E@keyframes flame-cta%7B0%25%7Btransform:scale(1) rotate(0deg);opacity:1%7D25%25%7Btransform:scale(1.2) rotate(3deg);opacity:0.95%7D50%25%7Btransform:scale(0.8) rotate(-2deg);opacity:1%7D75%25%7Btransform:scale(1.1) rotate(1deg);opacity:0.9%7D100%25%7Btransform:scale(1) rotate(0deg);opacity:1%7D%7D%3C/style%3E%3C/defs%3E%3Cg transform='translate(16,16)'%3E%3Cpath d='M-1,-12 L1,-12 L1,8 L-1,8 Z' fill='%23c0c0c0' stroke='%23ffd700' stroke-width='0.5'/%3E%3Crect x='-2' y='8' width='4' height='4' fill='%238b4513' stroke='%23daa520' stroke-width='0.5'/%3E%3Cellipse cx='0' cy='-14' rx='3.5' ry='4.5' fill='%23ff4500' opacity='0.8'%3E%3CanimateTransform attributeName='transform' type='scale' values='1,1;1.3,0.7;0.7,1.3;1.1,0.9;1,1' dur='0.5s' repeatCount='indefinite'/%3E%3C/ellipse%3E%3Cellipse cx='0' cy='-16' rx='2.5' ry='3.5' fill='%23ff6347' opacity='0.9'%3E%3CanimateTransform attributeName='transform' type='scale' values='1,1;0.7,1.4;1.4,0.6;0.9,1.1;1,1' dur='0.4s' repeatCount='indefinite'/%3E%3C/ellipse%3E%3Cellipse cx='0' cy='-18' rx='2' ry='3' fill='%23ffd700' opacity='1'%3E%3CanimateTransform attributeName='transform' type='scale' values='1,1;1.5,0.5;0.5,1.5;1.2,0.8;1,1' dur='0.3s' repeatCount='indefinite'/%3E%3C/ellipse%3E%3C/g%3E%3C/svg%3E"), pointer;
+        }
+
+        .cta-button.primary {
+            background: linear-gradient(135deg, #DAA520, #FFD700);
+            color: #2c1810;
+            border: 2px solid #B8860B;
+            box-shadow: 0 8px 25px rgba(218,165,32,0.4);
+        }
+
+        .cta-button.primary:hover {
+            transform: translateY(-5px) scale(1.05);
+            box-shadow: 0 15px 35px rgba(218,165,32,0.6);
+            background: linear-gradient(135deg, #FFD700, #DAA520);
+        }
+
+        .cta-button.secondary {
+            background: rgba(218,165,32,0.2);
+            color: #FFD700;
+            border: 2px solid #DAA520;
+        }
+
+        .cta-button.secondary:hover {
+            transform: translateY(-3px);
+            background: rgba(218,165,32,0.4);
+            border-color: #FFD700;
+        }
+
+        .button-icon {
+            font-size: 1.2rem;
+        }
+
+        .button-text {
+            font-weight: 600;
+        }
+
+        @media (max-width: 1024px) {
+            .pack-content {
+                grid-template-columns: 1fr;
+                gap: 30px;
+            }
+
+            .pack-main {
+                grid-template-columns: 1fr;
+                gap: 30px;
+            }
+
+            .pack-visual {
+                order: -1;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .pack-section {
+                margin: 20px 15px;
+                padding: 40px 20px;
+            }
+
+            .pack-content {
+                gap: 20px;
+            }
+
+            .pack-main {
+                gap: 20px;
+            }
+
+            .pack-image {
+                width: 200px;
+                height: 200px;
+            }
+
+            .alchemical-symbol {
+                font-size: 4rem;
+            }
+
+            .cta-buttons {
+                flex-direction: column;
+                align-items: center;
+            }
+
+            .cta-button {
+                width: 100%;
+                max-width: 300px;
+                justify-content: center;
+            }
+        }
+
         /* ===== SOCIAL MEDIA SECTION ===== */
         .social-section {
             background: linear-gradient(135deg, #0f0a0a 0%, #1a1111 50%, #2c1810 100%);
@@ -524,6 +879,109 @@
             </div>
         </section>
     </main>
+
+    <!-- Alchemist Pack Promotional Section -->
+    <section class="pack-section">
+        <div class="pack-container">
+            <div class="pack-header">
+                <h2 class="pack-title">⚗️ The Alchemist's Digital Grimoire</h2>
+                <div class="pack-price-badge">
+                    <span class="price">$27</span>
+                    <span class="price-label">ONE-TIME</span>
+                </div>
+            </div>
+
+            <div class="pack-content">
+                <div class="pack-main">
+                    <div class="pack-description">
+                        <h3 class="pack-subtitle">🔮 Unlock the Complete Alchemical Collection</h3>
+                        <p class="pack-text">
+                            Step into the digital sanctum of the Royal Library and gain access to the most comprehensive collection of esoteric knowledge ever assembled. This isn't just content—it's a transformation of consciousness.
+                        </p>
+
+                        <div class="pack-features">
+                            <div class="feature-item">
+                                <div class="feature-icon">📚</div>
+                                <div class="feature-content">
+                                    <h4>Complete Digital Library</h4>
+                                    <p>Access to all 35+ specialized pages covering Renaissance art, AI research, esoteric mysteries, and practical guides</p>
+                                </div>
+                            </div>
+
+                            <div class="feature-item">
+                                <div class="feature-icon">🎨</div>
+                                <div class="feature-content">
+                                    <h4>Master Artist Research</h4>
+                                    <p>In-depth studies of Albrecht Dürer, Leonardo da Vinci, and their symbolic techniques</p>
+                                </div>
+                            </div>
+
+                            <div class="feature-item">
+                                <div class="feature-icon">🤖</div>
+                                <div class="feature-content">
+                                    <h4>AI Consciousness Portal</h4>
+                                    <p>Advanced AI research, pattern recognition systems, and LLM creation guides</p>
+                                </div>
+                            </div>
+
+                            <div class="feature-item">
+                                <div class="feature-icon">🌌</div>
+                                <div class="feature-content">
+                                    <h4>Cosmic Mysteries Archive</h4>
+                                    <p>Sacred codices, angelic portals, alchemical research, and mystical traditions</p>
+                                </div>
+                            </div>
+
+                            <div class="feature-item">
+                                <div class="feature-icon">🔬</div>
+                                <div class="feature-content">
+                                    <h4>Scientific Enlightenment</h4>
+                                    <p>Higgs Boson research, parasite ecosystems, pyramid archaeology, and quantum insights</p>
+                                </div>
+                            </div>
+
+                            <div class="feature-item">
+                                <div class="feature-icon">⚔️</div>
+                                <div class="feature-content">
+                                    <h4>Interactive Experience</h4>
+                                    <p>Flaming sword cursors, animated elements, and immersive mystical interfaces</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="pack-visual">
+                        <div class="pack-image">
+                            <div class="alchemical-symbol">⚗️</div>
+                            <div class="floating-elements">
+                                <div class="element fire">🔥</div>
+                                <div class="element water">💧</div>
+                                <div class="element earth">🌍</div>
+                                <div class="element air">💨</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="pack-cta">
+                    <div class="cta-content">
+                        <h3 class="cta-title">Begin Your Alchemical Journey</h3>
+                        <p class="cta-text">Transform your understanding of reality with the complete digital grimoire</p>
+                        <div class="cta-buttons">
+                            <a href="/alchemist_pack_product_page.html" class="cta-button primary">
+                                <span class="button-icon">⚗️</span>
+                                <span class="button-text">Get the Complete Pack - $27</span>
+                            </a>
+                            <a href="/sacred_codex.html" class="cta-button secondary">
+                                <span class="button-icon">📜</span>
+                                <span class="button-text">Preview Sacred Codex</span>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
 
     <!-- Social Media Section -->
     <section class="social-section">
