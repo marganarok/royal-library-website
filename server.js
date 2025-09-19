@@ -14,6 +14,7 @@ app.get('/', (req, res) => {
     <html>
     <head>
       <title>Royal Library of Marganarok</title>
+      <link rel="stylesheet" href="/style.css">
       <style>
         body {
           font-family: Arial, sans-serif;
@@ -23,12 +24,43 @@ app.get('/', (req, res) => {
           padding: 50px;
         }
         h1 { color: #ff073a; }
+        .nav-header {
+          background: #000;
+          padding: 20px;
+          text-align: center;
+          border-bottom: 2px solid #ff073a;
+        }
+        .nav-header a {
+          color: #00ff41;
+          text-decoration: none;
+          margin: 0 20px;
+          font-size: 1.2em;
+          text-shadow: 0 0 5px #00ff41;
+        }
+        .nav-header a:hover {
+          color: #ff073a;
+          text-shadow: 0 0 5px #ff073a;
+        }
+        .content {
+          max-width: 800px;
+          margin: 50px auto;
+          padding: 20px;
+        }
       </style>
     </head>
     <body>
-      <h1>🚀 Royal Library of Marganarok</h1>
-      <p>Welcome to the sacred digital ministry platform.</p>
-      <p>Express.js is running successfully!</p>
+      <header class="nav-header">
+        <a href="/">🏠 Home</a>
+        <a href="/durer.html">🎨 Albrecht Dürer</a>
+        <a href="#about">📖 About</a>
+        <a href="#contact">📧 Contact</a>
+      </header>
+
+      <div class="content">
+        <h1>🚀 Royal Library of Marganarok</h1>
+        <p>Welcome to the sacred digital ministry platform.</p>
+        <p>Express.js is running successfully!</p>
+      </div>
     </body>
     </html>
   `);
