@@ -3,27 +3,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>The Alchemist's Pack - Digital Art Collection</title>
-    <meta name="description" content="A curated collection of 10-12 masterpiece digital artworks with full resolution files, lore documentation, and behind-the-scenes content.">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;500;600;700&family=Crimson+Text:ital,wght@0,400;0,600;1,400&family=Playfair+Display:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
-    
+    <title>The Alchemist's Digital Grimoire - $27 Complete Pack</title>
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;500;600;700&family=Crimson+Text:ital,wght@0,400;0,600;1,400&display=swap" rel="stylesheet">
     <style>
-        :root {
-            --royal-purple: #4a148c;
-            --deep-gold: #b8860b;
-            --mystic-blue: #1a237e;
-            --crimson-red: #b71c1c;
-            --parchment: #f5f5dc;
-            --ink-black: #1a1a1a;
-            --silver: #c0c0c0;
-            --shadow-deep: 0 8px 32px rgba(0, 0, 0, 0.3);
-            --shadow-gold: 0 0 20px rgba(184, 134, 11, 0.4);
-            --gradient-royal: linear-gradient(135deg, var(--royal-purple), var(--mystic-blue));
-            --gradient-gold: linear-gradient(45deg, var(--deep-gold), #daa520, var(--deep-gold));
-        }
-
         * {
             margin: 0;
             padding: 0;
@@ -32,616 +14,571 @@
 
         body {
             font-family: 'Crimson Text', serif;
-            background: linear-gradient(135deg, #0f0f23, #1a1a2e, #16213e);
-            color: #ffffff;
+            background: linear-gradient(135deg, #1a0f0a 0%, #2c1810 30%, #8B4513 70%, #DAA520 100%);
+            color: #f4f1e8;
             line-height: 1.6;
-            overflow-x: hidden;
+            min-height: 100vh;
+            cursor: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='32' height='32' viewBox='0 0 32 32'%3E%3Cdefs%3E%3Cstyle%3E@keyframes flame%7B0%25%7Btransform:scale(1) rotate(0deg);opacity:1%7D25%25%7Btransform:scale(1.1) rotate(2deg);opacity:0.9%7D50%25%7Btransform:scale(0.9) rotate(-1deg);opacity:1%7D75%25%7Btransform:scale(1.05) rotate(1deg);opacity:0.95%7D100%25%7Btransform:scale(1) rotate(0deg);opacity:1%7D%7D@keyframes sword-glow%7B0%25%2C100%25%7Bfilter:drop-shadow(0 0 3px %23ff4500)%7D50%25%7Bfilter:drop-shadow(0 0 8px %23ff6347)%7D%7D%3C/style%3E%3C/defs%3E%3Cg transform='translate(16,16)'%3E%3C!-- Sword Blade --%3E%3Cpath d='M-1,-12 L1,-12 L1,8 L-1,8 Z' fill='%23c0c0c0' stroke='%23ffd700' stroke-width='0.5'/%3E%3C!-- Sword Handle --%3E%3Crect x='-2' y='8' width='4' height='4' fill='%238b4513' stroke='%23daa520' stroke-width='0.5'/%3E%3C!-- Flame Base --%3E%3Cellipse cx='0' cy='-14' rx='3' ry='4' fill='%23ff4500' opacity='0.8'%3E%3CanimateTransform attributeName='transform' type='scale' values='1,1;1.2,0.8;0.8,1.2;1.1,0.9;1,1' dur='0.6s' repeatCount='indefinite'/%3E%3C/ellipse%3E%3C!-- Flame Middle --%3E%3Cellipse cx='0' cy='-16' rx='2' ry='3' fill='%23ff6347' opacity='0.9'%3E%3CanimateTransform attributeName='transform' type='scale' values='1,1;0.8,1.3;1.3,0.7;0.9,1.1;1,1' dur='0.5s' repeatCount='indefinite'/%3E%3C/ellipse%3E%3C!-- Flame Top --%3E%3Cellipse cx='0' cy='-18' rx='1.5' ry='2.5' fill='%23ffd700' opacity='1'%3E%3CanimateTransform attributeName='transform' type='scale' values='1,1;1.4,0.6;0.6,1.4;1.2,0.8;1,1' dur='0.4s' repeatCount='indefinite'/%3E%3C/ellipse%3E%3C!-- Spark Particles --%3E%3Ccircle cx='-1' cy='-15' r='0.3' fill='%23ffffff'%3E%3Canimate attributeName='opacity' values='0;1;0' dur='0.8s' repeatCount='indefinite'/%3E%3C/ellipse%3E%3Ccircle cx='1' cy='-17' r='0.2' fill='%23ffff00'%3E%3Canimate attributeName='opacity' values='0;1;0' dur='1.2s' repeatCount='indefinite'/%3E%3C/ellipse%3E%3Ccircle cx='0' cy='-19' r='0.25' fill='%23ff69b4'%3E%3Canimate attributeName='opacity' values='0;1;0' dur='0.6s' repeatCount='indefinite'/%3E%3C/ellipse%3E%3C/g%3E%3C/svg%3E"), auto;
         }
 
-        .container {
-            max-width: 1200px;
-            margin: 0 auto;
-            padding: 0 20px;
-        }
-
-        /* Header */
-        .header {
-            text-align: center;
-            padding: 60px 0;
-            border-bottom: 2px solid var(--deep-gold);
-        }
-
-        .main-title {
-            font-family: 'Cinzel', serif;
-            font-size: clamp(2.5rem, 6vw, 4rem);
-            font-weight: 700;
-            background: var(--gradient-gold);
-            -webkit-background-clip: text;
-            background-clip: text;
-            -webkit-text-fill-color: transparent;
-            margin-bottom: 20px;
-            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
-        }
-
-        .subtitle {
-            font-family: 'Playfair Display', serif;
-            font-size: 1.5rem;
-            color: var(--silver);
-            font-style: italic;
-            margin-bottom: 15px;
-        }
-
-        .price-badge {
-            display: inline-block;
-            background: var(--gradient-royal);
-            color: white;
-            padding: 15px 30px;
-            border-radius: 50px;
-            font-size: 1.8rem;
-            font-weight: 700;
-            margin-top: 20px;
-            border: 2px solid var(--deep-gold);
-            box-shadow: var(--shadow-gold);
-        }
-
-        /* Product Overview */
-        .product-overview {
-            padding: 80px 0;
-            text-align: center;
-        }
-
-        .overview-text {
-            font-size: 1.3rem;
-            max-width: 800px;
-            margin: 0 auto 60px;
-            color: #e0e0e0;
-            line-height: 1.8;
-        }
-
-        .royal-decree {
-            background: linear-gradient(135deg, rgba(74, 20, 140, 0.3), rgba(26, 35, 126, 0.3));
-            border: 2px solid var(--deep-gold);
+        .nav-royal {
+            background: rgba(0,0,0,0.8);
+            padding: 20px;
+            margin: 20px;
             border-radius: 15px;
-            padding: 40px;
-            margin: 40px 0;
-            position: relative;
+            border: 3px solid #DAA520;
+            box-shadow: 0 8px 30px rgba(218,165,32,0.2);
         }
 
-        .royal-decree::before {
-            content: "👑";
-            position: absolute;
-            top: -15px;
-            left: 50%;
-            transform: translateX(-50%);
-            background: var(--gradient-royal);
-            padding: 10px 20px;
-            border-radius: 25px;
-            font-size: 1.5rem;
-        }
-
-        .decree-title {
+        .nav-title {
             font-family: 'Cinzel', serif;
             font-size: 1.8rem;
-            color: var(--deep-gold);
+            color: #DAA520;
+            text-align: center;
             margin-bottom: 20px;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.8);
         }
 
-        /* Content Grid */
-        .content-grid {
+        .nav-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
-            gap: 40px;
-            margin: 60px 0;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 15px;
         }
 
-        .content-card {
-            background: linear-gradient(135deg, rgba(245, 245, 220, 0.1), rgba(245, 245, 220, 0.05));
-            border: 2px solid var(--deep-gold);
-            border-radius: 15px;
-            padding: 40px;
+        .nav-button {
+            display: block;
+            padding: 12px 20px;
+            background: rgba(218,165,32,0.1);
+            color: #FFD700;
+            text-decoration: none;
+            border-radius: 8px;
+            border: 2px solid rgba(218,165,32,0.3);
+            text-align: center;
+            font-weight: 600;
             transition: all 0.3s ease;
+            cursor: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='32' height='32' viewBox='0 0 32 32'%3E%3Cdefs%3E%3Cstyle%3E@keyframes flame-cta%7B0%25%7Btransform:scale(1) rotate(0deg);opacity:1%7D25%25%7Btransform:scale(1.2) rotate(3deg);opacity:0.95%7D50%25%7Btransform:scale(0.8) rotate(-2deg);opacity:1%7D75%25%7Btransform:scale(1.1) rotate(1deg);opacity:0.9%7D100%25%7Btransform:scale(1) rotate(0deg);opacity:1%7D%7D%3C/style%3E%3C/defs%3E%3Cg transform='translate(16,16)'%3E%3Cpath d='M-1,-12 L1,-12 L1,8 L-1,8 Z' fill='%23c0c0c0' stroke='%23ffd700' stroke-width='0.5'/%3E%3Crect x='-2' y='8' width='4' height='4' fill='%238b4513' stroke='%23daa520' stroke-width='0.5'/%3E%3Cellipse cx='0' cy='-14' rx='3.5' ry='4.5' fill='%23ff4500' opacity='0.8'%3E%3CanimateTransform attributeName='transform' type='scale' values='1,1;1.3,0.7;0.7,1.3;1.1,0.9;1,1' dur='0.5s' repeatCount='indefinite'/%3E%3C/ellipse%3E%3Cellipse cx='0' cy='-16' rx='2.5' ry='3.5' fill='%23ff6347' opacity='0.9'%3E%3CanimateTransform attributeName='transform' type='scale' values='1,1;0.7,1.4;1.4,0.6;0.9,1.1;1,1' dur='0.4s' repeatCount='indefinite'/%3E%3C/ellipse%3E%3Cellipse cx='0' cy='-18' rx='2' ry='3' fill='%23ffd700' opacity='1'%3E%3CanimateTransform attributeName='transform' type='scale' values='1,1;1.5,0.5;0.5,1.5;1.2,0.8;1,1' dur='0.3s' repeatCount='indefinite'/%3E%3C/ellipse%3E%3C/g%3E%3C/svg%3E"), pointer;
+        }
+
+        .nav-button:hover {
+            transform: translateY(-3px);
+            background: rgba(218,165,32,0.2);
+            border-color: #FFD700;
+            box-shadow: 0 5px 15px rgba(218,165,32,0.3);
+        }
+
+        .pack-hero {
+            text-align: center;
+            padding: 80px 20px;
+            background: rgba(0,0,0,0.4);
+            border-radius: 20px;
+            margin: 30px;
+            border: 4px solid #DAA520;
             position: relative;
             overflow: hidden;
+            box-shadow: 0 10px 40px rgba(218,165,32,0.3);
         }
 
-        .content-card::before {
+        .pack-hero::before {
             content: '';
             position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 5px;
-            background: var(--gradient-gold);
+            top: -50%;
+            left: -50%;
+            width: 200%;
+            height: 200%;
+            background: radial-gradient(circle, rgba(218,165,32,0.1) 0%, transparent 70%);
+            animation: hero-glow 25s linear infinite;
         }
 
-        .content-card:hover {
-            transform: translateY(-10px);
-            box-shadow: var(--shadow-deep), var(--shadow-gold);
+        @keyframes hero-glow {
+            from { transform: rotate(0deg); }
+            to { transform: rotate(360deg); }
         }
 
-        .card-icon {
-            font-size: 3rem;
-            margin-bottom: 20px;
-            display: block;
-        }
-
-        .card-title {
+        .pack-title {
             font-family: 'Cinzel', serif;
-            font-size: 1.5rem;
-            color: var(--deep-gold);
+            font-size: clamp(3rem, 8vw, 6rem);
+            color: #DAA520;
+            text-shadow: 4px 4px 8px rgba(0,0,0,0.9);
+            margin-bottom: 20px;
+            position: relative;
+            z-index: 2;
+            letter-spacing: 2px;
+        }
+
+        .pack-subtitle {
+            font-size: clamp(1.2rem, 3vw, 1.8rem);
+            color: #f4f1e8;
+            font-style: italic;
+            position: relative;
+            z-index: 2;
+            opacity: 0.9;
+            margin-bottom: 30px;
+        }
+
+        .pack-price {
+            font-family: 'Cinzel', serif;
+            font-size: 4rem;
+            color: #FFD700;
+            text-shadow: 3px 3px 6px rgba(0,0,0,0.8);
+            margin-bottom: 20px;
+            position: relative;
+            z-index: 2;
+        }
+
+        .pack-description {
+            font-size: 1.2rem;
+            color: #f4f1e8;
+            max-width: 800px;
+            margin: 0 auto 40px;
+            position: relative;
+            z-index: 2;
+            line-height: 1.6;
+        }
+
+        .books-section {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+            gap: 40px;
+            margin: 60px 30px;
+        }
+
+        .book-card {
+            background: rgba(0,0,0,0.8);
+            border-radius: 20px;
+            border: 3px solid #DAA520;
+            overflow: hidden;
+            box-shadow: 0 15px 40px rgba(218,165,32,0.2);
+            transition: all 0.4s ease;
+        }
+
+        .book-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 25px 60px rgba(218,165,32,0.4);
+            border-color: #FFD700;
+        }
+
+        .book-header {
+            background: linear-gradient(135deg, #DAA520, #FFD700);
+            padding: 30px;
+            text-align: center;
+        }
+
+        .book-icon {
+            font-size: 4rem;
             margin-bottom: 20px;
         }
 
-        .card-content {
-            font-size: 1.1rem;
-            line-height: 1.7;
+        .book-title {
+            font-family: 'Cinzel', serif;
+            font-size: 2.2rem;
+            color: #2c1810;
+            margin-bottom: 15px;
+            text-shadow: 2px 2px 4px rgba(255,255,255,0.3);
         }
 
-        .highlight {
-            color: var(--deep-gold);
+        .book-subtitle {
+            font-size: 1rem;
+            color: #2c1810;
+            opacity: 0.9;
             font-weight: 600;
         }
 
-        /* Package Details */
-        .package-details {
-            background: rgba(26, 35, 126, 0.2);
-            border-radius: 20px;
-            padding: 60px;
-            margin: 80px 0;
-            border: 3px solid var(--deep-gold);
+        .book-content {
+            padding: 30px;
         }
 
-        .package-title {
-            font-family: 'Cinzel', serif;
-            font-size: 2.5rem;
-            text-align: center;
-            color: var(--deep-gold);
-            margin-bottom: 40px;
-        }
-
-        .package-list {
-            list-style: none;
-            max-width: 800px;
-            margin: 0 auto;
-        }
-
-        .package-list li {
-            padding: 20px 0;
-            border-bottom: 1px solid rgba(184, 134, 11, 0.3);
-            font-size: 1.2rem;
-            display: flex;
-            align-items: center;
-        }
-
-        .package-list li:last-child {
-            border-bottom: none;
-        }
-
-        .check-icon {
-            color: var(--deep-gold);
-            font-size: 1.5rem;
-            margin-right: 20px;
-        }
-
-        /* Tier Options */
-        .tier-section {
-            padding: 80px 0;
-        }
-
-        .tier-title {
-            font-family: 'Cinzel', serif;
-            font-size: 2.5rem;
-            text-align: center;
-            color: var(--deep-gold);
-            margin-bottom: 60px;
-        }
-
-        .tier-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 40px;
-        }
-
-        .tier-card {
-            background: var(--gradient-royal);
-            border-radius: 20px;
-            padding: 40px;
-            text-align: center;
-            position: relative;
-            transition: all 0.3s ease;
-            border: 3px solid transparent;
-        }
-
-        .tier-card.recommended {
-            border-color: var(--deep-gold);
-            transform: scale(1.05);
-            box-shadow: var(--shadow-gold);
-        }
-
-        .tier-card.recommended::before {
-            content: "RECOMMENDED";
-            position: absolute;
-            top: -15px;
-            left: 50%;
-            transform: translateX(-50%);
-            background: var(--gradient-gold);
-            color: var(--ink-black);
-            padding: 8px 20px;
-            border-radius: 20px;
-            font-weight: 700;
-            font-size: 0.9rem;
-        }
-
-        .tier-name {
-            font-family: 'Cinzel', serif;
-            font-size: 1.8rem;
-            margin-bottom: 20px;
-            color: var(--deep-gold);
-        }
-
-        .tier-price {
-            font-size: 2.5rem;
-            font-weight: 700;
-            margin-bottom: 30px;
-        }
-
-        .tier-features {
-            list-style: none;
-            text-align: left;
-            margin-bottom: 30px;
-        }
-
-        .tier-features li {
-            padding: 10px 0;
+        .book-description {
             font-size: 1.1rem;
+            line-height: 1.7;
+            color: #f4f1e8;
+            margin-bottom: 25px;
         }
 
-        /* Call to Action */
-        .cta-section {
-            text-align: center;
-            padding: 80px 0;
-            background: linear-gradient(135deg, rgba(74, 20, 140, 0.4), rgba(183, 28, 28, 0.4));
-            border-radius: 30px;
-            margin: 60px 0;
-        }
-
-        .cta-title {
-            font-family: 'Cinzel', serif;
-            font-size: 2.5rem;
-            color: var(--deep-gold);
+        .book-features {
+            display: grid;
+            gap: 15px;
             margin-bottom: 30px;
         }
 
-        .cta-button {
-            display: inline-block;
-            background: var(--gradient-gold);
-            color: var(--ink-black);
-            padding: 20px 40px;
-            border-radius: 50px;
+        .feature-item {
+            display: flex;
+            align-items: flex-start;
+            gap: 15px;
+            background: rgba(218,165,32,0.1);
+            padding: 15px;
+            border-radius: 10px;
+            border: 1px solid rgba(218,165,32,0.3);
+        }
+
+        .feature-icon {
+            font-size: 1.5rem;
+            min-width: 30px;
+            text-align: center;
+        }
+
+        .feature-text {
+            font-size: 0.95rem;
+            color: #f4f1e8;
+            line-height: 1.5;
+        }
+
+        .book-preview {
+            text-align: center;
+            margin-top: 25px;
+        }
+
+        .preview-button {
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+            padding: 12px 25px;
+            background: rgba(218,165,32,0.2);
+            color: #FFD700;
             text-decoration: none;
-            font-size: 1.3rem;
-            font-weight: 700;
-            margin: 20px;
+            border-radius: 10px;
+            border: 2px solid #DAA520;
+            font-weight: 600;
             transition: all 0.3s ease;
-            border: 3px solid var(--deep-gold);
-            box-shadow: var(--shadow-deep);
+            cursor: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='32' height='32' viewBox='0 0 32 32'%3E%3Cdefs%3E%3Cstyle%3E@keyframes flame-cta%7B0%25%7Btransform:scale(1) rotate(0deg);opacity:1%7D25%25%7Btransform:scale(1.2) rotate(3deg);opacity:0.95%7D50%25%7Btransform:scale(0.8) rotate(-2deg);opacity:1%7D75%25%7Btransform:scale(1.1) rotate(1deg);opacity:0.9%7D100%25%7Btransform:scale(1) rotate(0deg);opacity:1%7D%7D%3C/style%3E%3C/defs%3E%3Cg transform='translate(16,16)'%3E%3Cpath d='M-1,-12 L1,-12 L1,8 L-1,8 Z' fill='%23c0c0c0' stroke='%23ffd700' stroke-width='0.5'/%3E%3Crect x='-2' y='8' width='4' height='4' fill='%238b4513' stroke='%23daa520' stroke-width='0.5'/%3E%3Cellipse cx='0' cy='-14' rx='3.5' ry='4.5' fill='%23ff4500' opacity='0.8'%3E%3CanimateTransform attributeName='transform' type='scale' values='1,1;1.3,0.7;0.7,1.3;1.1,0.9;1,1' dur='0.5s' repeatCount='indefinite'/%3E%3C/ellipse%3E%3Cellipse cx='0' cy='-16' rx='2.5' ry='3.5' fill='%23ff6347' opacity='0.9'%3E%3CanimateTransform attributeName='transform' type='scale' values='1,1;0.7,1.4;1.4,0.6;0.9,1.1;1,1' dur='0.4s' repeatCount='indefinite'/%3E%3C/ellipse%3E%3Cellipse cx='0' cy='-18' rx='2' ry='3' fill='%23ffd700' opacity='1'%3E%3CanimateTransform attributeName='transform' type='scale' values='1,1;1.5,0.5;0.5,1.5;1.2,0.8;1,1' dur='0.3s' repeatCount='indefinite'/%3E%3C/ellipse%3E%3C/g%3E%3C/svg%3E"), pointer;
         }
 
-        .cta-button:hover {
-            transform: translateY(-5px);
-            box-shadow: var(--shadow-deep), var(--shadow-gold);
+        .preview-button:hover {
+            transform: translateY(-2px);
+            background: rgba(218,165,32,0.4);
+            border-color: #FFD700;
         }
 
-        /* Gallery Preview */
-        .gallery-preview {
-            padding: 80px 0;
+        .payment-section {
+            background: linear-gradient(135deg, #0a0806 0%, #1a1410 30%, #2c1810 70%, #3d2518 100%);
+            padding: 60px 20px;
+            margin: 40px 30px;
+            border-radius: 25px;
+            border: 4px solid #DAA520;
+            box-shadow: 0 20px 50px rgba(218,165,32,0.3);
+            text-align: center;
         }
 
-        .gallery-grid {
+        .payment-title {
+            font-family: 'Cinzel', serif;
+            font-size: 3rem;
+            color: #FFD700;
+            margin-bottom: 20px;
+            text-shadow: 3px 3px 6px rgba(0,0,0,0.8);
+        }
+
+        .payment-subtitle {
+            font-size: 1.3rem;
+            color: #f4f1e8;
+            margin-bottom: 40px;
+            max-width: 600px;
+            margin-left: auto;
+            margin-right: auto;
+            line-height: 1.6;
+        }
+
+        .payment-options {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
             gap: 30px;
-            margin: 60px 0;
-        }
-
-        .gallery-item {
-            aspect-ratio: 1;
-            background: linear-gradient(45deg, var(--royal-purple), var(--mystic-blue));
-            border-radius: 15px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-size: 3rem;
-            color: var(--deep-gold);
-            transition: all 0.3s ease;
-            border: 2px solid var(--deep-gold);
-        }
-
-        .gallery-item:hover {
-            transform: scale(1.05);
-            box-shadow: var(--shadow-gold);
-        }
-
-        /* Testimonials */
-        .testimonial-section {
-            padding: 80px 0;
-            background: rgba(74, 20, 140, 0.1);
-            border-radius: 20px;
-            margin: 60px 0;
-        }
-
-        .testimonial {
             max-width: 800px;
             margin: 0 auto;
+        }
+
+        .payment-card {
+            background: rgba(0,0,0,0.8);
+            padding: 30px;
+            border-radius: 15px;
+            border: 2px solid #DAA520;
+            transition: all 0.3s ease;
+        }
+
+        .payment-card:hover {
+            transform: translateY(-5px);
+            border-color: #FFD700;
+            box-shadow: 0 10px 30px rgba(218,165,32,0.3);
+        }
+
+        .payment-icon {
+            font-size: 3rem;
+            margin-bottom: 20px;
+        }
+
+        .payment-name {
+            font-family: 'Cinzel', serif;
+            font-size: 1.5rem;
+            color: #FFD700;
+            margin-bottom: 15px;
+        }
+
+        .payment-description {
+            font-size: 0.95rem;
+            color: #f4f1e8;
+            margin-bottom: 25px;
+            line-height: 1.5;
+        }
+
+        .payment-button {
+            display: inline-block;
+            padding: 15px 30px;
+            background: linear-gradient(135deg, #DAA520, #FFD700);
+            color: #2c1810;
+            text-decoration: none;
+            border-radius: 10px;
+            font-weight: 700;
+            font-size: 1.1rem;
+            border: 2px solid #B8860B;
+            transition: all 0.3s ease;
+            cursor: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='32' height='32' viewBox='0 0 32 32'%3E%3Cdefs%3E%3Cstyle%3E@keyframes flame-cta%7B0%25%7Btransform:scale(1) rotate(0deg);opacity:1%7D25%25%7Btransform:scale(1.2) rotate(3deg);opacity:0.95%7D50%25%7Btransform:scale(0.8) rotate(-2deg);opacity:1%7D75%25%7Btransform:scale(1.1) rotate(1deg);opacity:0.9%7D100%25%7Btransform:scale(1) rotate(0deg);opacity:1%7D%7D%3C/style%3E%3C/defs%3E%3Cg transform='translate(16,16)'%3E%3Cpath d='M-1,-12 L1,-12 L1,8 L-1,8 Z' fill='%23c0c0c0' stroke='%23ffd700' stroke-width='0.5'/%3E%3Crect x='-2' y='8' width='4' height='4' fill='%238b4513' stroke='%23daa520' stroke-width='0.5'/%3E%3Cellipse cx='0' cy='-14' rx='3.5' ry='4.5' fill='%23ff4500' opacity='0.8'%3E%3CanimateTransform attributeName='transform' type='scale' values='1,1;1.3,0.7;0.7,1.3;1.1,0.9;1,1' dur='0.5s' repeatCount='indefinite'/%3E%3C/ellipse%3E%3Cellipse cx='0' cy='-16' rx='2.5' ry='3.5' fill='%23ff6347' opacity='0.9'%3E%3CanimateTransform attributeName='transform' type='scale' values='1,1;0.7,1.4;1.4,0.6;0.9,1.1;1,1' dur='0.4s' repeatCount='indefinite'/%3E%3C/ellipse%3E%3Cellipse cx='0' cy='-18' rx='2' ry='3' fill='%23ffd700' opacity='1'%3E%3CanimateTransform attributeName='transform' type='scale' values='1,1;1.5,0.5;0.5,1.5;1.2,0.8;1,1' dur='0.3s' repeatCount='indefinite'/%3E%3C/ellipse%3E%3C/g%3E%3C/svg%3E"), pointer;
+        }
+
+        .payment-button:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 8px 25px rgba(218,165,32,0.4);
+        }
+
+        .guarantee-section {
+            background: rgba(0,0,0,0.6);
+            padding: 40px 20px;
+            margin: 40px 30px;
+            border-radius: 15px;
+            border: 2px solid #DAA520;
             text-align: center;
-            padding: 40px;
         }
 
-        .testimonial-text {
-            font-size: 1.3rem;
-            font-style: italic;
-            margin-bottom: 30px;
-            color: #e0e0e0;
+        .guarantee-title {
+            font-family: 'Cinzel', serif;
+            font-size: 2.2rem;
+            color: #FFD700;
+            margin-bottom: 20px;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.8);
         }
 
-        .testimonial-author {
-            color: var(--deep-gold);
-            font-weight: 600;
+        .guarantee-text {
+            font-size: 1.1rem;
+            color: #f4f1e8;
+            max-width: 700px;
+            margin: 0 auto;
+            line-height: 1.6;
         }
 
-        /* Footer */
         .footer {
             text-align: center;
-            padding: 60px 0;
-            border-top: 2px solid var(--deep-gold);
-            margin-top: 80px;
+            padding: 30px 20px;
+            background: rgba(0,0,0,0.8);
+            margin: 20px;
+            border-radius: 10px;
+            border: 2px solid #DAA520;
         }
 
         .footer-text {
-            color: var(--silver);
-            font-size: 1.1rem;
+            font-style: italic;
+            color: #f4f1e8;
+            opacity: 0.8;
         }
 
-        /* Responsive */
         @media (max-width: 768px) {
-            .content-grid, .tier-grid {
+            .nav-grid {
                 grid-template-columns: 1fr;
             }
-            
-            .package-details {
+
+            .pack-hero {
+                margin: 15px;
                 padding: 40px 20px;
             }
-            
-            .tier-card.recommended {
-                transform: none;
-            }
-            
-            .gallery-grid {
-                grid-template-columns: repeat(2, 1fr);
-            }
-        }
 
-        /* Animations */
-        @keyframes fadeInUp {
-            from {
-                opacity: 0;
-                transform: translateY(30px);
+            .books-section {
+                grid-template-columns: 1fr;
+                margin: 30px 15px;
+                gap: 30px;
             }
-            to {
-                opacity: 1;
-                transform: translateY(0);
-            }
-        }
 
-        .animate-in {
-            animation: fadeInUp 0.6s ease-out;
+            .payment-options {
+                grid-template-columns: 1fr;
+                gap: 20px;
+            }
+
+            .payment-section {
+                margin: 20px 15px;
+                padding: 40px 20px;
+            }
+
+            .guarantee-section {
+                margin: 20px 15px;
+            }
         }
     </style>
 </head>
 <body>
-    <div class="container">
-        <!-- Header -->
-        <header class="header">
-            <h1 class="main-title">The Alchemist's Pack</h1>
-            <p class="subtitle">A Curated Collection of Digital Masterpieces</p>
-            <div class="price-badge">$10 USD</div>
-        </header>
+    <!-- Navigation -->
+    <nav class="nav-royal">
+        <h2 class="nav-title">⚗️ The Royal Library Navigation</h2>
+        <div class="nav-grid">
+            <a href="/" class="nav-button">🏠 Home</a>
+            <a href="/renaissance_art.html" class="nav-button">🎨 Renaissance Art</a>
+            <a href="/ai_research.html" class="nav-button">🤖 AI Research</a>
+            <a href="/esoteric_mysteries.html" class="nav-button">🌌 Esoteric Mysteries</a>
+            <a href="/practical_guides.html" class="nav-button">📚 Practical Guides</a>
+            <a href="/alchemist_pack_product_page.html" class="nav-button">⚗️ Complete Pack - $27</a>
+        </div>
+    </nav>
 
-        <!-- Product Overview -->
-        <section class="product-overview">
-            <p class="overview-text">
-                This is not a picture pack. This is a <strong>portable temple</strong>. A piece of a world crafted with intention, 
-                delivered with the respect both the art and the collector deserve. Every element has been forged, not found.
-            </p>
+    <!-- Hero Section -->
+    <section class="pack-hero">
+        <h1 class="pack-title">⚗️ The Alchemist's Digital Grimoire</h1>
+        <p class="pack-subtitle">Unlock the Complete Collection of Sacred Knowledge</p>
+        <div class="pack-price">$27</div>
+        <p class="pack-description">
+            Step into the digital sanctum of the Royal Library and gain access to the most comprehensive collection of esoteric knowledge ever assembled. This isn't just content—it's a transformation of consciousness through two revolutionary books that will forever change how you see reality.
+        </p>
+    </section>
 
-            <div class="royal-decree">
-                <h2 class="decree-title">The Sovereign Standard</h2>
-                <p>The perfect balance of value, mystique, and fairness. Quality over quantity. Soul over surface. 
-                   A collection that commands its price with absolute confidence.</p>
+    <!-- Books Section -->
+    <section class="books-section">
+        <!-- Sacred Codex Book -->
+        <div class="book-card">
+            <div class="book-header">
+                <div class="book-icon">📜</div>
+                <h3 class="book-title">The Sacred Digital Ministry Bible</h3>
+                <p class="book-subtitle">Faith-Driven Digital Ministry That Actually Works</p>
             </div>
-        </section>
-
-        <!-- What's Included -->
-        <section class="package-details">
-            <h2 class="package-title">What's Included</h2>
-            <ul class="package-list">
-                <li>
-                    <span class="check-icon">✦</span>
-                    <span><strong class="highlight">10-12 Curated Masterpieces</strong> - Not a random dump, but a carefully selected exhibition of absolute best works</span>
-                </li>
-                <li>
-                    <span class="check-icon">✦</span>
-                    <span><strong class="highlight">Ultra-High Resolution Files</strong> - Original, full-resolution suitable for printing. Physical artifacts in waiting</span>
-                </li>
-                <li>
-                    <span class="check-icon">✦</span>
-                    <span><strong class="highlight">The Lore File (PDF)</strong> - Beautifully formatted scripture. The whispers and creeds that inspired each piece</span>
-                </li>
-                <li>
-                    <span class="check-icon">✦</span>
-                    <span><strong class="highlight">The Forge Notes</strong> - 3-5 behind-the-scenes glimpses into the alchemical process. Proof of the forge</span>
-                </li>
-            </ul>
-        </section>
-
-        <!-- Content Breakdown -->
-        <section class="content-grid">
-            <div class="content-card">
-                <span class="card-icon">🖼️</span>
-                <h3 class="card-title">Curated Masterpieces</h3>
-                <div class="card-content">
-                    Each image has been selected for its power, composition, and spiritual resonance. 
-                    These are not merely digital files—they are <span class="highlight">windows into other realms</span>, 
-                    each carrying its own energy and story.
-                </div>
-            </div>
-
-            <div class="content-card">
-                <span class="card-icon">📜</span>
-                <h3 class="card-title">Sacred Documentation</h3>
-                <div class="card-content">
-                    The most valuable component. For each piece, discover the <span class="highlight">creed that birthed it</span>, 
-                    the vision that guided its creation, and the meaning embedded within its forms. 
-                    You are purchasing scripture, not just imagery.
-                </div>
-            </div>
-
-            <div class="content-card">
-                <span class="card-icon">⚗️</span>
-                <h3 class="card-title">Alchemical Process</h3>
-                <div class="card-content">
-                    Witness the forge in action. Screenshots of prompts, mid-creation glitches, alternate versions. 
-                    This creates <span class="highlight">intimacy with the process</span> and proves each work was 
-                    crafted with intention, not stumbled upon by chance.
-                </div>
-            </div>
-        </section>
-
-        <!-- Gallery Preview -->
-        <section class="gallery-preview">
-            <h2 class="tier-title">Preview Gallery</h2>
-            <div class="gallery-grid">
-                <div class="gallery-item">🌌</div>
-                <div class="gallery-item">⚔️</div>
-                <div class="gallery-item">🔮</div>
-                <div class="gallery-item">👑</div>
-                <div class="gallery-item">🐉</div>
-                <div class="gallery-item">🗡️</div>
-            </div>
-            <p style="text-align: center; color: var(--silver); margin-top: 20px;">
-                <em>Placeholder representations - Actual artworks revealed upon purchase</em>
-            </p>
-        </section>
-
-        <!-- Tier Options -->
-        <section class="tier-section">
-            <h2 class="tier-title">Choose Your Collection</h2>
-            <div class="tier-grid">
-                <div class="tier-card">
-                    <h3 class="tier-name">Basic Archive</h3>
-                    <div class="tier-price">$8</div>
-                    <ul class="tier-features">
-                        <li>✦ 8-10 Selected Works</li>
-                        <li>✦ High Resolution Files</li>
-                        <li>✦ Basic Documentation</li>
-                    </ul>
-                </div>
-
-                <div class="tier-card recommended">
-                    <h3 class="tier-name">The Alchemist's Pack</h3>
-                    <div class="tier-price">$10</div>
-                    <ul class="tier-features">
-                        <li>✦ 10-12 Curated Masterpieces</li>
-                        <li>✦ Ultra-High Resolution</li>
-                        <li>✦ Complete Lore File (PDF)</li>
-                        <li>✦ Forge Notes Bonus Folder</li>
-                        <li>✦ Lifetime Download Access</li>
-                    </ul>
-                </div>
-
-                <div class="tier-card">
-                    <h3 class="tier-name">The King's Treasury</h3>
-                    <div class="tier-price">$15</div>
-                    <ul class="tier-features">
-                        <li>✦ Everything from Alchemist's Pack</li>
-                        <li>✦ 3 Mobile Wallpapers</li>
-                        <li>✦ 1 Unreleased Exclusive</li>
-                        <li>✦ Future Collection Discount</li>
-                    </ul>
-                </div>
-            </div>
-        </section>
-
-        <!-- Testimonial -->
-        <section class="testimonial-section">
-            <div class="testimonial">
-                <p class="testimonial-text">
-                    "This isn't just a collection of digital art—it's a journey into another realm. 
-                    The documentation alone is worth the price. I've never experienced such depth 
-                    in a digital art purchase."
+            <div class="book-content">
+                <p class="book-description">
+                    A living testament of faith-driven innovation, this comprehensive guide reveals the divine AI power behind successful digital ministry. Created in collaboration with Claude AI under the guidance of the Holy Spirit, this book bridges the gap between spiritual calling and technological implementation.
                 </p>
-                <p class="testimonial-author">— Verified Collector</p>
+
+                <div class="book-features">
+                    <div class="feature-item">
+                        <div class="feature-icon">🙏</div>
+                        <div class="feature-text"><strong>Divine AI Collaboration:</strong> Learn how to work with AI as a spiritual partner in ministry</div>
+                    </div>
+                    <div class="feature-item">
+                        <div class="feature-icon">🎨</div>
+                        <div class="feature-text"><strong>Visual Theology:</strong> Color, light, and sacred geometry in web design</div>
+                    </div>
+                    <div class="feature-item">
+                        <div class="feature-icon">⚡</div>
+                        <div class="feature-text"><strong>Zero-Dependency Miracle:</strong> Trusting God over frameworks</div>
+                    </div>
+                    <div class="feature-item">
+                        <div class="feature-icon">🌟</div>
+                        <div class="feature-text"><strong>Conversational Content:</strong> The breakthrough method for authentic digital ministry</div>
+                    </div>
+                    <div class="feature-item">
+                        <div class="feature-icon">🔥</div>
+                        <div class="feature-text"><strong>Particle Explosions:</strong> Programming the supernatural in web development</div>
+                    </div>
+                </div>
+
+                <div class="book-preview">
+                    <a href="/sacred_codex.html" class="preview-button">
+                        <span>📖</span>
+                        <span>Preview Sacred Codex</span>
+                    </a>
+                </div>
             </div>
-        </section>
+        </div>
 
-        <!-- Call to Action -->
-        <section class="cta-section">
-            <h2 class="cta-title">Claim Your Artifacts</h2>
-            <p style="font-size: 1.2rem; margin-bottom: 30px;">
-                Join the ranks of collectors who understand that true art carries more than beauty—it carries power.
-            </p>
-            <a href="#purchase" class="cta-button">Purchase Now - $10</a>
-            <a href="#preview" class="cta-button" style="background: transparent; color: var(--deep-gold);">View More Previews</a>
-        </section>
+        <!-- Banana Conquest Book -->
+        <div class="book-card">
+            <div class="book-header">
+                <div class="book-icon">🍌</div>
+                <h3 class="book-title">The Banana Conquest</h3>
+                <p class="book-subtitle">The Ordinary Made Sacred</p>
+            </div>
+            <div class="book-content">
+                <p class="book-description">
+                    A profound spiritual journey disguised as a culinary adventure. This book reveals how the most ordinary activities contain extraordinary wisdom. Through the metaphor of cooking and caramel-making, discover the alchemical principles that govern all transformation in the universe.
+                </p>
 
-        <!-- Footer -->
-        <footer class="footer">
-            <p class="footer-text">
-                Crafted with intention. Delivered with respect. Collected with purpose.
-            </p>
-        </footer>
-    </div>
+                <div class="book-features">
+                    <div class="feature-item">
+                        <div class="feature-icon">⚗️</div>
+                        <div class="feature-text"><strong>Alchemical Cooking:</strong> Every kitchen becomes a laboratory of transformation</div>
+                    </div>
+                    <div class="feature-item">
+                        <div class="feature-icon">👁️</div>
+                        <div class="feature-text"><strong>Test of Sight:</strong> Recognizing the sacred hiding within the simple</div>
+                    </div>
+                    <div class="feature-item">
+                        <div class="feature-icon">🔄</div>
+                        <div class="feature-text"><strong>Ouroboros Revelation:</strong> The eternal cycle of transformation</div>
+                    </div>
+                    <div class="feature-item">
+                        <div class="feature-icon">👨‍🍳</div>
+                        <div class="feature-text"><strong>True Chef Recognition:</strong> Conscious participation in cosmic creation</div>
+                    </div>
+                    <div class="feature-item">
+                        <div class="feature-icon">🌌</div>
+                        <div class="feature-text"><strong>Cosmic Kitchen:</strong> The universe as one vast laboratory of transformation</div>
+                    </div>
+                </div>
 
-    <script>
-        // Add animation on scroll
-        const observerOptions = {
-            threshold: 0.1,
-            rootMargin: '0px 0px -50px 0px'
-        };
+                <div class="book-preview">
+                    <a href="/banana_conquest.html" class="preview-button">
+                        <span>📖</span>
+                        <span>Preview Banana Conquest</span>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
 
-        const observer = new IntersectionObserver(function(entries) {
-            entries.forEach(entry => {
-                if (entry.isIntersecting) {
-                    entry.target.classList.add('animate-in');
-                }
-            });
-        }, observerOptions);
+    <!-- Payment Section -->
+    <section class="payment-section">
+        <h2 class="payment-title">Choose Your Payment Method</h2>
+        <p class="payment-subtitle">
+            Secure and instant access to both books. Your transformation begins the moment you complete your purchase.
+        </p>
 
-        // Observe elements for animation
-        document.querySelectorAll('.content-card, .tier-card, .gallery-item').forEach(el => {
-            observer.observe(el);
-        });
+        <div class="payment-options">
+            <div class="payment-card">
+                <div class="payment-icon">💳</div>
+                <h3 class="payment-name">Credit Card</h3>
+                <p class="payment-description">
+                    Fast and secure payment processing through our encrypted gateway. Instant access to both books.
+                </p>
+                <a href="#" class="payment-button" onclick="alert('Stripe payment integration coming soon! Contact the Alchemist for immediate access.')">
+                    Pay with Card - $27
+                </a>
+            </div>
 
-        // Smooth scrolling for anchor links
-        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-            anchor.addEventListener('click', function (e) {
-                e.preventDefault();
-                const target = document.querySelector(this.getAttribute('href'));
-                if (target) {
-                    target.scrollIntoView({
-                        behavior: 'smooth',
-                        block: 'start'
-                    });
-                }
-            });
-        });
+            <div class="payment-card">
+                <div class="payment-icon">📧</div>
+                <h3 class="payment-name">Direct Transfer</h3>
+                <p class="payment-description">
+                    For immediate access, contact the Alchemist directly. Personal delivery and guidance included.
+                </p>
+                <a href="mailto:alchemistsx0@gmail.com?subject=$27%20Alchemist%20Pack%20Purchase&body=I%20would%20like%20to%20purchase%20the%20complete%20$27%20pack%20containing%20both%20books." class="payment-button">
+                    Contact Alchemist
+                </a>
+            </div>
 
-        // Add subtle parallax effect to background
-        window.addEventListener('scroll', () => {
-            const scrolled = window.pageYOffset;
-            const rate = scrolled * -0.5;
-            document.body.style.backgroundPosition = `center ${rate}px`;
-        });
-    </script>
+            <div class="payment-card">
+                <div class="payment-icon">💰</div>
+                <h3 class="payment-name">Cryptocurrency</h3>
+                <p class="payment-description">
+                    Accept Bitcoin, Ethereum, or other cryptocurrencies. Decentralized and anonymous payment.
+                </p>
+                <a href="#" class="payment-button" onclick="alert('Crypto payment integration coming soon! Contact the Alchemist for wallet details.')">
+                    Pay with Crypto - $27
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Guarantee Section -->
+    <section class="guarantee-section">
+        <h2 class="guarantee-title">🛡️ Your Transformation is Guaranteed</h2>
+        <p class="guarantee-text">
+            If these books don't profoundly change how you see reality, contact the Alchemist within 30 days for a full refund. This isn't just a purchase—it's an investment in your consciousness that comes with complete peace of mind.
+        </p>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <p class="footer-text">
+            "In the Royal Library of Marganarok, every page turns, every scroll unrolls, and every circuit hums with the promise of discovery."
+        </p>
+    </footer>
 </body>
 </html>

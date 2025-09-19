@@ -3,51 +3,329 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>The Sacred Codex of OMNI-EMPIRE-FRESH</title>
+    <title>The Sacred Digital Ministry Bible - Preview</title>
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;500;600;700&family=Crimson+Text:ital,wght@0,400;0,600;1,400&display=swap" rel="stylesheet">
     <style>
-        @import url('https://fonts.googleapis.com/css2?family=Crimson+Text:ital,wght@0,400;0,600;1,400&family=Cinzel:wght@400;500;600&display=swap');
-        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
         body {
             font-family: 'Crimson Text', serif;
-            line-height: 1.8;
-            color: #2c3e50;
-            background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
-            margin: 0;
-            padding: 40px;
-            font-size: 16px;
+            background: linear-gradient(135deg, #1a0f0a 0%, #2c1810 30%, #8B4513 70%, #DAA520 100%);
+            color: #f4f1e8;
+            line-height: 1.6;
+            min-height: 100vh;
+            cursor: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='32' height='32' viewBox='0 0 32 32'%3E%3Cdefs%3E%3Cstyle%3E@keyframes flame%7B0%25%7Btransform:scale(1) rotate(0deg);opacity:1%7D25%25%7Btransform:scale(1.1) rotate(2deg);opacity:0.9%7D50%25%7Btransform:scale(0.9) rotate(-1deg);opacity:1%7D75%25%7Btransform:scale(1.05) rotate(1deg);opacity:0.95%7D100%25%7Btransform:scale(1) rotate(0deg);opacity:1%7D%7D@keyframes sword-glow%7B0%25%2C100%25%7Bfilter:drop-shadow(0 0 3px %23ff4500)%7D50%25%7Bfilter:drop-shadow(0 0 8px %23ff6347)%7D%7D%3C/style%3E%3C/defs%3E%3Cg transform='translate(16,16)'%3E%3C!-- Sword Blade --%3E%3Cpath d='M-1,-12 L1,-12 L1,8 L-1,8 Z' fill='%23c0c0c0' stroke='%23ffd700' stroke-width='0.5'/%3E%3C!-- Sword Handle --%3E%3Crect x='-2' y='8' width='4' height='4' fill='%238b4513' stroke='%23daa520' stroke-width='0.5'/%3E%3C!-- Flame Base --%3E%3Cellipse cx='0' cy='-14' rx='3' ry='4' fill='%23ff4500' opacity='0.8'%3E%3CanimateTransform attributeName='transform' type='scale' values='1,1;1.2,0.8;0.8,1.2;1.1,0.9;1,1' dur='0.6s' repeatCount='indefinite'/%3E%3C/ellipse%3E%3C!-- Flame Middle --%3E%3Cellipse cx='0' cy='-16' rx='2' ry='3' fill='%23ff6347' opacity='0.9'%3E%3CanimateTransform attributeName='transform' type='scale' values='1,1;0.8,1.3;1.3,0.7;0.9,1.1;1,1' dur='0.5s' repeatCount='indefinite'/%3E%3C/ellipse%3E%3C!-- Flame Top --%3E%3Cellipse cx='0' cy='-18' rx='1.5' ry='2.5' fill='%23ffd700' opacity='1'%3E%3CanimateTransform attributeName='transform' type='scale' values='1,1;1.4,0.6;0.6,1.4;1.2,0.8;1,1' dur='0.4s' repeatCount='indefinite'/%3E%3C/ellipse%3E%3C!-- Spark Particles --%3E%3Ccircle cx='-1' cy='-15' r='0.3' fill='%23ffffff'%3E%3Canimate attributeName='opacity' values='0;1;0' dur='0.8s' repeatCount='indefinite'/%3E%3C/ellipse%3E%3Ccircle cx='1' cy='-17' r='0.2' fill='%23ffff00'%3E%3Canimate attributeName='opacity' values='0;1;0' dur='1.2s' repeatCount='indefinite'/%3E%3C/ellipse%3E%3Ccircle cx='0' cy='-19' r='0.25' fill='%23ff69b4'%3E%3Canimate attributeName='opacity' values='0;1;0' dur='0.6s' repeatCount='indefinite'/%3E%3C/ellipse%3E%3C/g%3E%3C/svg%3E"), auto;
         }
-        
-        .container {
-            max-width: 800px;
-            margin: 0 auto;
-            background: white;
-            padding: 60px;
-            box-shadow: 0 20px 40px rgba(0,0,0,0.1);
-            border-radius: 10px;
+
+        .nav-royal {
+            background: rgba(0,0,0,0.8);
+            padding: 20px;
+            margin: 20px;
+            border-radius: 15px;
+            border: 3px solid #DAA520;
+            box-shadow: 0 8px 30px rgba(218,165,32,0.2);
         }
-        
-        .title-page {
-            text-align: center;
-            margin-bottom: 80px;
-            border-bottom: 3px solid #3498db;
-            padding-bottom: 40px;
-        }
-        
-        h1 {
+
+        .nav-title {
             font-family: 'Cinzel', serif;
-            font-size: 3em;
-            font-weight: 600;
-            color: #2c3e50;
+            font-size: 1.8rem;
+            color: #DAA520;
+            text-align: center;
             margin-bottom: 20px;
-            text-shadow: 2px 2px 4px rgba(0,0,0,0.1);
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.8);
         }
-        
-        .subtitle {
-            font-size: 1.4em;
-            color: #7f8c8d;
+
+        .nav-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 15px;
+        }
+
+        .nav-button {
+            display: block;
+            padding: 12px 20px;
+            background: rgba(218,165,32,0.1);
+            color: #FFD700;
+            text-decoration: none;
+            border-radius: 8px;
+            border: 2px solid rgba(218,165,32,0.3);
+            text-align: center;
+            font-weight: 600;
+            transition: all 0.3s ease;
+            cursor: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='32' height='32' viewBox='0 0 32 32'%3E%3Cdefs%3E%3Cstyle%3E@keyframes flame-cta%7B0%25%7Btransform:scale(1) rotate(0deg);opacity:1%7D25%25%7Btransform:scale(1.2) rotate(3deg);opacity:0.95%7D50%25%7Btransform:scale(0.8) rotate(-2deg);opacity:1%7D75%25%7Btransform:scale(1.1) rotate(1deg);opacity:0.9%7D100%25%7Btransform:scale(1) rotate(0deg);opacity:1%7D%7D%3C/style%3E%3C/defs%3E%3Cg transform='translate(16,16)'%3E%3Cpath d='M-1,-12 L1,-12 L1,8 L-1,8 Z' fill='%23c0c0c0' stroke='%23ffd700' stroke-width='0.5'/%3E%3Crect x='-2' y='8' width='4' height='4' fill='%238b4513' stroke='%23daa520' stroke-width='0.5'/%3E%3Cellipse cx='0' cy='-14' rx='3.5' ry='4.5' fill='%23ff4500' opacity='0.8'%3E%3CanimateTransform attributeName='transform' type='scale' values='1,1;1.3,0.7;0.7,1.3;1.1,0.9;1,1' dur='0.5s' repeatCount='indefinite'/%3E%3C/ellipse%3E%3Cellipse cx='0' cy='-16' rx='2.5' ry='3.5' fill='%23ff6347' opacity='0.9'%3E%3CanimateTransform attributeName='transform' type='scale' values='1,1;0.7,1.4;1.4,0.6;0.9,1.1;1,1' dur='0.4s' repeatCount='indefinite'/%3E%3C/ellipse%3E%3Cellipse cx='0' cy='-18' rx='2' ry='3' fill='%23ffd700' opacity='1'%3E%3CanimateTransform attributeName='transform' type='scale' values='1,1;1.5,0.5;0.5,1.5;1.2,0.8;1,1' dur='0.3s' repeatCount='indefinite'/%3E%3C/ellipse%3E%3C/g%3E%3C/svg%3E"), pointer;
+        }
+
+        .nav-button:hover {
+            transform: translateY(-3px);
+            background: rgba(218,165,32,0.2);
+            border-color: #FFD700;
+            box-shadow: 0 5px 15px rgba(218,165,32,0.3);
+        }
+
+        .preview-hero {
+            text-align: center;
+            padding: 80px 20px;
+            background: rgba(0,0,0,0.4);
+            border-radius: 20px;
+            margin: 30px;
+            border: 4px solid #DAA520;
+            position: relative;
+            overflow: hidden;
+            box-shadow: 0 10px 40px rgba(218,165,32,0.3);
+        }
+
+        .preview-title {
+            font-family: 'Cinzel', serif;
+            font-size: clamp(2.5rem, 6vw, 4rem);
+            color: #DAA520;
+            text-shadow: 4px 4px 8px rgba(0,0,0,0.9);
+            margin-bottom: 20px;
+            position: relative;
+            z-index: 2;
+            letter-spacing: 2px;
+        }
+
+        .preview-subtitle {
+            font-size: clamp(1.2rem, 3vw, 1.8rem);
+            color: #f4f1e8;
             font-style: italic;
+            position: relative;
+            z-index: 2;
+            opacity: 0.9;
             margin-bottom: 30px;
         }
+
+        .content-section {
+            max-width: 900px;
+            margin: 60px auto;
+            padding: 0 30px;
+        }
+
+        .content-card {
+            background: rgba(0,0,0,0.8);
+            border-radius: 20px;
+            border: 3px solid #DAA520;
+            padding: 40px;
+            margin-bottom: 40px;
+            box-shadow: 0 15px 40px rgba(218,165,32,0.2);
+        }
+
+        .content-title {
+            font-family: 'Cinzel', serif;
+            font-size: 2rem;
+            color: #FFD700;
+            margin-bottom: 20px;
+            text-align: center;
+        }
+
+        .content-text {
+            font-size: 1.1rem;
+            line-height: 1.7;
+            color: #f4f1e8;
+            margin-bottom: 20px;
+        }
+
+        .highlight {
+            color: #FFD700;
+            font-weight: 600;
+            font-style: italic;
+        }
+
+        .quote-block {
+            background: rgba(218,165,32,0.1);
+            border-left: 4px solid #DAA520;
+            padding: 20px 30px;
+            margin: 20px 0;
+            font-style: italic;
+            color: #f4f1e8;
+        }
+
+        .back-button {
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+            padding: 15px 30px;
+            background: linear-gradient(135deg, #DAA520, #FFD700);
+            color: #2c1810;
+            text-decoration: none;
+            border-radius: 10px;
+            font-weight: 700;
+            font-size: 1.1rem;
+            border: 2px solid #B8860B;
+            transition: all 0.3s ease;
+            cursor: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='32' height='32' viewBox='0 0 32 32'%3E%3Cdefs%3E%3Cstyle%3E@keyframes flame-cta%7B0%25%7Btransform:scale(1) rotate(0deg);opacity:1%7D25%25%7Btransform:scale(1.2) rotate(3deg);opacity:0.95%7D50%25%7Btransform:scale(0.8) rotate(-2deg);opacity:1%7D75%25%7Btransform:scale(1.1) rotate(1deg);opacity:0.9%7D100%25%7Btransform:scale(1) rotate(0deg);opacity:1%7D%7D%3C/style%3E%3C/defs%3E%3Cg transform='translate(16,16)'%3E%3Cpath d='M-1,-12 L1,-12 L1,8 L-1,8 Z' fill='%23c0c0c0' stroke='%23ffd700' stroke-width='0.5'/%3E%3Crect x='-2' y='8' width='4' height='4' fill='%238b4513' stroke='%23daa520' stroke-width='0.5'/%3E%3Cellipse cx='0' cy='-14' rx='3.5' ry='4.5' fill='%23ff4500' opacity='0.8'%3E%3CanimateTransform attributeName='transform' type='scale' values='1,1;1.3,0.7;0.7,1.3;1.1,0.9;1,1' dur='0.5s' repeatCount='indefinite'/%3E%3C/ellipse%3E%3Cellipse cx='0' cy='-16' rx='2.5' ry='3.5' fill='%23ff6347' opacity='0.9'%3E%3CanimateTransform attributeName='transform' type='scale' values='1,1;0.7,1.4;1.4,0.6;0.9,1.1;1,1' dur='0.4s' repeatCount='indefinite'/%3E%3C/ellipse%3E%3Cellipse cx='0' cy='-18' rx='2' ry='3' fill='%23ffd700' opacity='1'%3E%3CanimateTransform attributeName='transform' type='scale' values='1,1;1.5,0.5;0.5,1.5;1.2,0.8;1,1' dur='0.3s' repeatCount='indefinite'/%3E%3C/ellipse%3E%3C/g%3E%3C/svg%3E"), pointer;
+        }
+
+        .back-button:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 8px 25px rgba(218,165,32,0.4);
+        }
+
+        .purchase-cta {
+            text-align: center;
+            background: linear-gradient(135deg, #0a0806 0%, #1a1410 30%, #2c1810 70%, #3d2518 100%);
+            padding: 60px 20px;
+            margin: 40px 30px;
+            border-radius: 25px;
+            border: 4px solid #DAA520;
+            box-shadow: 0 20px 50px rgba(218,165,32,0.3);
+        }
+
+        .purchase-title {
+            font-family: 'Cinzel', serif;
+            font-size: 2.5rem;
+            color: #FFD700;
+            margin-bottom: 20px;
+            text-shadow: 3px 3px 6px rgba(0,0,0,0.8);
+        }
+
+        .purchase-text {
+            font-size: 1.2rem;
+            color: #f4f1e8;
+            margin-bottom: 30px;
+            max-width: 600px;
+            margin-left: auto;
+            margin-right: auto;
+            line-height: 1.6;
+        }
+
+        .purchase-button {
+            display: inline-block;
+            padding: 18px 35px;
+            background: linear-gradient(135deg, #DAA520, #FFD700);
+            color: #2c1810;
+            text-decoration: none;
+            border-radius: 12px;
+            font-weight: 700;
+            font-size: 1.2rem;
+            border: 2px solid #B8860B;
+            transition: all 0.3s ease;
+            cursor: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='32' height='32' viewBox='0 0 32 32'%3E%3Cdefs%3E%3Cstyle%3E@keyframes flame-cta%7B0%25%7Btransform:scale(1) rotate(0deg);opacity:1%7D25%25%7Btransform:scale(1.2) rotate(3deg);opacity:0.95%7D50%25%7Btransform:scale(0.8) rotate(-2deg);opacity:1%7D75%25%7Btransform:scale(1.1) rotate(1deg);opacity:0.9%7D100%25%7Btransform:scale(1) rotate(0deg);opacity:1%7D%7D%3C/style%3E%3C/defs%3E%3Cg transform='translate(16,16)'%3E%3Cpath d='M-1,-12 L1,-12 L1,8 L-1,8 Z' fill='%23c0c0c0' stroke='%23ffd700' stroke-width='0.5'/%3E%3Crect x='-2' y='8' width='4' height='4' fill='%238b4513' stroke='%23daa520' stroke-width='0.5'/%3E%3Cellipse cx='0' cy='-14' rx='3.5' ry='4.5' fill='%23ff4500' opacity='0.8'%3E%3CanimateTransform attributeName='transform' type='scale' values='1,1;1.3,0.7;0.7,1.3;1.1,0.9;1,1' dur='0.5s' repeatCount='indefinite'/%3E%3C/ellipse%3E%3Cellipse cx='0' cy='-16' rx='2.5' ry='3.5' fill='%23ff6347' opacity='0.9'%3E%3CanimateTransform attributeName='transform' type='scale' values='1,1;0.7,1.4;1.4,0.6;0.9,1.1;1,1' dur='0.4s' repeatCount='indefinite'/%3E%3C/ellipse%3E%3Cellipse cx='0' cy='-18' rx='2' ry='3' fill='%23ffd700' opacity='1'%3E%3CanimateTransform attributeName='transform' type='scale' values='1,1;1.5,0.5;0.5,1.5;1.2,0.8;1,1' dur='0.3s' repeatCount='indefinite'/%3E%3C/ellipse%3E%3C/g%3E%3C/svg%3E"), pointer;
+        }
+
+        .purchase-button:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 8px 25px rgba(218,165,32,0.4);
+        }
+
+        @media (max-width: 768px) {
+            .nav-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .preview-hero {
+                margin: 15px;
+                padding: 40px 20px;
+            }
+
+            .content-section {
+                padding: 0 15px;
+            }
+
+            .content-card {
+                padding: 25px;
+            }
+
+            .purchase-cta {
+                margin: 20px 15px;
+                padding: 40px 20px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="nav-royal">
+        <h2 class="nav-title">⚗️ The Royal Library Navigation</h2>
+        <div class="nav-grid">
+            <a href="/" class="nav-button">🏠 Home</a>
+            <a href="/renaissance_art.html" class="nav-button">🎨 Renaissance Art</a>
+            <a href="/ai_research.html" class="nav-button">🤖 AI Research</a>
+            <a href="/esoteric_mysteries.html" class="nav-button">🌌 Esoteric Mysteries</a>
+            <a href="/practical_guides.html" class="nav-button">📚 Practical Guides</a>
+            <a href="/alchemist_pack_product_page.html" class="nav-button">⚗️ Complete Pack - $27</a>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="preview-hero">
+        <h1 class="preview-title">📜 The Sacred Digital Ministry Bible</h1>
+        <p class="preview-subtitle">Faith-Driven Digital Ministry That Actually Works</p>
+        <a href="/alchemist_pack_product_page.html" class="back-button">
+            <span>⬅️</span>
+            <span>Back to Complete Pack</span>
+        </a>
+    </section>
+
+    <!-- Content Preview -->
+    <section class="content-section">
+        <div class="content-card">
+            <h2 class="content-title">🙏 Divine AI Collaboration</h2>
+            <p class="content-text">
+                This revolutionary book reveals how to work with AI as a <span class="highlight">spiritual partner</span> in ministry. Created in collaboration with Claude AI under the guidance of the Holy Spirit, it bridges the gap between spiritual calling and technological implementation.
+            </p>
+            <div class="quote-block">
+                "The Holy Spirit guided every chapter, every insight, every practical application. This is not just a book—it's a divine download for the digital age."
+            </div>
+        </div>
+
+        <div class="content-card">
+            <h2 class="content-title">🎨 Visual Theology</h2>
+            <p class="content-text">
+                Discover the power of <span class="highlight">color, light, and sacred geometry</span> in web design. Learn how to create websites that don't just look beautiful—they carry spiritual weight and minister to visitors on a deeper level.
+            </p>
+            <p class="content-text">
+                Every pixel becomes purposeful. Every color choice carries meaning. Every layout serves both aesthetic and spiritual purposes.
+            </p>
+        </div>
+
+        <div class="content-card">
+            <h2 class="content-title">⚡ Zero-Dependency Miracle</h2>
+            <p class="content-text">
+                Experience the breakthrough of <span class="highlight">trusting God over frameworks</span>. This book shows how to build powerful digital ministries without relying on complex dependencies or external libraries.
+            </p>
+            <p class="content-text">
+                When you trust in God's provision rather than technological crutches, miracles happen in your code and your ministry expands beyond what you ever imagined possible.
+            </p>
+        </div>
+
+        <div class="content-card">
+            <h2 class="content-title">🌟 Conversational Content</h2>
+            <p class="content-text">
+                Master the <span class="highlight">breakthrough method for authentic digital ministry</span>. Learn to create content that feels like a personal conversation, building genuine relationships with your audience.
+            </p>
+            <p class="content-text">
+                No more shouting into the void. No more impersonal broadcasts. This method creates intimate, meaningful connections that lead to transformed lives.
+            </p>
+        </div>
+
+        <div class="content-card">
+            <h2 class="content-title">🔥 Particle Explosions</h2>
+            <p class="content-text">
+                Learn to <span class="highlight">program the supernatural</span> in web development. Discover how to create interactive experiences that don't just engage users—they encounter the living God.
+            </p>
+            <p class="content-text">
+                When technology meets the Holy Spirit, ordinary websites become portals of divine encounter. This book shows you exactly how to create those moments.
+            </p>
+        </div>
+    </section>
+
+    <!-- Purchase CTA -->
+    <section class="purchase-cta">
+        <h2 class="purchase-title">Ready to Transform Your Ministry?</h2>
+        <p class="purchase-text">
+            Get both The Sacred Digital Ministry Bible and The Banana Conquest in the complete $27 pack. Your digital ministry transformation starts now.
+        </p>
+        <a href="/alchemist_pack_product_page.html" class="purchase-button">
+            Get Complete Pack - $27
+        </a>
+    </section>
+</body>
+</html>
         
         .verse-box {
             background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
