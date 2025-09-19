@@ -4,6 +4,12 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>The Alchemist's Digital Grimoire - $27 Complete Pack</title>
+    <script src="https://js.stripe.com/v3/"></script>
+    <script>
+        // Initialize Stripe
+        const stripe = Stripe('pk_test_your_stripe_publishable_key_here'); // Replace with your actual publishable key
+        let elements;
+    </script>
     <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;500;600;700&family=Crimson+Text:ital,wght@0,400;0,600;1,400&display=swap" rel="stylesheet">
     <style>
         * {
@@ -336,6 +342,27 @@
             box-shadow: 0 8px 25px rgba(218,165,32,0.4);
         }
 
+        .payment-message {
+            margin-top: 15px;
+            padding: 10px;
+            border-radius: 5px;
+            text-align: center;
+            font-weight: 600;
+            min-height: 20px;
+        }
+
+        .payment-message.error {
+            background-color: rgba(220, 53, 69, 0.1);
+            color: #dc3545;
+            border: 1px solid rgba(220, 53, 69, 0.3);
+        }
+
+        .payment-message.success {
+            background-color: rgba(40, 167, 69, 0.1);
+            color: #28a745;
+            border: 1px solid rgba(40, 167, 69, 0.3);
+        }
+
         .guarantee-section {
             background: rgba(0,0,0,0.6);
             padding: 40px 20px;
@@ -533,13 +560,14 @@
         <div class="payment-options">
             <div class="payment-card">
                 <div class="payment-icon">💳</div>
-                <h3 class="payment-name">Credit Card</h3>
+                <h3 class="payment-name">Secure Stripe Payment</h3>
                 <p class="payment-description">
-                    Fast and secure payment processing through our encrypted gateway. Instant access to both books.
+                    Fast, secure payment processing with full PCI compliance. Instant access to both books with 256-bit SSL encryption.
                 </p>
-                <a href="#" class="payment-button" onclick="alert('Stripe payment integration coming soon! Contact the Alchemist for immediate access.')">
-                    Pay with Card - $27
-                </a>
+                <button id="stripe-payment-button" class="payment-button">
+                    Pay with Stripe - $27
+                </button>
+                <div id="payment-message" class="payment-message"></div>
             </div>
 
             <div class="payment-card">
@@ -559,9 +587,9 @@
                 <p class="payment-description">
                     Accept Bitcoin, Ethereum, or other cryptocurrencies. Decentralized and anonymous payment.
                 </p>
-                <a href="#" class="payment-button" onclick="alert('Crypto payment integration coming soon! Contact the Alchemist for wallet details.')">
+                <button onclick="alert('Crypto payment integration coming soon! Contact the Alchemist for wallet details.')" class="payment-button">
                     Pay with Crypto - $27
-                </a>
+                </button>
             </div>
         </div>
     </section>
@@ -580,5 +608,63 @@
             "In the Royal Library of Marganarok, every page turns, every scroll unrolls, and every circuit hums with the promise of discovery."
         </p>
     </footer>
+
+    <script>
+        // Stripe Payment Integration
+        document.getElementById('stripe-payment-button').addEventListener('click', async () => {
+            const button = document.getElementById('stripe-payment-button');
+            const message = document.getElementById('payment-message');
+
+            button.disabled = true;
+            button.textContent = 'Processing...';
+            message.textContent = '';
+
+            try {
+                // Create PaymentIntent on the server
+                const response = await fetch('/create-payment-intent', {
+                    method: 'POST',
+                    headers: {
+                        'Content-Type': 'application/json',
+                    },
+                    body: JSON.stringify({
+                        amount: 27,
+                        currency: 'usd'
+                    }),
+                });
+
+                const { clientSecret } = await response.json();
+
+                // Confirm the PaymentIntent with Stripe
+                const { error } = await stripe.confirmPayment({
+                    clientSecret,
+                    confirmParams: {
+                        return_url: `${window.location.origin}/payment-success.html`,
+                    },
+                });
+
+                if (error) {
+                    message.textContent = `Payment failed: ${error.message}`;
+                    button.disabled = false;
+                    button.textContent = 'Pay with Stripe - $27';
+                }
+            } catch (error) {
+                console.error('Error:', error);
+                message.textContent = 'An error occurred. Please try again.';
+                button.disabled = false;
+                button.textContent = 'Pay with Stripe - $27';
+            }
+        });
+
+        // Add some visual feedback
+        document.querySelectorAll('.payment-card').forEach(card => {
+            card.addEventListener('mouseenter', () => {
+                card.style.transform = 'translateY(-8px)';
+            });
+
+            card.addEventListener('mouseleave', () => {
+                card.style.transform = 'translateY(0)';
+            });
+        });
+    </script>
 </body>
 </html>
