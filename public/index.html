@@ -254,6 +254,149 @@
                 padding: 20px 15px;
             }
         }
+
+        /* ===== SOCIAL MEDIA SECTION ===== */
+        .social-section {
+            background: linear-gradient(135deg, #0f0a0a 0%, #1a1111 50%, #2c1810 100%);
+            padding: 60px 20px;
+            margin: 30px;
+            border-radius: 20px;
+            border: 3px solid #DAA520;
+            box-shadow: 0 15px 40px rgba(218,165,32,0.2);
+        }
+
+        .social-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            text-align: center;
+        }
+
+        .social-title {
+            font-family: 'Cinzel', serif;
+            font-size: clamp(2rem, 4vw, 3rem);
+            color: #FFD700;
+            margin-bottom: 15px;
+            text-shadow: 3px 3px 6px rgba(0,0,0,0.8);
+        }
+
+        .social-subtitle {
+            font-size: clamp(1rem, 2vw, 1.3rem);
+            color: #f4f1e8;
+            margin-bottom: 40px;
+            font-style: italic;
+            opacity: 0.9;
+        }
+
+        .social-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 20px;
+            max-width: 1000px;
+            margin: 0 auto;
+        }
+
+        .social-button {
+            display: flex;
+            align-items: center;
+            background: rgba(139,69,19,0.9);
+            padding: 20px 25px;
+            border-radius: 15px;
+            border: 2px solid #DAA520;
+            text-decoration: none;
+            color: #f4f1e8;
+            transition: all 0.4s ease;
+            box-shadow: 0 8px 20px rgba(218,165,32,0.1);
+            cursor: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='32' height='32' viewBox='0 0 32 32'%3E%3Cdefs%3E%3Cstyle%3E@keyframes flame-social%7B0%25%7Btransform:scale(1) rotate(0deg);opacity:1%7D25%25%7Btransform:scale(1.2) rotate(3deg);opacity:0.95%7D50%25%7Btransform:scale(0.9) rotate(-2deg);opacity:1%7D75%25%7Btransform:scale(1.1) rotate(1deg);opacity:0.9%7D100%25%7Btransform:scale(1) rotate(0deg);opacity:1%7D%7D%3C/style%3E%3C/defs%3E%3Cg transform='translate(16,16)'%3E%3Cpath d='M-1,-12 L1,-12 L1,8 L-1,8 Z' fill='%23c0c0c0' stroke='%23ffd700' stroke-width='0.5'/%3E%3Crect x='-2' y='8' width='4' height='4' fill='%238b4513' stroke='%23daa520' stroke-width='0.5'/%3E%3Cellipse cx='0' cy='-14' rx='3.5' ry='4.5' fill='%23ff4500' opacity='0.8'%3E%3CanimateTransform attributeName='transform' type='scale' values='1,1;1.3,0.7;0.7,1.3;1.1,0.9;1,1' dur='0.5s' repeatCount='indefinite'/%3E%3C/ellipse%3E%3Cellipse cx='0' cy='-16' rx='2.5' ry='3.5' fill='%23ff6347' opacity='0.9'%3E%3CanimateTransform attributeName='transform' type='scale' values='1,1;0.7,1.4;1.4,0.6;0.9,1.1;1,1' dur='0.4s' repeatCount='indefinite'/%3E%3C/ellipse%3E%3Cellipse cx='0' cy='-18' rx='2' ry='3' fill='%23ffd700' opacity='1'%3E%3CanimateTransform attributeName='transform' type='scale' values='1,1;1.5,0.5;0.5,1.5;1.2,0.8;1,1' dur='0.3s' repeatCount='indefinite'/%3E%3C/ellipse%3E%3C/g%3E%3C/svg%3E"), pointer;
+        }
+
+        .social-button:hover {
+            transform: translateY(-8px) scale(1.02);
+            box-shadow: 0 15px 35px rgba(218,165,32,0.4);
+            background: rgba(218,165,32,0.1);
+            border-color: #FFD700;
+        }
+
+        .social-button:hover .social-icon {
+            transform: scale(1.2) rotate(5deg);
+            color: #FFD700;
+        }
+
+        .social-button:hover .social-name {
+            color: #FFD700;
+            text-shadow: 0 0 10px rgba(255,215,0,0.5);
+        }
+
+        .social-icon {
+            font-size: 2.5rem;
+            margin-right: 20px;
+            transition: all 0.3s ease;
+            min-width: 50px;
+            text-align: center;
+        }
+
+        .social-content {
+            text-align: left;
+            flex: 1;
+        }
+
+        .social-name {
+            font-family: 'Cinzel', serif;
+            font-size: 1.4rem;
+            font-weight: 600;
+            color: #f4f1e8;
+            margin-bottom: 5px;
+            transition: all 0.3s ease;
+        }
+
+        .social-handle {
+            font-size: 1rem;
+            color: #DAA520;
+            opacity: 0.8;
+            font-style: italic;
+        }
+
+        /* Platform-specific colors */
+        .facebook:hover { border-color: #1877f2; }
+        .instagram:hover { border-color: #e4405f; }
+        .twitter:hover { border-color: #1da1f2; }
+        .linkedin:hover { border-color: #0077b5; }
+        .linktree:hover { border-color: #39e09b; }
+        .tiktok:hover { border-color: #000000; }
+        .youtube:hover { border-color: #ff0000; }
+
+        .facebook:hover .social-name { color: #1877f2; }
+        .instagram:hover .social-name { color: #e4405f; }
+        .twitter:hover .social-name { color: #1da1f2; }
+        .linkedin:hover .social-name { color: #0077b5; }
+        .linktree:hover .social-name { color: #39e09b; }
+        .tiktok:hover .social-name { color: #ffffff; }
+        .youtube:hover .social-name { color: #ff0000; }
+
+        @media (max-width: 768px) {
+            .social-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .social-section {
+                margin: 15px;
+                padding: 40px 20px;
+            }
+
+            .social-button {
+                flex-direction: column;
+                text-align: center;
+                padding: 20px 15px;
+            }
+
+            .social-icon {
+                margin-right: 0;
+                margin-bottom: 15px;
+            }
+
+            .social-content {
+                text-align: center;
+            }
+        }
     </style>
 </head>
 <body>
@@ -381,6 +524,72 @@
             </div>
         </section>
     </main>
+
+    <!-- Social Media Section -->
+    <section class="social-section">
+        <div class="social-container">
+            <h2 class="social-title">🌟 Connect with the Alchemist</h2>
+            <p class="social-subtitle">Follow the journey through the realms of knowledge and creation</p>
+
+            <div class="social-grid">
+                <a href="https://www.facebook.com/profile.php?id=61578595622796" target="_blank" rel="noopener noreferrer" class="social-button facebook">
+                    <div class="social-icon">📘</div>
+                    <div class="social-content">
+                        <div class="social-name">Facebook</div>
+                        <div class="social-handle">@Alchemists</div>
+                    </div>
+                </a>
+
+                <a href="https://www.instagram.com/alchemistsx0/" target="_blank" rel="noopener noreferrer" class="social-button instagram">
+                    <div class="social-icon">📷</div>
+                    <div class="social-content">
+                        <div class="social-name">Instagram</div>
+                        <div class="social-handle">@alchemistsx0</div>
+                    </div>
+                </a>
+
+                <a href="https://x.com/Philipp36533206" target="_blank" rel="noopener noreferrer" class="social-button twitter">
+                    <div class="social-icon">🐦</div>
+                    <div class="social-content">
+                        <div class="social-name">X (Twitter)</div>
+                        <div class="social-handle">@Philipp36533206</div>
+                    </div>
+                </a>
+
+                <a href="https://www.linkedin.com/in/philippe-b-1234567890-/" target="_blank" rel="noopener noreferrer" class="social-button linkedin">
+                    <div class="social-icon">💼</div>
+                    <div class="social-content">
+                        <div class="social-name">LinkedIn</div>
+                        <div class="social-handle">Philippe B.</div>
+                    </div>
+                </a>
+
+                <a href="https://linktr.ee/alchemistsx0" target="_blank" rel="noopener noreferrer" class="social-button linktree">
+                    <div class="social-icon">🔗</div>
+                    <div class="social-content">
+                        <div class="social-name">Linktree</div>
+                        <div class="social-handle">@alchemistsx0</div>
+                    </div>
+                </a>
+
+                <a href="https://www.tiktok.com/@alchystones" target="_blank" rel="noopener noreferrer" class="social-button tiktok">
+                    <div class="social-icon">🎵</div>
+                    <div class="social-content">
+                        <div class="social-name">TikTok</div>
+                        <div class="social-handle">@alchystones</div>
+                    </div>
+                </a>
+
+                <a href="https://www.youtube.com/@alchemists-u1c" target="_blank" rel="noopener noreferrer" class="social-button youtube">
+                    <div class="social-icon">📺</div>
+                    <div class="social-content">
+                        <div class="social-name">YouTube</div>
+                        <div class="social-handle">@alchemists-u1c</div>
+                    </div>
+                </a>
+            </div>
+        </div>
+    </section>
 
     <footer class="footer">
         <p class="footer-text">
