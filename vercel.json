@@ -1,0 +1,10 @@
+{
+  "version": 2,
+  "name": "royal-library-website",
+  "routes": [
+    {
+      "src": "/(.*)",
+      "dest": "/server.js"
+    }
+  ]
+}
