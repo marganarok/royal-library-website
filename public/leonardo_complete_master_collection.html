@@ -1,0 +1,575 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Leonardo da Vinci: Complete Master Collection</title>
+    <meta name="description" content="Explore Leonardo da Vinci's complete works: typography techniques, cryptographic decoding, foundational notebooks, and artistic innovations within the Royal Library of Marganarok.">
+    <meta name="keywords" content="Leonardo da Vinci, typography, cryptography, decoder, notebooks, Renaissance art, Royal Library, Marganarok">
+    <link rel="stylesheet" href="style.css">
+    <style>
+        .leonardo-container {
+            max-width: 1400px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+        .leonardo-header {
+            text-align: center;
+            margin-bottom: 50px;
+        }
+
+        .leonardo-title {
+            font-size: 4em;
+            color: #ff073a;
+            text-shadow: 0 0 25px #ff073a;
+            margin-bottom: 15px;
+            font-family: 'Times New Roman', serif;
+        }
+
+        .leonardo-subtitle {
+            font-size: 1.4em;
+            color: #00ff41;
+            text-shadow: 0 0 15px #00ff41;
+            font-style: italic;
+        }
+
+        .master-section {
+            background: rgba(0, 255, 65, 0.05);
+            border: 1px solid #00ff41;
+            border-radius: 15px;
+            padding: 40px;
+            margin: 30px 0;
+            box-shadow: 0 0 30px rgba(0, 255, 65, 0.2);
+        }
+
+        .section-title {
+            color: #ff073a;
+            font-size: 2.5em;
+            text-align: center;
+            margin-bottom: 30px;
+            text-shadow: 0 0 15px #ff073a;
+            font-family: 'Times New Roman', serif;
+        }
+
+        .renaissance-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: 25px;
+            margin: 30px 0;
+        }
+
+        .renaissance-card {
+            background: rgba(255, 7, 58, 0.05);
+            border: 1px solid #ff073a;
+            border-radius: 12px;
+            padding: 25px;
+            transition: all 0.4s ease;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .renaissance-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 3px;
+            background: linear-gradient(90deg, #ff073a, #ff6347, #daa520);
+        }
+
+        .renaissance-card:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 15px 40px rgba(255, 7, 58, 0.4);
+            border-color: #ff6347;
+        }
+
+        .card-icon {
+            font-size: 3em;
+            margin-bottom: 15px;
+            text-align: center;
+        }
+
+        .card-title {
+            color: #00ff41;
+            font-size: 1.4em;
+            margin-bottom: 15px;
+            text-shadow: 0 0 8px #00ff41;
+            text-align: center;
+            font-family: 'Times New Roman', serif;
+        }
+
+        .card-content {
+            color: #c0c0c0;
+            line-height: 1.7;
+            font-size: 1em;
+        }
+
+        .typography-section {
+            background: linear-gradient(135deg, rgba(139, 115, 85, 0.1), rgba(160, 149, 107, 0.1));
+            border: 2px solid #8b7355;
+            border-radius: 15px;
+            padding: 35px;
+            margin: 30px 0;
+        }
+
+        .typography-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 20px;
+        }
+
+        .typography-card {
+            background: rgba(255, 255, 255, 0.95);
+            border-radius: 12px;
+            padding: 20px;
+            box-shadow: 0 6px 20px rgba(0, 0, 0, 0.15);
+            border: 2px solid #8b7355;
+            transition: all 0.3s ease;
+        }
+
+        .typography-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 12px 30px rgba(0, 0, 0, 0.25);
+        }
+
+        .crypto-section {
+            background: linear-gradient(135deg, rgba(10, 10, 10, 0.8), rgba(26, 26, 46, 0.6), rgba(22, 33, 62, 0.4));
+            border: 2px solid #ff6b6b;
+            border-radius: 15px;
+            padding: 35px;
+            margin: 30px 0;
+            color: #e8e8e8;
+        }
+
+        .crypto-machine {
+            background: linear-gradient(135deg, #1e1e1e, #2d1b2e, #1e1e1e);
+            border-radius: 15px;
+            padding: 25px;
+            margin: 20px 0;
+            border: 1px solid #ff6b6b;
+        }
+
+        .crypto-input {
+            width: 100%;
+            padding: 12px;
+            background: rgba(0, 0, 0, 0.8);
+            border: 1px solid #ffd93d;
+            border-radius: 5px;
+            color: #ffd93d;
+            font-family: 'Courier New', monospace;
+            font-size: 1em;
+            margin: 10px 0;
+        }
+
+        .crypto-button {
+            background: linear-gradient(45deg, #ff6b6b, #ff4757);
+            border: none;
+            color: white;
+            padding: 10px 20px;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 1em;
+            margin: 5px;
+            transition: all 0.3s ease;
+        }
+
+        .crypto-button:hover {
+            transform: scale(1.05);
+            box-shadow: 0 0 15px rgba(255, 107, 107, 0.5);
+        }
+
+        .crypto-techniques-title {
+            color: #ff6b6b;
+            margin-bottom: 15px;
+        }
+
+        .crypto-card-red {
+            background: rgba(255, 107, 107, 0.1);
+            border-color: #ff6b6b;
+        }
+
+        .interactive-experience-title {
+            color: #daa520;
+            margin-bottom: 20px;
+        }
+
+        .interactive-experience-text {
+            color: #c0c0c0;
+            margin-bottom: 20px;
+        }
+
+        .notebooks-section {
+            background: linear-gradient(135deg, rgba(139, 115, 85, 0.15), rgba(160, 149, 107, 0.1));
+            border: 2px solid #daa520;
+            border-radius: 15px;
+            padding: 35px;
+            margin: 30px 0;
+        }
+
+        .notebook-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+            gap: 25px;
+        }
+
+        .notebook-card {
+            background: rgba(255, 255, 255, 0.95);
+            border-radius: 12px;
+            padding: 25px;
+            box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+            border: 3px solid #daa520;
+            transition: all 0.3s ease;
+        }
+
+        .notebook-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 15px 35px rgba(218, 165, 32, 0.3);
+        }
+
+        .notebook-title {
+            color: #4a3728;
+            font-size: 1.3em;
+            margin-bottom: 15px;
+            font-weight: bold;
+            text-align: center;
+        }
+
+        .notebook-content {
+            color: #2c1810;
+            line-height: 1.6;
+        }
+
+        .interactive-demo {
+            background: rgba(0, 0, 0, 0.9);
+            border: 1px solid #daa520;
+            border-radius: 10px;
+            padding: 20px;
+            margin: 20px 0;
+            text-align: center;
+        }
+
+        .demo-button {
+            background: linear-gradient(45deg, #daa520, #ffd700);
+            border: none;
+            color: #000;
+            padding: 12px 25px;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 1.1em;
+            margin: 10px;
+            transition: all 0.3s ease;
+        }
+
+        .demo-button:hover {
+            transform: scale(1.05);
+            box-shadow: 0 0 20px rgba(218, 165, 32, 0.5);
+        }
+
+        .back-link {
+            display: inline-block;
+            color: #daa520;
+            text-decoration: none;
+            margin-top: 40px;
+            padding: 12px 25px;
+            border: 1px solid #daa520;
+            border-radius: 5px;
+            transition: all 0.3s ease;
+        }
+
+        .back-link:hover {
+            background: rgba(218, 165, 32, 0.1);
+            text-shadow: 0 0 10px #daa520;
+        }
+
+        .typography-title {
+            color: #4a3728;
+            text-align: center;
+            margin-bottom: 15px;
+        }
+
+        .typography-text {
+            color: #2c1810;
+            line-height: 1.6;
+        }
+
+        .crypto-quote {
+            text-align: center;
+            margin-bottom: 30px;
+            color: #ffd93d;
+            font-style: italic;
+        }
+
+        .crypto-machine-title {
+            color: #ff6b6b;
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+        .crypto-input-section {
+            margin-bottom: 20px;
+        }
+
+        .crypto-label {
+            color: #ffd93d;
+            display: block;
+            margin-bottom: 5px;
+        }
+
+        .crypto-buttons {
+            text-align: center;
+        }
+
+        .crypto-techniques {
+            margin-top: 30px;
+        }
+
+        @media (max-width: 768px) {
+            .leonardo-title {
+                font-size: 2.5em;
+            }
+
+            .renaissance-grid,
+            .typography-grid,
+            .notebook-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="leonardo-container">
+        <div class="leonardo-header">
+            <h1 class="leonardo-title">🎨 Leonardo da Vinci</h1>
+            <p class="leonardo-subtitle">Complete Master Collection: Typography, Cryptography & Foundational Notebooks</p>
+        </div>
+
+        <div class="master-section">
+            <h2 class="section-title">The Renaissance Genius</h2>
+            <div class="renaissance-grid">
+                <div class="renaissance-card">
+                    <div class="card-icon">🖌️</div>
+                    <h3 class="card-title">The Artist</h3>
+                    <p class="card-content">Painter, sculptor, architect, and inventor whose works epitomized the Renaissance humanist ideal. His masterpieces like the Mona Lisa and The Last Supper continue to captivate humanity centuries later.</p>
+                </div>
+                <div class="renaissance-card">
+                    <div class="card-icon">🔬</div>
+                    <h3 class="card-title">The Scientist</h3>
+                    <p class="card-content">Pioneering anatomist, engineer, and natural philosopher who made groundbreaking discoveries in anatomy, geology, optics, and hydrodynamics through systematic observation and experimentation.</p>
+                </div>
+                <div class="renaissance-card">
+                    <div class="card-icon">📚</div>
+                    <h3 class="card-title">The Scholar</h3>
+                    <p class="card-content">Prolific writer and thinker whose notebooks contain over 13,000 pages of observations, drawings, and theories spanning art, science, engineering, and philosophy.</p>
+                </div>
+                <div class="renaissance-card">
+                    <div class="card-icon">⚙️</div>
+                    <h3 class="card-title">The Inventor</h3>
+                    <p class="card-content">Visionary designer of flying machines, armored vehicles, and mechanical devices centuries ahead of their time, including the helicopter, tank, and parachute.</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="typography-section">
+            <h2 class="section-title">Typography & Design Techniques</h2>
+            <div class="typography-grid">
+                <div class="typography-card">
+                    <h3 class="typography-title">Proportional Spacing</h3>
+                    <p class="typography-text">Leonardo pioneered the use of proportional spacing in typography, ensuring that letters were spaced according to their visual weight rather than mechanical uniformity. This approach created more harmonious and readable text layouts.</p>
+                </div>
+                <div class="typography-card">
+                    <h3 class="typography-title">Anatomical Letterforms</h3>
+                    <p class="typography-text">Drawing from his anatomical studies, Leonardo designed letterforms that mirrored the proportions and movements of the human body, creating letters that felt alive and organic rather than mechanical.</p>
+                </div>
+                <div class="typography-card">
+                    <h3 class="typography-title">Mirror Writing</h3>
+                    <p class="typography-text">Leonardo frequently wrote in mirror script, requiring readers to use a mirror to decipher his notes. This technique may have been developed to protect his ideas or as a form of visual cryptography.</p>
+                </div>
+                <div class="typography-card">
+                    <h3 class="typography-title">Geometric Construction</h3>
+                    <p class="typography-text">Using geometric principles and the golden ratio, Leonardo constructed letterforms based on mathematical proportions, creating visually balanced and aesthetically pleasing typography.</p>
+                </div>
+                <div class="typography-card">
+                    <h3 class="typography-title">Calligraphic Innovation</h3>
+                    <p class="typography-text">Leonardo developed innovative calligraphic techniques, experimenting with different pens, inks, and writing surfaces to achieve unique textural and visual effects in his manuscripts.</p>
+                </div>
+                <div class="typography-card">
+                    <h3 class="typography-title">Hierarchical Typography</h3>
+                    <p class="typography-text">He pioneered the use of typographic hierarchy, using different sizes, weights, and styles to create visual relationships and guide readers through complex textual information.</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="crypto-section">
+            <h2 class="section-title">Cryptographic Decoder</h2>
+            <p class="crypto-quote">
+                "The noblest pleasure is the joy of understanding." - Leonardo da Vinci
+            </p>
+
+            <div class="crypto-machine">
+                <h3 class="crypto-machine-title">Da Vinci Cryptographic Machine</h3>
+
+                <div class="crypto-input-section">
+                    <label class="crypto-label">Input Text:</label>
+                    <textarea id="cryptoInput" class="crypto-input" rows="3" placeholder="Enter text to encode/decode..."></textarea>
+                </div>
+
+                <div class="crypto-input-section">
+                    <label class="crypto-label" for="cryptoOutput">Output:</label>
+                    <textarea id="cryptoOutput" class="crypto-input" rows="3" readonly aria-label="Cryptographic output result"></textarea>
+                </div>
+
+                <div class="crypto-buttons">
+                    <button class="crypto-button" onclick="encodeMirror()">🔄 Mirror Encode</button>
+                    <button class="crypto-button" onclick="decodeMirror()">🔄 Mirror Decode</button>
+                    <button class="crypto-button" onclick="encodeCaesar()">🔢 Caesar Cipher</button>
+                    <button class="crypto-button" onclick="decodeCaesar()">🔢 Caesar Decode</button>
+                    <button class="crypto-button" onclick="clearCrypto()">🗑️ Clear</button>
+                </div>
+            </div>
+
+            <div class="crypto-techniques">
+                <h3 class="crypto-techniques-title">Cryptographic Techniques Used by Leonardo:</h3>
+                <div class="renaissance-grid">
+                    <div class="renaissance-card crypto-card-red">
+                        <div class="card-icon">🔄</div>
+                        <h3 class="card-title">Mirror Writing</h3>
+                        <p class="card-content">Leonardo's most famous cryptographic technique, writing backwards so that text could only be read with a mirror. This protected his scientific discoveries and artistic techniques.</p>
+                    </div>
+                    <div class="renaissance-card crypto-card-red">
+                        <div class="card-icon">🔢</div>
+                        <h3 class="card-title">Caesar Ciphers</h3>
+                        <p class="card-content">Simple substitution ciphers where each letter is shifted by a fixed number of positions. Leonardo experimented with various shift values and combined this with other techniques.</p>
+                    </div>
+                    <div class="renaissance-card crypto-card-red">
+                        <div class="card-icon">🎭</div>
+                        <h3 class="card-title">Visual Cryptography</h3>
+                        <p class="card-content">Leonardo used visual elements like anamorphic drawings and hidden images within his paintings to conceal messages that could only be revealed through specific viewing techniques.</p>
+                    </div>
+                    <div class="renaissance-card crypto-card-red">
+                        <div class="card-icon">📝</div>
+                        <h3 class="card-title">Steganography</h3>
+                        <p class="card-content">Hiding messages within seemingly innocent drawings and diagrams. Leonardo often embedded scientific observations and personal thoughts within his anatomical and engineering sketches.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="notebooks-section">
+            <h2 class="section-title">The Five Foundational Notebooks</h2>
+            <div class="notebook-grid">
+                <div class="notebook-card">
+                    <h3 class="notebook-title">📓 Codex Arundel</h3>
+                    <p class="notebook-content">One of Leonardo's most important notebooks, containing studies on mechanics, physics, and engineering. This codex demonstrates his systematic approach to scientific inquiry and contains detailed drawings of machines and mechanical principles.</p>
+                </div>
+                <div class="notebook-card">
+                    <h3 class="notebook-title">📖 Codex Atlanticus</h3>
+                    <p class="notebook-content">The largest collection of Leonardo's drawings and writings, spanning 1,119 pages. It contains studies on anatomy, engineering, geography, and natural phenomena, showcasing the breadth of his intellectual curiosity.</p>
+                </div>
+                <div class="notebook-card">
+                    <h3 class="notebook-title">📚 Codex Leicester</h3>
+                    <p class="notebook-content">Focused on Leonardo's studies of water and geology, this notebook contains his observations on rivers, fossils, and the formation of mountains. It represents his geological and hydrological research.</p>
+                </div>
+                <div class="notebook-card">
+                    <h3 class="notebook-title">📝 Codex Madrid</h3>
+                    <p class="notebook-content">A comprehensive study of mechanics and engineering principles. This codex contains detailed analyses of levers, pulleys, and other mechanical systems, demonstrating Leonardo's engineering expertise.</p>
+                </div>
+                <div class="notebook-card">
+                    <h3 class="notebook-title">🎨 Codex Trivulzianus</h3>
+                    <p class="notebook-content">One of Leonardo's earliest notebooks, containing studies on geometry, mechanics, and early anatomical drawings. This codex shows the development of his artistic and scientific thinking from his early career.</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="interactive-demo">
+            <h3 class="interactive-experience-title">Interactive Da Vinci Experience</h3>
+            <p class="interactive-experience-text">
+                Explore Leonardo's techniques through interactive demonstrations
+            </p>
+            <button class="demo-button" onclick="showTypographyDemo()">✍️ Typography Demo</button>
+            <button class="demo-button" onclick="showCryptoDemo()">🔐 Crypto Workshop</button>
+            <button class="demo-button" onclick="showAnatomyDemo()">🫀 Anatomy Studies</button>
+            <button class="demo-button" onclick="showInventionDemo()">⚙️ Invention Gallery</button>
+        </div>
+
+        <div class="center-text">
+            <a href="/" class="back-link">← Return to Royal Library</a>
+        </div>
+    </div>
+
+    <script>
+        // Cryptographic functions
+        function encodeMirror() {
+            const input = document.getElementById('cryptoInput').value;
+            const output = input.split('').reverse().join('');
+            document.getElementById('cryptoOutput').value = output;
+        }
+
+        function decodeMirror() {
+            // Mirror decoding is the same as encoding for simple reversal
+            encodeMirror();
+        }
+
+        function encodeCaesar() {
+            const input = document.getElementById('cryptoInput').value;
+            const shift = 3; // Caesar shift of 3
+            let output = '';
+            for (let char of input) {
+                if (char.match(/[a-z]/i)) {
+                    const code = char.charCodeAt(0);
+                    const base = code >= 65 && code <= 90 ? 65 : 97;
+                    output += String.fromCharCode(((code - base + shift) % 26) + base);
+                } else {
+                    output += char;
+                }
+            }
+            document.getElementById('cryptoOutput').value = output;
+        }
+
+        function decodeCaesar() {
+            const input = document.getElementById('cryptoInput').value;
+            const shift = -3; // Negative shift for decoding
+            let output = '';
+            for (let char of input) {
+                if (char.match(/[a-z]/i)) {
+                    const code = char.charCodeAt(0);
+                    const base = code >= 65 && code <= 90 ? 65 : 97;
+                    output += String.fromCharCode(((code - base + shift + 26) % 26) + base);
+                } else {
+                    output += char;
+                }
+            }
+            document.getElementById('cryptoOutput').value = output;
+        }
+
+        function clearCrypto() {
+            document.getElementById('cryptoInput').value = '';
+            document.getElementById('cryptoOutput').value = '';
+        }
+
+        // Interactive demo functions
+        function showTypographyDemo() {
+            alert('🎨 Typography Demo: Leonardo used the golden ratio (φ = 1.618) in his letterform designs. The proportions create visual harmony that pleases the eye.');
+        }
+
+        function showCryptoDemo() {
+            alert('🔐 Crypto Workshop: Try encoding "HELLO WORLD" with mirror writing or Caesar cipher above!');
+        }
+
+        function showAnatomyDemo() {
+            alert('🫀 Anatomy Studies: Leonardo dissected over 30 corpses to understand human anatomy, creating the most accurate drawings of his time.');
+        }
+
+        function showInventionDemo() {
+            alert('⚙️ Invention Gallery: Leonardo designed the helicopter, tank, and parachute - concepts centuries ahead of their time!');
+        }
+
+        // Initialize
+        document.addEventListener('DOMContentLoaded', function() {
+            console.log('🎨 Leonardo da Vinci Master Collection initialized');
+        });
+    </script>
+</body>
+</html></content>
+<parameter name="filePath">c:\Users\LiteGamer\Desktop\Royal_Library_Website\public\leonardo_complete_master_collection.html
