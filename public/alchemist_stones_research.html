@@ -1,0 +1,432 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Alchemist Stones Research - Royal Library of Marganarok</title>
+    <meta name="description" content="Comprehensive research on alchemical stones, philosopher's stones, and transmutation materials within the Royal Library of Marganarok.">
+    <meta name="keywords" content="alchemist stones, philosopher's stone, alchemy, transmutation, royal library, marganarok">
+    <link rel="stylesheet" href="style.css">
+    <style>
+        .alchemist-container {
+            max-width: 1400px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+        .alchemist-header {
+            text-align: center;
+            margin-bottom: 50px;
+        }
+
+        .alchemist-title {
+            font-size: 4em;
+            color: #ff073a;
+            text-shadow: 0 0 25px #ff073a;
+            margin-bottom: 15px;
+            font-family: 'Times New Roman', serif;
+        }
+
+        .alchemist-subtitle {
+            font-size: 1.4em;
+            color: #00ff41;
+            text-shadow: 0 0 15px #00ff41;
+            font-style: italic;
+        }
+
+        .stone-section {
+            background: rgba(255, 215, 0, 0.05);
+            border: 1px solid #ffd700;
+            border-radius: 15px;
+            padding: 40px;
+            margin: 30px 0;
+            box-shadow: 0 0 30px rgba(255, 215, 0, 0.2);
+        }
+
+        .stone-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+            gap: 25px;
+            margin: 30px 0;
+        }
+
+        .stone-card {
+            background: rgba(255, 215, 0, 0.1);
+            border: 1px solid #ffd700;
+            border-radius: 12px;
+            padding: 25px;
+            transition: all 0.4s ease;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .stone-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 3px;
+            background: linear-gradient(90deg, #ffd700, #ff8c00, #daa520);
+        }
+
+        .stone-card:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 15px 40px rgba(255, 215, 0, 0.4);
+            border-color: #ff8c00;
+        }
+
+        .stone-icon {
+            font-size: 3em;
+            margin-bottom: 15px;
+            text-align: center;
+        }
+
+        .stone-title {
+            color: #ffd700;
+            font-size: 1.4em;
+            margin-bottom: 15px;
+            text-shadow: 0 0 8px #ffd700;
+            text-align: center;
+            font-family: 'Times New Roman', serif;
+        }
+
+        .stone-content {
+            color: #f4f1e8;
+            line-height: 1.7;
+            font-size: 1em;
+        }
+
+        .transmutation-section {
+            background: linear-gradient(135deg, rgba(255, 69, 0, 0.1), rgba(255, 140, 0, 0.1));
+            border: 2px solid #ff4500;
+            border-radius: 15px;
+            padding: 35px;
+            margin: 30px 0;
+        }
+
+        .transmutation-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 20px;
+        }
+
+        .transmutation-card {
+            background: rgba(255, 255, 255, 0.95);
+            border-radius: 12px;
+            padding: 20px;
+            box-shadow: 0 6px 20px rgba(0, 0, 0, 0.15);
+            border: 2px solid #ff4500;
+            transition: all 0.3s ease;
+        }
+
+        .transmutation-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 12px 30px rgba(0, 0, 0, 0.25);
+        }
+
+        .laboratory-section {
+            background: linear-gradient(135deg, rgba(138, 43, 226, 0.1), rgba(75, 0, 130, 0.1));
+            border: 2px solid #8a2be2;
+            border-radius: 15px;
+            padding: 35px;
+            margin: 30px 0;
+        }
+
+        .laboratory-tools {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: 25px;
+        }
+
+        .tool-card {
+            background: rgba(138, 43, 226, 0.1);
+            border: 1px solid #8a2be2;
+            border-radius: 12px;
+            padding: 25px;
+            transition: all 0.4s ease;
+        }
+
+        .tool-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 30px rgba(138, 43, 226, 0.3);
+        }
+
+        .tool-icon {
+            font-size: 2.5em;
+            margin-bottom: 15px;
+            text-align: center;
+        }
+
+        .tool-title {
+            color: #dda0dd;
+            font-size: 1.3em;
+            margin-bottom: 15px;
+            text-shadow: 0 0 8px #dda0dd;
+            text-align: center;
+        }
+
+        .tool-content {
+            color: #f4f1e8;
+            line-height: 1.6;
+        }
+
+        .philosopher-stone {
+            background: linear-gradient(135deg, rgba(255, 7, 58, 0.1), rgba(220, 20, 60, 0.1));
+            border: 2px solid #ff073a;
+            border-radius: 15px;
+            padding: 35px;
+            margin: 30px 0;
+            text-align: center;
+        }
+
+        .stone-reveal {
+            background: rgba(255, 7, 58, 0.1);
+            border: 1px solid #ff073a;
+            border-radius: 10px;
+            padding: 20px;
+            margin: 20px 0;
+            position: relative;
+        }
+
+        .stone-button {
+            background: linear-gradient(45deg, #ff073a, #dc143c);
+            border: none;
+            color: white;
+            padding: 12px 25px;
+            border-radius: 8px;
+            cursor: pointer;
+            font-size: 1em;
+            margin: 10px;
+            transition: all 0.3s ease;
+        }
+
+        .stone-button:hover {
+            transform: scale(1.05);
+            box-shadow: 0 0 20px rgba(255, 7, 58, 0.5);
+        }
+
+        .back-link {
+            display: inline-block;
+            color: #ffd700;
+            text-decoration: none;
+            margin-top: 40px;
+            padding: 12px 25px;
+            border: 1px solid #ffd700;
+            border-radius: 5px;
+            transition: all 0.3s ease;
+        }
+
+        .back-link:hover {
+            background: rgba(255, 215, 0, 0.1);
+            text-shadow: 0 0 10px #ffd700;
+        }
+
+        .center-text {
+            text-align: center;
+        }
+
+        .button-container {
+            margin-top: 20px;
+        }
+
+        .stone-list {
+            text-align: left;
+            display: inline-block;
+        }
+
+        .stone-quote {
+            margin-top: 20px;
+            font-style: italic;
+        }
+    </style>
+</head>
+<body>
+    <div class="alchemist-container">
+        <div class="alchemist-header">
+            <h1 class="alchemist-title">⚱️ Alchemist Stones Research</h1>
+            <p class="alchemist-subtitle">The Quest for Transmutation and the Philosopher's Stone</p>
+        </div>
+
+        <div class="stone-section">
+            <h2 class="section-title">The Sacred Stones of Alchemy</h2>
+            <div class="stone-grid">
+                <div class="stone-card">
+                    <div class="stone-icon">💎</div>
+                    <h3 class="stone-title">The Philosopher's Stone</h3>
+                    <p class="stone-content">The ultimate goal of alchemical transmutation - a legendary substance capable of turning base metals into gold and granting immortality. Also known as the Elixir of Life, this stone represents the perfect union of matter and spirit.</p>
+                </div>
+
+                <div class="stone-card">
+                    <div class="stone-icon">🔮</div>
+                    <h3 class="stone-title">The Red Stone</h3>
+                    <p class="stone-content">The perfected Philosopher's Stone in its final form. Representing the solar principle and the successful completion of the Magnum Opus. This stone embodies the divine masculine and the active principle of creation.</p>
+                </div>
+
+                <div class="stone-card">
+                    <div class="stone-icon">🌙</div>
+                    <h3 class="stone-title">The White Stone</h3>
+                    <p class="stone-content">The intermediate stage of the Philosopher's Stone, representing lunar purity and spiritual enlightenment. This stone grants the ability to transmute metals into silver and represents the divine feminine principle.</p>
+                </div>
+
+                <div class="stone-card">
+                    <div class="stone-icon">⚗️</div>
+                    <h3 class="stone-title">The Green Lion</h3>
+                    <p class="stone-content">A volatile, mercurial substance representing the raw power of transformation. This "devouring lion" symbolizes the destructive yet necessary phase of alchemical dissolution before reconstruction.</p>
+                </div>
+
+                <div class="stone-card">
+                    <div class="stone-icon">🦅</div>
+                    <h3 class="stone-title">The Eagle Stone</h3>
+                    <p class="stone-content">Representing sublimation and ascension, this stone embodies the volatile elements that rise like an eagle in flight. It symbolizes the spiritual elevation and purification of the soul.</p>
+                </div>
+
+                <div class="stone-card">
+                    <div class="stone-icon">🦊</div>
+                    <h3 class="stone-title">The Fox Stone</h3>
+                    <p class="stone-content">A cunning, transformative substance that appears and disappears, representing the elusive nature of alchemical wisdom. The fox symbolizes both deception and divine cunning in the pursuit of truth.</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="transmutation-section">
+            <h2 class="section-title">The Seven Stages of Transmutation</h2>
+            <div class="transmutation-grid">
+                <div class="transmutation-card">
+                    <h3>⚫ Calcination</h3>
+                    <p>The burning away of impurities, both physical and spiritual. Fire reduces matter to its essential ash, representing the death of the old self.</p>
+                </div>
+
+                <div class="transmutation-card">
+                    <h3>⚪ Dissolution</h3>
+                    <p>The dissolution of hardened structures in the waters of the unconscious. What was solid becomes fluid, allowing for deep transformation.</p>
+                </div>
+
+                <div class="transmutation-card">
+                    <h3>🟡 Separation</h3>
+                    <p>The separation of the pure from the impure, the valuable from the worthless. This stage requires discernment and the ability to distinguish essence from illusion.</p>
+                </div>
+
+                <div class="transmutation-card">
+                    <h3>🟠 Conjunction</h3>
+                    <p>The sacred marriage of opposites - the union of solar and lunar, masculine and feminine, conscious and unconscious. This creates the hermaphroditic wholeness.</p>
+                </div>
+
+                <div class="transmutation-card">
+                    <h3>🔴 Fermentation</h3>
+                    <p>The putrefaction and rebirth process where new life emerges from decay. The "black sun" rises, bringing enlightenment and spiritual renewal.</p>
+                </div>
+
+                <div class="transmutation-card">
+                    <h3>🟣 Distillation</h3>
+                    <p>The purification and elevation of the spirit. Volatile elements are separated and refined, creating the philosopher's mercury - the universal solvent.</p>
+                </div>
+
+                <div class="transmutation-card">
+                    <h3>⚪ Coagulation</h3>
+                    <p>The final solidification and crystallization. The purified essence becomes the philosopher's stone, capable of transmuting all it touches.</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="laboratory-section">
+            <h2 class="section-title">The Alchemist's Laboratory</h2>
+            <div class="laboratory-tools">
+                <div class="tool-card">
+                    <div class="tool-icon">⚗️</div>
+                    <h3 class="tool-title">The Athanor</h3>
+                    <p class="tool-content">The sacred furnace used for calcination and distillation. This self-regulating furnace maintains constant heat for months, representing the steady work of spiritual transformation.</p>
+                </div>
+
+                <div class="tool-card">
+                    <div class="tool-icon">🧪</div>
+                    <h3 class="tool-title">The Pelican</h3>
+                    <p class="tool-content">A distillation apparatus shaped like a pelican feeding its young. This tool represents the circulation of fluids and the nurturing aspect of the alchemical process.</p>
+                </div>
+
+                <div class="tool-card">
+                    <div class="tool-icon">🕯️</div>
+                    <h3 class="tool-title">The Philosopher's Lamp</h3>
+                    <p class="tool-content">A lamp that burns without fuel, representing the inner light of illumination. This tool symbolizes the eternal flame of spiritual wisdom that guides the alchemist.</p>
+                </div>
+
+                <div class="tool-card">
+                    <div class="tool-icon">📚</div>
+                    <h3 class="tool-title">The Emerald Tablet</h3>
+                    <p class="tool-content">The foundational text of alchemy, inscribed on emerald. This tablet contains the secret of transmutation: "As above, so below" - the microcosm reflects the macrocosm.</p>
+                </div>
+
+                <div class="tool-card">
+                    <div class="tool-icon">🧿</div>
+                    <h3 class="tool-title">The Alchemical Symbols</h3>
+                    <p class="tool-content">A complex system of symbols representing elements, processes, and principles. These symbols encode the secret knowledge that cannot be expressed in ordinary language.</p>
+                </div>
+
+                <div class="tool-card">
+                    <div class="tool-icon">⏳</div>
+                    <h3 class="tool-title">The Sacred Timing</h3>
+                    <p class="tool-content">Understanding planetary hours, lunar cycles, and astrological timing. The alchemist works in harmony with cosmic rhythms to amplify the power of transformation.</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="philosopher-stone">
+            <h2 class="section-title">The Quest for the Philosopher's Stone</h2>
+            <p class="stone-content">The ultimate achievement of alchemy - the creation of a substance that can transmute base metals into gold and grant immortality. This stone represents the perfect balance of all elements and the union of spirit and matter.</p>
+
+            <div class="stone-reveal" id="stoneReveal">
+                <h3>The Nature of the Stone</h3>
+                <p>The Philosopher's Stone is not merely a physical substance, but a state of being - the perfect integration of all aspects of existence. It represents enlightenment, wholeness, and the ability to transform reality itself.</p>
+                <div class="button-container">
+                    <button class="stone-button" onclick="revealStone()">🔮 Reveal the Stone</button>
+                    <button class="stone-button" onclick="hideStone()">🌑 Conceal the Stone</button>
+                </div>
+            </div>
+        </div>
+
+        <div class="center-text">
+            <a href="/" class="back-link">← Return to Royal Library</a>
+        </div>
+    </div>
+
+    <script>
+        function revealStone() {
+            const reveal = document.getElementById('stoneReveal');
+            reveal.innerHTML = `
+                <h3>✨ The Philosopher's Stone Revealed</h3>
+                <p><strong>The Stone is:</strong></p>
+                <ul class="stone-list">
+                    <li>• A catalyst for transformation</li>
+                    <li>• The union of all elements</li>
+                    <li>• Eternal life essence</li>
+                    <li>• Perfect spiritual gold</li>
+                    <li>• The key to all mysteries</li>
+                    <li>• Divine consciousness made manifest</li>
+                </ul>
+                <p class="stone-quote">"The Stone teaches us that transformation begins within. The gold we seek is not in the earth, but in the perfection of our own being."</p>
+                <div class="button-container">
+                    <button class="stone-button" onclick="hideStone()">🌑 Conceal the Stone</button>
+                </div>
+            `;
+        }
+
+        function hideStone() {
+            const reveal = document.getElementById('stoneReveal');
+            reveal.innerHTML = `
+                <h3>The Nature of the Stone</h3>
+                <p>The Philosopher's Stone is not merely a physical substance, but a state of being - the perfect integration of all aspects of existence. It represents enlightenment, wholeness, and the ability to transform reality itself.</p>
+                <div style="margin-top: 20px;">
+                    <button class="stone-button" onclick="revealStone()">🔮 Reveal the Stone</button>
+                    <button class="stone-button" onclick="hideStone()">🌑 Conceal the Stone</button>
+                </div>
+            `;
+        }
+
+        // Initialize
+        document.addEventListener('DOMContentLoaded', function() {
+            console.log('⚱️ Alchemist Stones Research initialized');
+        });
+    </script>
+</body>
+</html></content>
+<parameter name="filePath">c:\Users\LiteGamer\Desktop\Royal_Library_Website\public\alchemist_stones_research.html
