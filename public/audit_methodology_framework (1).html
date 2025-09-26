@@ -422,6 +422,384 @@
                 grid-template-columns: 1fr;
             }
         }
+
+        .case-studies {
+            background: rgba(212, 175, 55, 0.05);
+            border: 1px solid var(--audit-gold);
+            border-radius: 15px;
+            padding: 40px;
+            margin: 30px 0;
+            box-shadow: 0 0 30px rgba(212, 175, 55, 0.2);
+        }
+
+        .case-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+            gap: 25px;
+            margin: 30px 0;
+        }
+
+        .case-card {
+            background: rgba(212, 175, 55, 0.1);
+            border: 1px solid var(--audit-gold);
+            border-radius: 12px;
+            padding: 25px;
+            transition: all 0.3s ease;
+        }
+
+        .case-card:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 8px 25px rgba(212, 175, 55, 0.3);
+        }
+
+        .case-title {
+            font-family: 'Cinzel', serif;
+            font-size: 1.4rem;
+            font-weight: 600;
+            margin-bottom: 15px;
+            color: var(--audit-gold);
+            text-shadow: var(--text-glow);
+        }
+
+        .case-description {
+            font-family: 'Crimson Text', serif;
+            font-size: 0.9rem;
+            line-height: 1.6;
+            color: var(--text-primary);
+            margin-bottom: 20px;
+        }
+
+        .case-outcomes {
+            background: rgba(44, 62, 80, 0.8);
+            border-radius: 8px;
+            padding: 15px;
+        }
+
+        .outcome-item {
+            color: var(--text-accent);
+            font-size: 0.85rem;
+            margin-bottom: 5px;
+        }
+
+        .outcome-item:last-child {
+            margin-bottom: 0;
+        }
+
+        .industry-frameworks {
+            background: rgba(44, 62, 80, 0.05);
+            border: 1px solid var(--audit-ink);
+            border-radius: 15px;
+            padding: 40px;
+            margin: 30px 0;
+        }
+
+        .industry-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 25px;
+        }
+
+        .industry-card {
+            background: rgba(44, 62, 80, 0.1);
+            border: 1px solid var(--audit-silver);
+            border-radius: 12px;
+            padding: 25px;
+        }
+
+        .industry-title {
+            font-family: 'Cinzel', serif;
+            font-size: 1.3rem;
+            font-weight: 600;
+            margin-bottom: 15px;
+            color: var(--audit-gold);
+        }
+
+        .industry-frameworks-list {
+            font-family: 'Crimson Text', serif;
+            font-size: 0.9rem;
+            line-height: 1.6;
+            color: var(--text-primary);
+        }
+
+        .framework-item {
+            margin-bottom: 8px;
+        }
+
+        .certification-paths {
+            background: rgba(139, 0, 0, 0.05);
+            border: 1px solid var(--audit-seal);
+            border-radius: 15px;
+            padding: 40px;
+            margin: 30px 0;
+        }
+
+        .certification-timeline {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 20px;
+        }
+
+        .cert-level {
+            background: rgba(139, 0, 0, 0.1);
+            border: 1px solid var(--audit-seal);
+            border-radius: 12px;
+            padding: 25px;
+            position: relative;
+        }
+
+        .cert-number {
+            position: absolute;
+            top: -15px;
+            left: 50%;
+            transform: translateX(-50%);
+            background: var(--audit-seal);
+            color: var(--audit-parchment);
+            border-radius: 50%;
+            width: 30px;
+            height: 30px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-family: 'Cinzel', serif;
+            font-weight: 700;
+            font-size: 1.1rem;
+            box-shadow: 0 0 10px rgba(139, 0, 0, 0.5);
+        }
+
+        .cert-title {
+            font-family: 'Cinzel', serif;
+            font-size: 1.3rem;
+            font-weight: 600;
+            margin-bottom: 15px;
+            color: var(--audit-seal);
+            text-align: center;
+        }
+
+        .cert-credentials {
+            font-family: 'Crimson Text', serif;
+            font-size: 0.85rem;
+            line-height: 1.6;
+            color: var(--text-primary);
+        }
+
+        .cert-item {
+            margin-bottom: 8px;
+        }
+
+        .best-practices {
+            background: rgba(212, 175, 55, 0.05);
+            border: 1px solid var(--audit-gold);
+            border-radius: 15px;
+            padding: 40px;
+            margin: 30px 0;
+        }
+
+        .practices-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 25px;
+        }
+
+        .practice-category {
+            background: rgba(212, 175, 55, 0.1);
+            border: 1px solid var(--audit-gold);
+            border-radius: 12px;
+            padding: 25px;
+        }
+
+        .practice-title {
+            font-family: 'Cinzel', serif;
+            font-size: 1.3rem;
+            font-weight: 600;
+            margin-bottom: 15px;
+            color: var(--audit-gold);
+        }
+
+        .practice-list {
+            font-family: 'Crimson Text', serif;
+            font-size: 0.85rem;
+            line-height: 1.6;
+            color: var(--text-primary);
+        }
+
+        .practice-item {
+            margin-bottom: 8px;
+        }
+
+        .emerging-trends {
+            background: rgba(44, 62, 80, 0.05);
+            border: 1px solid var(--audit-ink);
+            border-radius: 15px;
+            padding: 40px;
+            margin: 30px 0;
+        }
+
+        .trends-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: 25px;
+        }
+
+        .trend-card {
+            background: rgba(44, 62, 80, 0.1);
+            border: 1px solid var(--audit-silver);
+            border-radius: 12px;
+            padding: 25px;
+            transition: all 0.3s ease;
+        }
+
+        .trend-card:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 8px 25px rgba(44, 62, 80, 0.2);
+            border-color: var(--audit-gold);
+        }
+
+        .trend-icon {
+            font-size: 2rem;
+            margin-bottom: 15px;
+            text-align: center;
+        }
+
+        .trend-title {
+            font-family: 'Cinzel', serif;
+            font-size: 1.2rem;
+            font-weight: 600;
+            margin-bottom: 10px;
+            color: var(--audit-gold);
+        }
+
+        .trend-description {
+            font-family: 'Crimson Text', serif;
+            font-size: 0.85rem;
+            line-height: 1.5;
+            color: var(--text-primary);
+        }
+
+        .implementation-guide {
+            background: rgba(139, 0, 0, 0.05);
+            border: 1px solid var(--audit-seal);
+            border-radius: 15px;
+            padding: 40px;
+            margin: 30px 0;
+        }
+
+        .guide-phases {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 25px;
+        }
+
+        .guide-phase {
+            background: rgba(139, 0, 0, 0.1);
+            border: 1px solid var(--audit-seal);
+            border-radius: 12px;
+            padding: 25px;
+        }
+
+        .phase-title {
+            font-family: 'Cinzel', serif;
+            font-size: 1.2rem;
+            font-weight: 600;
+            margin-bottom: 15px;
+            color: var(--audit-seal);
+        }
+
+        .phase-steps {
+            font-family: 'Crimson Text', serif;
+            font-size: 0.85rem;
+            line-height: 1.6;
+            color: var(--text-primary);
+        }
+
+        .step {
+            margin-bottom: 8px;
+            padding-left: 15px;
+            position: relative;
+        }
+
+        .step:before {
+            content: '•';
+            position: absolute;
+            left: 0;
+            color: var(--audit-gold);
+        }
+
+        .interactive-assessment {
+            background: rgba(212, 175, 55, 0.05);
+            border: 1px solid var(--audit-gold);
+            border-radius: 15px;
+            padding: 40px;
+            margin: 30px 0;
+        }
+
+        .assessment-controls {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 20px;
+            margin-bottom: 30px;
+        }
+
+        .control-group {
+            display: flex;
+            flex-direction: column;
+        }
+
+        .control-label {
+            font-family: 'Cinzel', serif;
+            font-size: 1rem;
+            font-weight: 600;
+            margin-bottom: 8px;
+            color: var(--audit-gold);
+        }
+
+        .assessment-select {
+            background: rgba(44, 62, 80, 0.8);
+            border: 2px solid var(--audit-silver);
+            border-radius: 8px;
+            padding: 12px;
+            color: var(--text-primary);
+            font-family: 'Crimson Text', serif;
+            font-size: 0.9rem;
+            transition: all 0.3s ease;
+        }
+
+        .assessment-select:focus {
+            outline: none;
+            border-color: var(--audit-gold);
+            box-shadow: 0 0 10px rgba(212, 175, 55, 0.3);
+        }
+
+        .assessment-btn {
+            background: linear-gradient(135deg, var(--audit-seal), var(--audit-gold));
+            border: 2px solid var(--audit-gold);
+            color: var(--audit-parchment);
+            padding: 15px 30px;
+            border-radius: 8px;
+            cursor: pointer;
+            font-family: 'Cinzel', serif;
+            font-weight: 600;
+            font-size: 1rem;
+            transition: all 0.3s ease;
+            text-shadow: 0 0 5px rgba(245, 245, 220, 0.5);
+            grid-column: 1 / -1;
+            justify-self: center;
+        }
+
+        .assessment-btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 5px 15px rgba(139, 0, 0, 0.4);
+            border-color: var(--audit-seal);
+        }
+
+        .assessment-results {
+            background: rgba(44, 62, 80, 0.05);
+            border: 1px solid var(--audit-silver);
+            border-radius: 12px;
+            min-height: 200px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
     </style>
 </head>
 <body>
@@ -744,6 +1122,423 @@
                 </div>
             </div>
         </section>
+
+        <section class="case-studies">
+            <h2 style="font-family: 'Cinzel', serif; font-size: 2.5rem; text-align: center; margin-bottom: 30px; color: var(--audit-gold); text-shadow: var(--text-glow);">Case Studies & Applications</h2>
+            <p style="font-family: 'Crimson Text', serif; font-size: 1.1rem; line-height: 1.8; text-align: center; margin-bottom: 40px; color: var(--text-primary);">
+                Real-world applications of audit methodologies demonstrating successful implementations and lessons learned.
+            </p>
+
+            <div class="case-grid">
+                <div class="case-card">
+                    <h3 class="case-title">🏦 Financial Services Compliance</h3>
+                    <p class="case-description">
+                        A major international bank implemented COBIT 2019 framework to address regulatory compliance requirements under Basel III and GDPR. The audit revealed critical gaps in data governance and led to a comprehensive digital transformation initiative.
+                    </p>
+                    <div class="case-outcomes">
+                        <div class="outcome-item">✓ 40% reduction in compliance violations</div>
+                        <div class="outcome-item">✓ €2.3M cost savings through automated controls</div>
+                        <div class="outcome-item">✓ Improved regulatory reporting accuracy by 95%</div>
+                    </div>
+                </div>
+
+                <div class="case-card">
+                    <h3 class="case-title">🏥 Healthcare Data Security</h3>
+                    <p class="case-description">
+                        A regional healthcare network adopted ISO 27001 to protect sensitive patient data following multiple data breaches. The audit methodology identified 127 security controls requiring implementation across 14 domains.
+                    </p>
+                    <div class="case-outcomes">
+                        <div class="outcome-item">✓ HIPAA compliance achieved in 18 months</div>
+                        <div class="outcome-item">✓ 99.9% reduction in data breach incidents</div>
+                        <div class="outcome-item">✓ Patient trust scores increased by 35%</div>
+                    </div>
+                </div>
+
+                <div class="case-card">
+                    <h3 class="case-title">🏭 Manufacturing Quality Control</h3>
+                    <p class="case-description">
+                        An automotive manufacturer implemented integrated audit approaches combining ISO 9001, ISO 14001, and OHSAS 18001. The comprehensive audit framework revealed optimization opportunities in supply chain management.
+                    </p>
+                    <div class="case-outcomes">
+                        <div class="outcome-item">✓ 25% improvement in defect rates</div>
+                        <div class="outcome-item">✓ $1.8M annual savings in waste reduction</div>
+                        <div class="outcome-item">✓ 50% faster time-to-market for new models</div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="industry-frameworks">
+            <h2 style="font-family: 'Cinzel', serif; font-size: 2.5rem; text-align: center; margin-bottom: 30px; color: var(--audit-gold); text-shadow: var(--text-glow);">Industry-Specific Frameworks</h2>
+
+            <div class="industry-grid">
+                <div class="industry-card">
+                    <h3 class="industry-title">Financial Services</h3>
+                    <div class="industry-frameworks-list">
+                        <div class="framework-item">• Basel III Capital Requirements</div>
+                        <div class="framework-item">• SOX 404 Internal Controls</div>
+                        <div class="framework-item">• IFRS 9 Financial Instruments</div>
+                        <div class="framework-item">• Anti-Money Laundering (AML) Standards</div>
+                    </div>
+                </div>
+
+                <div class="industry-card">
+                    <h3 class="industry-title">Healthcare & Life Sciences</h3>
+                    <div class="industry-frameworks-list">
+                        <div class="framework-item">• HIPAA Security Rule</div>
+                        <div class="framework-item">• FDA 21 CFR Part 11</div>
+                        <div class="framework-item">• GxP Quality Guidelines</div>
+                        <div class="framework-item">• Clinical Trial Regulations</div>
+                    </div>
+                </div>
+
+                <div class="industry-card">
+                    <h3 class="industry-title">Technology & Cloud</h3>
+                    <div class="industry-frameworks-list">
+                        <div class="framework-item">• CSA Cloud Controls Matrix</div>
+                        <div class="framework-item">• FedRAMP Security Assessment</div>
+                        <div class="framework-item">• ISO 27017 Cloud Security</div>
+                        <div class="framework-item">• SOC 2 Type II Compliance</div>
+                    </div>
+                </div>
+
+                <div class="industry-card">
+                    <h3 class="industry-title">Manufacturing & Industrial</h3>
+                    <div class="industry-frameworks-list">
+                        <div class="framework-item">• ISO 9001 Quality Management</div>
+                        <div class="framework-item">• ISO 14001 Environmental Management</div>
+                        <div class="framework-item">• ISO 45001 Occupational Health</div>
+                        <div class="framework-item">• Industry 4.0 Cybersecurity</div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="certification-paths">
+            <h2 style="font-family: 'Cinzel', serif; font-size: 2.5rem; text-align: center; margin-bottom: 30px; color: var(--audit-gold); text-shadow: var(--text-glow);">Professional Certification Paths</h2>
+
+            <div class="certification-timeline">
+                <div class="cert-level">
+                    <div class="cert-number">1</div>
+                    <h3 class="cert-title">Entry Level</h3>
+                    <div class="cert-credentials">
+                        <div class="cert-item">• Certified Internal Auditor (CIA)</div>
+                        <div class="cert-item">• Certified Fraud Examiner (CFE)</div>
+                        <div class="cert-item">• Certified Information Systems Auditor (CISA)</div>
+                    </div>
+                </div>
+
+                <div class="cert-level">
+                    <div class="cert-number">2</div>
+                    <h3 class="cert-title">Mid Level</h3>
+                    <div class="cert-credentials">
+                        <div class="cert-item">• Certified Information Technology Professional (CITP)</div>
+                        <div class="cert-item">• Certified Risk Management Professional (CRMP)</div>
+                        <div class="cert-item">• Certified Compliance & Ethics Professional (CCEP)</div>
+                    </div>
+                </div>
+
+                <div class="cert-level">
+                    <div class="cert-number">3</div>
+                    <h3 class="cert-title">Senior Level</h3>
+                    <div class="cert-credentials">
+                        <div class="cert-item">• Certified Information Systems Security Professional (CISSP)</div>
+                        <div class="cert-item">• Certified Enterprise Risk Manager (CERM)</div>
+                        <div class="cert-item">• Certified in Risk and Information Systems Control (CRISC)</div>
+                    </div>
+                </div>
+
+                <div class="cert-level">
+                    <div class="cert-number">4</div>
+                    <h3 class="cert-title">Executive Level</h3>
+                    <div class="cert-credentials">
+                        <div class="cert-item">• Certified in the Governance of Enterprise IT (CGEIT)</div>
+                        <div class="cert-item">• Certified ScrumMaster (CSM) for Audit</div>
+                        <div class="cert-item">• Executive Certificate in Cybersecurity</div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="best-practices">
+            <h2 style="font-family: 'Cinzel', serif; font-size: 2.5rem; text-align: center; margin-bottom: 30px; color: var(--audit-gold); text-shadow: var(--text-glow);">Audit Best Practices</h2>
+
+            <div class="practices-grid">
+                <div class="practice-category">
+                    <h3 class="practice-title">Planning Excellence</h3>
+                    <div class="practice-list">
+                        <div class="practice-item">• Conduct thorough risk assessments before audit initiation</div>
+                        <div class="practice-item">• Develop detailed audit programs with clear objectives</div>
+                        <div class="practice-item">• Establish stakeholder communication plans</div>
+                        <div class="practice-item">• Allocate appropriate resources and timelines</div>
+                        <div class="practice-item">• Consider materiality thresholds and sampling strategies</div>
+                    </div>
+                </div>
+
+                <div class="practice-category">
+                    <h3 class="practice-title">Execution Standards</h3>
+                    <div class="practice-list">
+                        <div class="practice-item">• Maintain professional skepticism throughout the audit</div>
+                        <div class="practice-item">• Document all procedures and findings contemporaneously</div>
+                        <div class="practice-item">• Use appropriate sampling techniques for efficiency</div>
+                        <div class="practice-item">• Validate evidence through multiple sources</div>
+                        <div class="practice-item">• Consider the competence and objectivity of evidence</div>
+                    </div>
+                </div>
+
+                <div class="practice-category">
+                    <h3 class="practice-title">Reporting Quality</h3>
+                    <div class="practice-list">
+                        <div class="practice-item">• Present findings clearly and concisely</div>
+                        <div class="practice-item">• Provide actionable recommendations</div>
+                        <div class="practice-item">• Include root cause analysis</div>
+                        <div class="practice-item">• Quantify impact where possible</div>
+                        <div class="practice-item">• Suggest prioritized remediation plans</div>
+                    </div>
+                </div>
+
+                <div class="practice-category">
+                    <h3 class="practice-title">Continuous Improvement</h3>
+                    <div class="practice-list">
+                        <div class="practice-item">• Conduct post-audit reviews and lessons learned</div>
+                        <div class="practice-item">• Monitor implementation of recommendations</div>
+                        <div class="practice-item">• Update methodologies based on emerging risks</div>
+                        <div class="practice-item">• Invest in auditor training and development</div>
+                        <div class="practice-item">• Leverage technology for audit efficiency</div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="emerging-trends">
+            <h2 style="font-family: 'Cinzel', serif; font-size: 2.5rem; text-align: center; margin-bottom: 30px; color: var(--audit-gold); text-shadow: var(--text-glow);">Emerging Trends & Technologies</h2>
+
+            <div class="trends-grid">
+                <div class="trend-card">
+                    <div class="trend-icon">🤖</div>
+                    <h3 class="trend-title">Artificial Intelligence & Machine Learning</h3>
+                    <p class="trend-description">
+                        AI-powered audit analytics for anomaly detection, predictive risk modeling, and automated control testing. Machine learning algorithms can process vast datasets to identify patterns invisible to human auditors.
+                    </p>
+                </div>
+
+                <div class="trend-card">
+                    <div class="trend-icon">⛓️</div>
+                    <h3 class="trend-title">Blockchain & Distributed Ledger</h3>
+                    <p class="trend-description">
+                        Immutable audit trails and smart contract validation. Blockchain technology enables real-time transaction verification and automated compliance checking across distributed systems.
+                    </p>
+                </div>
+
+                <div class="trend-card">
+                    <div class="trend-icon">☁️</div>
+                    <h3 class="trend-title">Cloud-Native Auditing</h3>
+                    <p class="trend-description">
+                        Continuous auditing in cloud environments with automated monitoring, configuration drift detection, and serverless audit functions. Adapting traditional audit methodologies to cloud-native architectures.
+                    </p>
+                </div>
+
+                <div class="trend-card">
+                    <div class="trend-icon">🔄</div>
+                    <h3 class="trend-title">Continuous Auditing</h3>
+                    <p class="trend-description">
+                        Real-time monitoring and automated audit procedures that provide ongoing assurance. Moving from periodic snapshots to continuous validation of controls and transactions.
+                    </p>
+                </div>
+
+                <div class="trend-card">
+                    <div class="trend-icon">🛡️</div>
+                    <h3 class="trend-title">Cybersecurity Integration</h3>
+                    <p class="trend-description">
+                        Convergence of IT audit and cybersecurity assessment frameworks. Integrated approaches addressing both traditional financial controls and modern cyber threats.
+                    </p>
+                </div>
+
+                <div class="trend-card">
+                    <div class="trend-icon">📊</div>
+                    <h3 class="trend-title">Data Analytics & Visualization</h3>
+                    <p class="trend-description">
+                        Advanced data visualization techniques for audit findings presentation. Interactive dashboards and predictive analytics for risk assessment and trend analysis.
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <section class="implementation-guide">
+            <h2 style="font-family: 'Cinzel', serif; font-size: 2.5rem; text-align: center; margin-bottom: 30px; color: var(--audit-gold); text-shadow: var(--text-glow);">Implementation Guide</h2>
+
+            <div class="guide-phases">
+                <div class="guide-phase">
+                    <h3 class="phase-title">Phase 1: Assessment & Planning (Weeks 1-4)</h3>
+                    <div class="phase-steps">
+                        <div class="step">1. Conduct organizational risk assessment</div>
+                        <div class="step">2. Identify applicable regulatory requirements</div>
+                        <div class="step">3. Select appropriate audit framework(s)</div>
+                        <div class="step">4. Define audit scope and objectives</div>
+                        <div class="step">5. Assemble audit team and allocate resources</div>
+                        <div class="step">6. Develop detailed audit plan and timeline</div>
+                    </div>
+                </div>
+
+                <div class="guide-phase">
+                    <h3 class="phase-title">Phase 2: Design & Development (Weeks 5-12)</h3>
+                    <div class="phase-steps">
+                        <div class="step">1. Customize framework controls to organizational context</div>
+                        <div class="step">2. Design control procedures and testing methods</div>
+                        <div class="step">3. Develop audit programs and workpapers</div>
+                        <div class="step">4. Create testing scripts and sampling plans</div>
+                        <div class="step">5. Establish evidence collection procedures</div>
+                        <div class="step">6. Pilot test procedures on small scope</div>
+                    </div>
+                </div>
+
+                <div class="guide-phase">
+                    <h3 class="phase-title">Phase 3: Execution & Testing (Weeks 13-24)</h3>
+                    <div class="phase-steps">
+                        <div class="step">1. Conduct fieldwork and control testing</div>
+                        <div class="step">2. Document findings and evidence</div>
+                        <div class="step">3. Perform root cause analysis</div>
+                        <div class="step">4. Validate control effectiveness</div>
+                        <div class="step">5. Assess compliance with requirements</div>
+                        <div class="step">6. Prepare preliminary findings report</div>
+                    </div>
+                </div>
+
+                <div class="guide-phase">
+                    <h3 class="phase-title">Phase 4: Reporting & Follow-up (Weeks 25-32)</h3>
+                    <div class="phase-steps">
+                        <div class="step">1. Finalize audit findings and recommendations</div>
+                        <div class="step">2. Prepare comprehensive audit report</div>
+                        <div class="step">3. Present findings to management and audit committee</div>
+                        <div class="step">4. Develop remediation action plans</div>
+                        <div class="step">5. Establish monitoring procedures</div>
+                        <div class="step">6. Conduct post-implementation review</div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="interactive-assessment">
+            <h2 style="font-family: 'Cinzel', serif; font-size: 2.5rem; text-align: center; margin-bottom: 30px; color: var(--audit-gold); text-shadow: var(--text-glow);">Interactive Risk Assessment</h2>
+            <p style="font-family: 'Crimson Text', serif; font-size: 1.1rem; text-align: center; margin-bottom: 40px; color: var(--text-primary);">
+                Evaluate your organization's audit readiness with this interactive assessment tool.
+            </p>
+
+            <div class="assessment-controls">
+                <div class="control-group">
+                    <label class="control-label">Organization Size:</label>
+                    <select id="org-size" class="assessment-select">
+                        <option value="small">Small (1-50 employees)</option>
+                        <option value="medium">Medium (51-500 employees)</option>
+                        <option value="large">Large (501-5000 employees)</option>
+                        <option value="enterprise">Enterprise (5000+ employees)</option>
+                    </select>
+                </div>
+
+                <div class="control-group">
+                    <label class="control-label">Industry:</label>
+                    <select id="industry" class="assessment-select">
+                        <option value="finance">Financial Services</option>
+                        <option value="healthcare">Healthcare</option>
+                        <option value="technology">Technology</option>
+                        <option value="manufacturing">Manufacturing</option>
+                        <option value="retail">Retail & Consumer</option>
+                        <option value="government">Government</option>
+                    </select>
+                </div>
+
+                <div class="control-group">
+                    <label class="control-label">Current Audit Maturity:</label>
+                    <select id="maturity" class="assessment-select">
+                        <option value="basic">Basic (Ad-hoc processes)</option>
+                        <option value="developing">Developing (Some formal processes)</option>
+                        <option value="mature">Mature (Well-established framework)</option>
+                        <option value="advanced">Advanced (Optimized and automated)</option>
+                    </select>
+                </div>
+
+                <button class="assessment-btn" onclick="generateAssessment()">Generate Assessment</button>
+            </div>
+
+            <div id="assessment-results" class="assessment-results">
+                <div style="text-align: center; padding: 40px; color: var(--text-primary);">
+                    <div style="font-size: 1.5rem; margin-bottom: 10px;">📊 Assessment Results</div>
+                    <div style="font-size: 0.9rem; opacity: 0.8;">Select your parameters above and click Generate Assessment</div>
+                </div>
+            </div>
+        </section>
     </div>
+
+    <script>
+        function generateAssessment() {
+            const orgSize = document.getElementById('org-size').value;
+            const industry = document.getElementById('industry').value;
+            const maturity = document.getElementById('maturity').value;
+
+            const assessments = {
+                small: { score: 3, frameworks: ['ISO 27001', 'SOC 2'], timeline: '6-9 months' },
+                medium: { score: 6, frameworks: ['COBIT', 'ISO 27001', 'NIST'], timeline: '9-15 months' },
+                large: { score: 8, frameworks: ['COBIT', 'ISO 27001', 'SOX', 'NIST'], timeline: '12-24 months' },
+                enterprise: { score: 9, frameworks: ['COBIT', 'ISO 27001', 'SOX', 'NIST', 'Custom'], timeline: '18-36 months' }
+            };
+
+            const industryMultipliers = {
+                finance: 1.5,
+                healthcare: 1.4,
+                technology: 1.3,
+                manufacturing: 1.1,
+                retail: 1.0,
+                government: 1.2
+            };
+
+            const maturityBonuses = {
+                basic: 0,
+                developing: 1,
+                mature: 2,
+                advanced: 3
+            };
+
+            const baseAssessment = assessments[orgSize];
+            const adjustedScore = Math.min(10, Math.max(1, Math.round(baseAssessment.score * industryMultipliers[industry] + maturityBonuses[maturity])));
+
+            const recommendations = [];
+            if (adjustedScore < 4) recommendations.push('Focus on basic control implementation');
+            if (adjustedScore < 7) recommendations.push('Consider ISO 27001 certification');
+            if (adjustedScore >= 7) recommendations.push('Pursue integrated framework adoption');
+            if (maturity === 'basic') recommendations.push('Invest in audit team training');
+
+            const resultsDiv = document.getElementById('assessment-results');
+            resultsDiv.innerHTML = `
+                <div style="background: rgba(44, 62, 80, 0.1); border: 1px solid var(--audit-silver); border-radius: 12px; padding: 30px;">
+                    <h3 style="font-family: 'Cinzel', serif; color: var(--audit-gold); margin-bottom: 20px; text-align: center;">Assessment Results</h3>
+
+                    <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 20px; margin-bottom: 30px;">
+                        <div style="text-align: center;">
+                            <div style="font-size: 2rem; font-weight: bold; color: var(--audit-gold); margin-bottom: 5px;">${adjustedScore}/10</div>
+                            <div style="font-size: 0.9rem; color: var(--text-primary);">Audit Readiness Score</div>
+                        </div>
+                        <div style="text-align: center;">
+                            <div style="font-size: 1.2rem; font-weight: bold; color: var(--audit-silver); margin-bottom: 5px;">${baseAssessment.timeline}</div>
+                            <div style="font-size: 0.9rem; color: var(--text-primary);">Implementation Timeline</div>
+                        </div>
+                    </div>
+
+                    <div style="margin-bottom: 20px;">
+                        <h4 style="font-family: 'Cinzel', serif; color: var(--audit-gold); margin-bottom: 10px;">Recommended Frameworks:</h4>
+                        <div style="display: flex; flex-wrap: wrap; gap: 10px;">
+                            ${baseAssessment.frameworks.map(f => `<span style="background: var(--audit-seal); color: var(--audit-parchment); padding: 5px 12px; border-radius: 20px; font-size: 0.8rem;">${f}</span>`).join('')}
+                        </div>
+                    </div>
+
+                    <div>
+                        <h4 style="font-family: 'Cinzel', serif; color: var(--audit-gold); margin-bottom: 10px;">Key Recommendations:</h4>
+                        <ul style="color: var(--text-primary); line-height: 1.6;">
+                            ${recommendations.map(r => `<li>${r}</li>`).join('')}
+                        </ul>
+                    </div>
+                </div>
+            `;
+        }
+    </script>
 </body>
 </html>
