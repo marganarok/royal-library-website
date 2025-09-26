@@ -1,0 +1,657 @@
+<!DOCTYPE html>
+<html lang='en'>
+<head>
+    <meta charset='UTF-8'>
+    <meta name='viewport' content='width=device-width, initial-scale=1.0'>
+    <title>Blueprint Car Engine - Royal Library of Marganarok</title>
+    <meta name='description' content='Comprehensive blueprint analysis of automotive engine design and evolution - from steam power to modern internal combustion engines within the Royal Library of Marganarok.'>
+    <meta name='keywords' content='car engine blueprints, automotive engineering, internal combustion engine, engine design, mechanical blueprints, royal library, marganarok'>
+    <link rel='stylesheet' href='style.css'>
+    <link href='https://fonts.googleapis.com/css2?family=Cinzel:wght@400;500;600;700&family=Crimson+Text:ital,wght@0,400;0,600;1,400&display=swap' rel='stylesheet'>
+    <style>
+        :root {
+            --engine-steel: #2c3e50;
+            --engine-brass: #b87333;
+            --engine-aluminum: #95a5a6;
+            --engine-copper: #e74c3c;
+            --engine-chrome: #ecf0f1;
+            --blueprint-bg: #1a1a2e;
+            --blueprint-lines: #34495e;
+            --shadow: rgba(0,0,0,0.3);
+            --accent-blue: #2563eb;
+            --text-primary: #008080;
+            --text-secondary: #e8f4f8;
+            --text-accent: #ffeb3b;
+            --text-glow: 0 0 8px rgba(0, 128, 128, 0.6);
+        }
+
+        .engine-container {
+            max-width: 1400px;
+            margin: 0 auto;
+            padding: 20px;
+            color: var(--text-primary);
+            text-shadow: 0 0 3px rgba(0, 128, 128, 0.3);
+        }
+
+        .engine-header {
+            text-align: center;
+            margin-bottom: 50px;
+            background: linear-gradient(135deg, var(--engine-steel), var(--engine-brass));
+            color: var(--engine-chrome);
+            padding: 80px 20px;
+            border-radius: 15px;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .engine-header::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><defs><pattern id="gear-pattern" width="20" height="20" patternUnits="userSpaceOnUse"><circle cx="10" cy="10" r="3" fill="none" stroke="rgba(236,240,241,0.1)" stroke-width="0.5"/><path d="M10,7 L13,10 L10,13 L7,10 Z" fill="none" stroke="rgba(236,240,241,0.1)" stroke-width="0.5"/></pattern></defs><rect width="100" height="100" fill="url(%23gear-pattern)"/></svg>');
+            opacity: 0.3;
+        }
+
+        .engine-title {
+            font-family: 'Cinzel', serif;
+            font-size: clamp(3rem, 8vw, 5.5rem);
+            font-weight: 700;
+            margin-bottom: 20px;
+            position: relative;
+            z-index: 2;
+            text-shadow: 0 0 10px rgba(255, 215, 0, 1), 0 0 20px rgba(255, 215, 0, 0.8), 0 0 30px rgba(255, 215, 0, 0.6), 0 0 40px rgba(255, 215, 0, 0.4);
+            color: var(--engine-brass);
+        }
+
+        .engine-subtitle {
+            font-size: 1.4rem;
+            opacity: 0.9;
+            font-style: italic;
+            position: relative;
+            z-index: 2;
+            color: var(--text-secondary);
+            text-shadow: 0 0 8px rgba(232, 244, 248, 0.8);
+        }
+
+        .blueprint-section {
+            background: rgba(44, 62, 80, 0.05);
+            border: 1px solid var(--engine-steel);
+            border-radius: 15px;
+            padding: 40px;
+            margin: 30px 0;
+            box-shadow: 0 0 30px rgba(44, 62, 80, 0.2);
+        }
+
+        .blueprint-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+            gap: 25px;
+            margin: 30px 0;
+        }
+
+        .blueprint-card {
+            background: rgba(44, 62, 80, 0.1);
+            border: 1px solid var(--engine-steel);
+            border-radius: 12px;
+            padding: 25px;
+            transition: all 0.3s ease;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .blueprint-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 30px rgba(44, 62, 80, 0.3);
+            border-color: var(--engine-brass);
+        }
+
+        .blueprint-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 3px;
+            background: linear-gradient(90deg, var(--engine-brass), var(--engine-copper));
+        }
+
+        .blueprint-title {
+            font-family: 'Cinzel', serif;
+            font-size: 1.5rem;
+            font-weight: 600;
+            margin-bottom: 15px;
+            color: var(--engine-brass);
+            text-shadow: var(--text-glow);
+        }
+
+        .blueprint-specs {
+            background: rgba(26, 26, 46, 0.8);
+            border: 1px solid var(--blueprint-lines);
+            border-radius: 8px;
+            padding: 20px;
+            margin: 15px 0;
+            font-family: 'Crimson Text', serif;
+            font-size: 0.9rem;
+            line-height: 1.6;
+        }
+
+        .spec-item {
+            display: flex;
+            justify-content: space-between;
+            padding: 5px 0;
+            border-bottom: 1px solid rgba(52, 73, 94, 0.3);
+        }
+
+        .spec-item:last-child {
+            border-bottom: none;
+        }
+
+        .spec-label {
+            font-weight: 600;
+            color: var(--engine-aluminum);
+        }
+
+        .spec-value {
+            color: var(--text-accent);
+            font-weight: 500;
+        }
+
+        .engine-diagram {
+            background: var(--blueprint-bg);
+            border: 2px solid var(--blueprint-lines);
+            border-radius: 10px;
+            padding: 30px;
+            margin: 20px 0;
+            position: relative;
+            min-height: 300px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-family: 'Cinzel', serif;
+            font-size: 1.2rem;
+            color: var(--engine-chrome);
+            text-shadow: 0 0 5px rgba(236, 240, 241, 0.5);
+        }
+
+        .engine-diagram::before {
+            content: '';
+            position: absolute;
+            top: 10px;
+            left: 10px;
+            right: 10px;
+            bottom: 10px;
+            border: 1px solid rgba(52, 73, 94, 0.5);
+            border-radius: 5px;
+            background: repeating-linear-gradient(
+                0deg,
+                transparent,
+                transparent 19px,
+                rgba(52, 73, 94, 0.1) 19px,
+                rgba(52, 73, 94, 0.1) 20px
+            ), repeating-linear-gradient(
+                90deg,
+                transparent,
+                transparent 19px,
+                rgba(52, 73, 94, 0.1) 19px,
+                rgba(52, 73, 94, 0.1) 20px
+            );
+        }
+
+        .timeline-section {
+            margin: 50px 0;
+        }
+
+        .timeline {
+            position: relative;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .timeline::after {
+            content: '';
+            position: absolute;
+            width: 6px;
+            background: linear-gradient(to bottom, var(--engine-brass), var(--engine-copper));
+            top: 0;
+            bottom: 0;
+            left: 50%;
+            margin-left: -3px;
+            border-radius: 3px;
+            box-shadow: 0 0 10px rgba(184, 115, 51, 0.5);
+        }
+
+        .timeline-item {
+            padding: 10px 40px;
+            position: relative;
+            background-color: inherit;
+            width: 50%;
+            box-sizing: border-box;
+        }
+
+        .timeline-item::after {
+            content: '';
+            position: absolute;
+            width: 25px;
+            height: 25px;
+            right: -17px;
+            background: var(--engine-steel);
+            border: 4px solid var(--engine-brass);
+            top: 15px;
+            border-radius: 50%;
+            z-index: 1;
+            box-shadow: 0 0 10px rgba(184, 115, 51, 0.7);
+        }
+
+        .timeline-item:nth-child(even) {
+            left: 50%;
+        }
+
+        .timeline-item:nth-child(even)::after {
+            left: -16px;
+        }
+
+        .timeline-content {
+            padding: 20px 30px;
+            background: rgba(44, 62, 80, 0.1);
+            border: 1px solid var(--engine-steel);
+            position: relative;
+            border-radius: 12px;
+            box-shadow: 0 0 20px rgba(44, 62, 80, 0.2);
+        }
+
+        .timeline-year {
+            font-family: 'Cinzel', serif;
+            font-size: 1.3rem;
+            font-weight: 700;
+            color: var(--engine-brass);
+            margin-bottom: 10px;
+            text-shadow: var(--text-glow);
+        }
+
+        .timeline-text {
+            font-family: 'Crimson Text', serif;
+            line-height: 1.6;
+            color: var(--text-primary);
+        }
+
+        .interactive-controls {
+            background: rgba(44, 62, 80, 0.05);
+            border: 1px solid var(--engine-steel);
+            border-radius: 15px;
+            padding: 30px;
+            margin: 30px 0;
+            text-align: center;
+        }
+
+        .control-buttons {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 15px;
+            justify-content: center;
+            margin-top: 20px;
+        }
+
+        .control-btn {
+            background: linear-gradient(135deg, var(--engine-steel), var(--engine-aluminum));
+            border: 2px solid var(--engine-brass);
+            color: var(--engine-chrome);
+            padding: 12px 24px;
+            border-radius: 8px;
+            cursor: pointer;
+            font-family: 'Cinzel', serif;
+            font-weight: 600;
+            transition: all 0.3s ease;
+            text-shadow: 0 0 5px rgba(236, 240, 241, 0.5);
+        }
+
+        .control-btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 5px 15px rgba(184, 115, 51, 0.4);
+            border-color: var(--engine-copper);
+        }
+
+        .control-btn:active {
+            transform: translateY(0);
+        }
+
+        .engine-display {
+            background: var(--blueprint-bg);
+            border: 2px solid var(--blueprint-lines);
+            border-radius: 10px;
+            padding: 30px;
+            margin: 20px 0;
+            min-height: 200px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-family: 'Cinzel', serif;
+            font-size: 1.5rem;
+            color: var(--engine-chrome);
+            text-shadow: 0 0 8px rgba(236, 240, 241, 0.7);
+        }
+
+        @media (max-width: 768px) {
+            .timeline::after {
+                left: 31px;
+            }
+
+            .timeline-item {
+                width: 100%;
+                padding-left: 70px;
+                padding-right: 25px;
+            }
+
+            .timeline-item::after {
+                left: 21px;
+            }
+
+            .timeline-item:nth-child(even) {
+                left: 0%;
+            }
+
+            .timeline-item:nth-child(even)::after {
+                left: 21px;
+            }
+
+            .blueprint-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="engine-container">
+        <header class="engine-header">
+            <h1 class="engine-title">BLUEPRINT CAR ENGINE</h1>
+            <p class="engine-subtitle">Architectural Marvels of Mechanical Power - Royal Library of Marganarok</p>
+        </header>
+
+        <section class="blueprint-section">
+            <h2 style="font-family: 'Cinzel', serif; font-size: 2.5rem; text-align: center; margin-bottom: 30px; color: var(--engine-brass); text-shadow: var(--text-glow);">Engine Architecture Overview</h2>
+            <p style="font-family: 'Crimson Text', serif; font-size: 1.1rem; line-height: 1.8; text-align: center; margin-bottom: 40px; color: var(--text-primary);">
+                The internal combustion engine represents one of humanity's greatest mechanical achievements. From the first steam-powered carriages to modern turbocharged powerplants, these blueprints reveal the evolution of automotive propulsion technology.
+            </p>
+
+            <div class="blueprint-grid">
+                <div class="blueprint-card">
+                    <h3 class="blueprint-title">V8 Engine Configuration</h3>
+                    <div class="blueprint-specs">
+                        <div class="spec-item">
+                            <span class="spec-label">Cylinder Arrangement:</span>
+                            <span class="spec-value">V-8 (90°)</span>
+                        </div>
+                        <div class="spec-item">
+                            <span class="spec-label">Displacement:</span>
+                            <span class="spec-value">5.0L - 6.2L</span>
+                        </div>
+                        <div class="spec-item">
+                            <span class="spec-label">Power Output:</span>
+                            <span class="spec-value">400-650 hp</span>
+                        </div>
+                        <div class="spec-item">
+                            <span class="spec-label">Torque:</span>
+                            <span class="spec-value">400-650 lb-ft</span>
+                        </div>
+                        <div class="spec-item">
+                            <span class="spec-label">Applications:</span>
+                            <span class="spec-value">Performance Vehicles</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="blueprint-card">
+                    <h3 class="blueprint-title">Inline-4 Turbocharged</h3>
+                    <div class="blueprint-specs">
+                        <div class="spec-item">
+                            <span class="spec-label">Cylinder Arrangement:</span>
+                            <span class="spec-value">I-4</span>
+                        </div>
+                        <div class="spec-item">
+                            <span class="spec-label">Displacement:</span>
+                            <span class="spec-value">1.5L - 2.0L</span>
+                        </div>
+                        <div class="spec-item">
+                            <span class="spec-label">Power Output:</span>
+                            <span class="spec-value">180-300 hp</span>
+                        </div>
+                        <div class="spec-item">
+                            <span class="spec-label">Boost Pressure:</span>
+                            <span class="spec-value">1.2-2.5 bar</span>
+                        </div>
+                        <div class="spec-item">
+                            <span class="spec-label">Applications:</span>
+                            <span class="spec-value">Compact Vehicles</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="blueprint-card">
+                    <h3 class="blueprint-title">V6 Engine Configuration</h3>
+                    <div class="blueprint-specs">
+                        <div class="spec-item">
+                            <span class="spec-label">Cylinder Arrangement:</span>
+                            <span class="spec-value">V-6 (60°-90°)</span>
+                        </div>
+                        <div class="spec-item">
+                            <span class="spec-label">Displacement:</span>
+                            <span class="spec-value">2.5L - 4.0L</span>
+                        </div>
+                        <div class="spec-item">
+                            <span class="spec-label">Power Output:</span>
+                            <span class="spec-value">250-450 hp</span>
+                        </div>
+                        <div class="spec-item">
+                            <span class="spec-label">Configuration:</span>
+                            <span class="spec-value">Naturally Aspirated</span>
+                        </div>
+                        <div class="spec-item">
+                            <span class="spec-label">Applications:</span>
+                            <span class="spec-value">Sports Sedans</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="blueprint-card">
+                    <h3 class="blueprint-title">Rotary Engine (Wankel)</h3>
+                    <div class="blueprint-specs">
+                        <div class="spec-item">
+                            <span class="spec-label">Type:</span>
+                            <span class="spec-value">Rotary Piston</span>
+                        </div>
+                        <div class="spec-item">
+                            <span class="spec-label">Displacement:</span>
+                            <span class="spec-value">1.3L - 2.0L</span>
+                        </div>
+                        <div class="spec-item">
+                            <span class="spec-label">Power Output:</span>
+                            <span class="spec-value">200-300 hp</span>
+                        </div>
+                        <div class="spec-item">
+                            <span class="spec-label">RPM Range:</span>
+                            <span class="spec-value">High (9000+)</span>
+                        </div>
+                        <div class="spec-item">
+                            <span class="spec-label">Applications:</span>
+                            <span class="spec-value">Sports Cars</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="blueprint-section">
+            <h2 style="font-family: 'Cinzel', serif; font-size: 2.5rem; text-align: center; margin-bottom: 30px; color: var(--engine-brass); text-shadow: var(--text-glow);">Engine Blueprint Schematic</h2>
+            <div class="engine-diagram">
+                <div style="text-align: center;">
+                    <div style="font-size: 2rem; margin-bottom: 10px;">🏗️ ENGINE BLUEPRINT</div>
+                    <div style="font-size: 1rem; opacity: 0.8;">Interactive 3D Model Loading...</div>
+                    <div style="font-size: 0.8rem; margin-top: 10px; opacity: 0.6;">[Blueprint visualization would be rendered here]</div>
+                </div>
+            </div>
+        </section>
+
+        <section class="timeline-section">
+            <h2 style="font-family: 'Cinzel', serif; font-size: 2.5rem; text-align: center; margin-bottom: 50px; color: var(--engine-brass); text-shadow: var(--text-glow);">Evolution of Engine Technology</h2>
+
+            <div class="timeline">
+                <div class="timeline-item">
+                    <div class="timeline-content">
+                        <div class="timeline-year">1769</div>
+                        <div class="timeline-text">
+                            James Watt patents the steam engine, laying the foundation for mechanical power. The first steam-powered road vehicles appear, though impractical for widespread use.
+                        </div>
+                    </div>
+                </div>
+
+                <div class="timeline-item">
+                    <div class="timeline-content">
+                        <div class="timeline-year">1859</div>
+                        <div class="timeline-text">
+                            Jean Joseph Etienne Lenoir develops the first practical internal combustion engine using coal gas. This marks the beginning of the petroleum engine era.
+                        </div>
+                    </div>
+                </div>
+
+                <div class="timeline-item">
+                    <div class="timeline-content">
+                        <div class="timeline-year">1876</div>
+                        <div class="timeline-text">
+                            Nikolaus Otto invents the four-stroke cycle engine, revolutionizing internal combustion technology and making automotive transportation feasible.
+                        </div>
+                    </div>
+                </div>
+
+                <div class="timeline-item">
+                    <div class="timeline-content">
+                        <div class="timeline-year">1885</div>
+                        <div class="timeline-text">
+                            Karl Benz patents the first automobile powered by an internal combustion engine. The Benz Patent-Motorwagen features a single-cylinder engine producing 0.75 hp.
+                        </div>
+                    </div>
+                </div>
+
+                <div class="timeline-item">
+                    <div class="timeline-content">
+                        <div class="timeline-year">1908</div>
+                        <div class="timeline-text">
+                            Henry Ford introduces the Model T with a simple, reliable four-cylinder engine. Mass production techniques make automobiles accessible to the general public.
+                        </div>
+                    </div>
+                </div>
+
+                <div class="timeline-item">
+                    <div class="timeline-content">
+                        <div class="timeline-year">1954</div>
+                        <div class="timeline-text">
+                            Felix Wankel patents the rotary engine, offering high power density and smooth operation. Mazda later adopts this technology for their sports cars.
+                        </div>
+                    </div>
+                </div>
+
+                <div class="timeline-item">
+                    <div class="timeline-content">
+                        <div class="timeline-year">1962</div>
+                        <div class="timeline-text">
+                            The first turbocharged production car engine appears. Turbochargers become essential for high-performance and fuel-efficient engines.
+                        </div>
+                    </div>
+                </div>
+
+                <div class="timeline-item">
+                    <div class="timeline-content">
+                        <div class="timeline-year">1980s</div>
+                        <div class="timeline-text">
+                            Fuel injection systems replace carburetors, providing better fuel efficiency and performance. Computer-controlled engine management becomes standard.
+                        </div>
+                    </div>
+                </div>
+
+                <div class="timeline-item">
+                    <div class="timeline-content">
+                        <div class="timeline-year">1990s</div>
+                        <div class="timeline-text">
+                            Variable valve timing and cylinder deactivation technologies emerge, optimizing engine efficiency across different operating conditions.
+                        </div>
+                    </div>
+                </div>
+
+                <div class="timeline-item">
+                    <div class="timeline-content">
+                        <div class="timeline-year">2010s</div>
+                        <div class="timeline-text">
+                            Hybrid powertrains and electrification begin to challenge traditional internal combustion engines. Turbocharged downsized engines become prevalent.
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="interactive-controls">
+            <h2 style="font-family: 'Cinzel', serif; font-size: 2.5rem; margin-bottom: 20px; color: var(--engine-brass); text-shadow: var(--text-glow);">Interactive Engine Explorer</h2>
+            <p style="font-family: 'Crimson Text', serif; font-size: 1.1rem; margin-bottom: 30px; color: var(--text-primary);">
+                Explore different engine configurations and view detailed blueprints. Select an engine type to see its specifications and internal workings.
+            </p>
+
+            <div class="control-buttons">
+                <button class="control-btn" onclick="showEngine('v8')">V8 Engine</button>
+                <button class="control-btn" onclick="showEngine('inline4')">Inline-4 Turbo</button>
+                <button class="control-btn" onclick="showEngine('v6')">V6 Engine</button>
+                <button class="control-btn" onclick="showEngine('rotary')">Rotary Engine</button>
+                <button class="control-btn" onclick="showEngine('electric')">Electric Motor</button>
+            </div>
+
+            <div id="engine-display" class="engine-display">
+                <div style="text-align: center;">
+                    <div style="font-size: 1.5rem; margin-bottom: 10px;">🔧 Select an Engine Type</div>
+                    <div style="font-size: 0.9rem; opacity: 0.8;">Choose from the buttons above to explore engine blueprints</div>
+                </div>
+            </div>
+        </section>
+    </div>
+
+    <script>
+        function showEngine(type) {
+            const display = document.getElementById('engine-display');
+            const engines = {
+                v8: {
+                    title: '🏎️ V8 High-Performance Engine',
+                    specs: 'Displacement: 6.2L | Power: 650 hp | Torque: 650 lb-ft | Configuration: 90° V8',
+                    description: 'Large displacement V8 engines are the pinnacle of performance automotive powerplants, featuring dual overhead camshafts and advanced fuel injection systems.'
+                },
+                inline4: {
+                    title: '🚗 Inline-4 Turbocharged Engine',
+                    specs: 'Displacement: 2.0L | Power: 250 hp | Boost: 2.0 bar | Efficiency: 35 mpg combined',
+                    description: 'Modern turbocharged four-cylinder engines provide excellent fuel economy with performance approaching traditional V6 engines through forced induction.'
+                },
+                v6: {
+                    title: '🏁 V6 Sports Engine',
+                    specs: 'Displacement: 3.5L | Power: 350 hp | Torque: 400 lb-ft | Configuration: 60° V6',
+                    description: 'V6 engines offer the perfect balance of power, smoothness, and packaging efficiency, commonly found in sports sedans and SUVs.'
+                },
+                rotary: {
+                    title: '⚡ Rotary (Wankel) Engine',
+                    specs: 'Displacement: 1.3L | Power: 250 hp | RPM: 9000+ | Design: Triangular rotor',
+                    description: 'The rotary engine uses a triangular rotor instead of pistons, providing high power density and smooth operation at high RPMs.'
+                },
+                electric: {
+                    title: '🔋 Electric Motor System',
+                    specs: 'Power: 300 kW | Torque: 600 Nm | Efficiency: 95% | Range: 300+ miles',
+                    description: 'Modern electric motors provide instant torque and silent operation, representing the future of automotive propulsion technology.'
+                }
+            };
+
+            const engine = engines[type];
+            display.innerHTML = `
+                <div style="text-align: center;">
+                    <div style="font-size: 1.8rem; margin-bottom: 15px; color: var(--engine-brass); text-shadow: var(--text-glow);">${engine.title}</div>
+                    <div style="font-size: 1rem; margin-bottom: 10px; color: var(--text-accent); font-weight: 600;">${engine.specs}</div>
+                    <div style="font-size: 0.9rem; line-height: 1.6; color: var(--text-primary); max-width: 600px; margin: 0 auto;">${engine.description}</div>
+                </div>
+            `;
+        }
+    </script>
+</body>
+</html>
