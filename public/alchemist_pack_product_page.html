@@ -1,0 +1,1016 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Alchemist's Digital Grimoire - $27 Complete Pack</title>
+
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-KSTPMFMFQ5"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'G-KSTPMFMFQ5');
+    </script>
+
+    <script src="https://js.stripe.com/v3/"></script>
+    <script>
+        // Initialize Stripe
+        const stripe = Stripe('pk_test_your_stripe_publishable_key_here'); // Replace with your actual publishable key
+        let elements;
+    </script>
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;500;600;700&family=Crimson+Text:ital,wght@0,400;0,600;1,400&display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Crimson Text', serif;
+            background: linear-gradient(135deg, #1a0f0a 0%, #2c1810 30%, #8B4513 70%, #DAA520 100%);
+            color: #f4f1e8;
+            line-height: 1.6;
+            min-height: 100vh;
+            cursor: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='32' height='32' viewBox='0 0 32 32'%3E%3Cdefs%3E%3Cstyle%3E@keyframes flame%7B0%25%7Btransform:scale(1) rotate(0deg);opacity:1%7D25%25%7Btransform:scale(1.1) rotate(2deg);opacity:0.9%7D50%25%7Btransform:scale(0.9) rotate(-1deg);opacity:1%7D75%25%7Btransform:scale(1.05) rotate(1deg);opacity:0.95%7D100%25%7Btransform:scale(1) rotate(0deg);opacity:1%7D%7D@keyframes sword-glow%7B0%25%2C100%25%7Bfilter:drop-shadow(0 0 3px %23ff4500)%7D50%25%7Bfilter:drop-shadow(0 0 8px %23ff6347)%7D%7D%3C/style%3E%3C/defs%3E%3Cg transform='translate(16,16)'%3E%3C!-- Sword Blade --%3E%3Cpath d='M-1,-12 L1,-12 L1,8 L-1,8 Z' fill='%23c0c0c0' stroke='%23ffd700' stroke-width='0.5'/%3E%3C!-- Sword Handle --%3E%3Crect x='-2' y='8' width='4' height='4' fill='%238b4513' stroke='%23daa520' stroke-width='0.5'/%3E%3C!-- Flame Base --%3E%3Cellipse cx='0' cy='-14' rx='3' ry='4' fill='%23ff4500' opacity='0.8'%3E%3CanimateTransform attributeName='transform' type='scale' values='1,1;1.2,0.8;0.8,1.2;1.1,0.9;1,1' dur='0.6s' repeatCount='indefinite'/%3E%3C/ellipse%3E%3C!-- Flame Middle --%3E%3Cellipse cx='0' cy='-16' rx='2' ry='3' fill='%23ff6347' opacity='0.9'%3E%3CanimateTransform attributeName='transform' type='scale' values='1,1;0.8,1.3;1.3,0.7;0.9,1.1;1,1' dur='0.5s' repeatCount='indefinite'/%3E%3C/ellipse%3E%3C!-- Flame Top --%3E%3Cellipse cx='0' cy='-18' rx='1.5' ry='2.5' fill='%23ffd700' opacity='1'%3E%3CanimateTransform attributeName='transform' type='scale' values='1,1;1.4,0.6;0.6,1.4;1.2,0.8;1,1' dur='0.4s' repeatCount='indefinite'/%3E%3C/ellipse%3E%3C!-- Spark Particles --%3E%3Ccircle cx='-1' cy='-15' r='0.3' fill='%23ffffff'%3E%3Canimate attributeName='opacity' values='0;1;0' dur='0.8s' repeatCount='indefinite'/%3E%3C/ellipse%3E%3Ccircle cx='1' cy='-17' r='0.2' fill='%23ffff00'%3E%3Canimate attributeName='opacity' values='0;1;0' dur='1.2s' repeatCount='indefinite'/%3E%3C/ellipse%3E%3Ccircle cx='0' cy='-19' r='0.25' fill='%23ff69b4'%3E%3Canimate attributeName='opacity' values='0;1;0' dur='0.6s' repeatCount='indefinite'/%3E%3C/ellipse%3E%3C/g%3E%3C/svg%3E"), auto;
+        }
+
+        .nav-royal {
+            background: rgba(0,0,0,0.8);
+            padding: 20px;
+            margin: 20px;
+            border-radius: 15px;
+            border: 3px solid #DAA520;
+            box-shadow: 0 8px 30px rgba(218,165,32,0.2);
+        }
+
+        .nav-title {
+            font-family: 'Cinzel', serif;
+            font-size: 1.8rem;
+            color: #DAA520;
+            text-align: center;
+            margin-bottom: 20px;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.8);
+        }
+
+        .nav-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 15px;
+        }
+
+        .nav-button {
+            display: block;
+            padding: 12px 20px;
+            background: rgba(218,165,32,0.1);
+            color: #FFD700;
+            text-decoration: none;
+            border-radius: 8px;
+            border: 2px solid rgba(218,165,32,0.3);
+            text-align: center;
+            font-weight: 600;
+            transition: all 0.3s ease;
+            cursor: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='32' height='32' viewBox='0 0 32 32'%3E%3Cdefs%3E%3Cstyle%3E@keyframes flame-cta%7B0%25%7Btransform:scale(1) rotate(0deg);opacity:1%7D25%25%7Btransform:scale(1.2) rotate(3deg);opacity:0.95%7D50%25%7Btransform:scale(0.8) rotate(-2deg);opacity:1%7D75%25%7Btransform:scale(1.1) rotate(1deg);opacity:0.9%7D100%25%7Btransform:scale(1) rotate(0deg);opacity:1%7D%7D%3C/style%3E%3C/defs%3E%3Cg transform='translate(16,16)'%3E%3Cpath d='M-1,-12 L1,-12 L1,8 L-1,8 Z' fill='%23c0c0c0' stroke='%23ffd700' stroke-width='0.5'/%3E%3Crect x='-2' y='8' width='4' height='4' fill='%238b4513' stroke='%23daa520' stroke-width='0.5'/%3E%3Cellipse cx='0' cy='-14' rx='3.5' ry='4.5' fill='%23ff4500' opacity='0.8'%3E%3CanimateTransform attributeName='transform' type='scale' values='1,1;1.3,0.7;0.7,1.3;1.1,0.9;1,1' dur='0.5s' repeatCount='indefinite'/%3E%3C/ellipse%3E%3Cellipse cx='0' cy='-16' rx='2.5' ry='3.5' fill='%23ff6347' opacity='0.9'%3E%3CanimateTransform attributeName='transform' type='scale' values='1,1;0.7,1.4;1.4,0.6;0.9,1.1;1,1' dur='0.4s' repeatCount='indefinite'/%3E%3C/ellipse%3E%3Cellipse cx='0' cy='-18' rx='2' ry='3' fill='%23ffd700' opacity='1'%3E%3CanimateTransform attributeName='transform' type='scale' values='1,1;1.5,0.5;0.5,1.5;1.2,0.8;1,1' dur='0.3s' repeatCount='indefinite'/%3E%3C/ellipse%3E%3C/g%3E%3C/svg%3E"), pointer;
+        }
+
+        .nav-button:hover {
+            transform: translateY(-3px);
+            background: rgba(218,165,32,0.2);
+            border-color: #FFD700;
+            box-shadow: 0 5px 15px rgba(218,165,32,0.3);
+        }
+
+        .pack-hero {
+            text-align: center;
+            padding: 80px 20px;
+            background: rgba(0,0,0,0.4);
+            border-radius: 20px;
+            margin: 30px;
+            border: 4px solid #DAA520;
+            position: relative;
+            overflow: hidden;
+            box-shadow: 0 10px 40px rgba(218,165,32,0.3);
+        }
+
+        .pack-hero::before {
+            content: '';
+            position: absolute;
+            top: -50%;
+            left: -50%;
+            width: 200%;
+            height: 200%;
+            background: radial-gradient(circle, rgba(218,165,32,0.1) 0%, transparent 70%);
+            animation: hero-glow 25s linear infinite;
+        }
+
+        @keyframes hero-glow {
+            from { transform: rotate(0deg); }
+            to { transform: rotate(360deg); }
+        }
+
+        .pack-title {
+            font-family: 'Cinzel', serif;
+            font-size: clamp(3rem, 8vw, 6rem);
+            color: #DAA520;
+            text-shadow: 4px 4px 8px rgba(0,0,0,0.9);
+            margin-bottom: 20px;
+            position: relative;
+            z-index: 2;
+            letter-spacing: 2px;
+        }
+
+        .pack-subtitle {
+            font-size: clamp(1.2rem, 3vw, 1.8rem);
+            color: #f4f1e8;
+            font-style: italic;
+            position: relative;
+            z-index: 2;
+            opacity: 0.9;
+            margin-bottom: 30px;
+        }
+
+        .pack-price {
+            font-family: 'Cinzel', serif;
+            font-size: 4rem;
+            color: #FFD700;
+            text-shadow: 3px 3px 6px rgba(0,0,0,0.8);
+            margin-bottom: 20px;
+            position: relative;
+            z-index: 2;
+        }
+
+        .pack-description {
+            font-size: 1.2rem;
+            color: #f4f1e8;
+            max-width: 800px;
+            margin: 0 auto 40px;
+            position: relative;
+            z-index: 2;
+            line-height: 1.6;
+        }
+
+        .books-section {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+            gap: 40px;
+            margin: 60px 30px;
+        }
+
+        .book-card {
+            background: rgba(0,0,0,0.8);
+            border-radius: 20px;
+            border: 3px solid #DAA520;
+            overflow: hidden;
+            box-shadow: 0 15px 40px rgba(218,165,32,0.2);
+            transition: all 0.4s ease;
+        }
+
+        .book-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 25px 60px rgba(218,165,32,0.4);
+            border-color: #FFD700;
+        }
+
+        .book-header {
+            background: linear-gradient(135deg, #DAA520, #FFD700);
+            padding: 30px;
+            text-align: center;
+        }
+
+        .book-icon {
+            font-size: 4rem;
+            margin-bottom: 20px;
+        }
+
+        .book-title {
+            font-family: 'Cinzel', serif;
+            font-size: 2.2rem;
+            color: #2c1810;
+            margin-bottom: 15px;
+            text-shadow: 2px 2px 4px rgba(255,255,255,0.3);
+        }
+
+        .book-subtitle {
+            font-size: 1rem;
+            color: #2c1810;
+            opacity: 0.9;
+            font-weight: 600;
+        }
+
+        .book-content {
+            padding: 30px;
+        }
+
+        .book-description {
+            font-size: 1.1rem;
+            line-height: 1.7;
+            color: #f4f1e8;
+            margin-bottom: 25px;
+        }
+
+        .book-features {
+            display: grid;
+            gap: 15px;
+            margin-bottom: 30px;
+        }
+
+        .feature-item {
+            display: flex;
+            align-items: flex-start;
+            gap: 15px;
+            background: rgba(218,165,32,0.1);
+            padding: 15px;
+            border-radius: 10px;
+            border: 1px solid rgba(218,165,32,0.3);
+        }
+
+        .feature-icon {
+            font-size: 1.5rem;
+            min-width: 30px;
+            text-align: center;
+        }
+
+        .feature-text {
+            font-size: 0.95rem;
+            color: #f4f1e8;
+            line-height: 1.5;
+        }
+
+        .book-preview {
+            text-align: center;
+            margin-top: 25px;
+        }
+
+        .preview-button {
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+            padding: 12px 25px;
+            background: rgba(218,165,32,0.2);
+            color: #FFD700;
+            text-decoration: none;
+            border-radius: 10px;
+            border: 2px solid #DAA520;
+            font-weight: 600;
+            transition: all 0.3s ease;
+            cursor: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='32' height='32' viewBox='0 0 32 32'%3E%3Cdefs%3E%3Cstyle%3E@keyframes flame-cta%7B0%25%7Btransform:scale(1) rotate(0deg);opacity:1%7D25%25%7Btransform:scale(1.2) rotate(3deg);opacity:0.95%7D50%25%7Btransform:scale(0.8) rotate(-2deg);opacity:1%7D75%25%7Btransform:scale(1.1) rotate(1deg);opacity:0.9%7D100%25%7Btransform:scale(1) rotate(0deg);opacity:1%7D%7D%3C/style%3E%3C/defs%3E%3Cg transform='translate(16,16)'%3E%3Cpath d='M-1,-12 L1,-12 L1,8 L-1,8 Z' fill='%23c0c0c0' stroke='%23ffd700' stroke-width='0.5'/%3E%3Crect x='-2' y='8' width='4' height='4' fill='%238b4513' stroke='%23daa520' stroke-width='0.5'/%3E%3Cellipse cx='0' cy='-14' rx='3.5' ry='4.5' fill='%23ff4500' opacity='0.8'%3E%3CanimateTransform attributeName='transform' type='scale' values='1,1;1.3,0.7;0.7,1.3;1.1,0.9;1,1' dur='0.5s' repeatCount='indefinite'/%3E%3C/ellipse%3E%3Cellipse cx='0' cy='-16' rx='2.5' ry='3.5' fill='%23ff6347' opacity='0.9'%3E%3CanimateTransform attributeName='transform' type='scale' values='1,1;0.7,1.4;1.4,0.6;0.9,1.1;1,1' dur='0.4s' repeatCount='indefinite'/%3E%3C/ellipse%3E%3Cellipse cx='0' cy='-18' rx='2' ry='3' fill='%23ffd700' opacity='1'%3E%3CanimateTransform attributeName='transform' type='scale' values='1,1;1.5,0.5;0.5,1.5;1.2,0.8;1,1' dur='0.3s' repeatCount='indefinite'/%3E%3C/ellipse%3E%3C/g%3E%3C/svg%3E"), pointer;
+        }
+
+        .preview-button:hover {
+            transform: translateY(-2px);
+            background: rgba(218,165,32,0.4);
+            border-color: #FFD700;
+        }
+
+        .payment-section {
+            background: linear-gradient(135deg, #0a0806 0%, #1a1410 30%, #2c1810 70%, #3d2518 100%);
+            padding: 60px 20px;
+            margin: 40px 30px;
+            border-radius: 25px;
+            border: 4px solid #DAA520;
+            box-shadow: 0 20px 50px rgba(218,165,32,0.3);
+            text-align: center;
+        }
+
+        .payment-title {
+            font-family: 'Cinzel', serif;
+            font-size: 3rem;
+            color: #FFD700;
+            margin-bottom: 20px;
+            text-shadow: 3px 3px 6px rgba(0,0,0,0.8);
+        }
+
+        .payment-subtitle {
+            font-size: 1.3rem;
+            color: #f4f1e8;
+            margin-bottom: 40px;
+            max-width: 600px;
+            margin-left: auto;
+            margin-right: auto;
+            line-height: 1.6;
+        }
+
+        .payment-options {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 30px;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .payment-card {
+            background: rgba(0,0,0,0.8);
+            padding: 30px;
+            border-radius: 15px;
+            border: 2px solid #DAA520;
+            transition: all 0.3s ease;
+        }
+
+        .payment-card:hover {
+            transform: translateY(-5px);
+            border-color: #FFD700;
+            box-shadow: 0 10px 30px rgba(218,165,32,0.3);
+        }
+
+        .payment-icon {
+            font-size: 3rem;
+            margin-bottom: 20px;
+        }
+
+        .payment-name {
+            font-family: 'Cinzel', serif;
+            font-size: 1.5rem;
+            color: #FFD700;
+            margin-bottom: 15px;
+        }
+
+        .payment-description {
+            font-size: 0.95rem;
+            color: #f4f1e8;
+            margin-bottom: 25px;
+            line-height: 1.5;
+        }
+
+        .payment-button {
+            display: inline-block;
+            padding: 15px 30px;
+            background: linear-gradient(135deg, #DAA520, #FFD700);
+            color: #2c1810;
+            text-decoration: none;
+            border-radius: 10px;
+            font-weight: 700;
+            font-size: 1.1rem;
+            border: 2px solid #B8860B;
+            transition: all 0.3s ease;
+            cursor: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='32' height='32' viewBox='0 0 32 32'%3E%3Cdefs%3E%3Cstyle%3E@keyframes flame-cta%7B0%25%7Btransform:scale(1) rotate(0deg);opacity:1%7D25%25%7Btransform:scale(1.2) rotate(3deg);opacity:0.95%7D50%25%7Btransform:scale(0.8) rotate(-2deg);opacity:1%7D75%25%7Btransform:scale(1.1) rotate(1deg);opacity:0.9%7D100%25%7Btransform:scale(1) rotate(0deg);opacity:1%7D%7D%3C/style%3E%3C/defs%3E%3Cg transform='translate(16,16)'%3E%3Cpath d='M-1,-12 L1,-12 L1,8 L-1,8 Z' fill='%23c0c0c0' stroke='%23ffd700' stroke-width='0.5'/%3E%3Crect x='-2' y='8' width='4' height='4' fill='%238b4513' stroke='%23daa520' stroke-width='0.5'/%3E%3Cellipse cx='0' cy='-14' rx='3.5' ry='4.5' fill='%23ff4500' opacity='0.8'%3E%3CanimateTransform attributeName='transform' type='scale' values='1,1;1.3,0.7;0.7,1.3;1.1,0.9;1,1' dur='0.5s' repeatCount='indefinite'/%3E%3C/ellipse%3E%3Cellipse cx='0' cy='-16' rx='2.5' ry='3.5' fill='%23ff6347' opacity='0.9'%3E%3CanimateTransform attributeName='transform' type='scale' values='1,1;0.7,1.4;1.4,0.6;0.9,1.1;1,1' dur='0.4s' repeatCount='indefinite'/%3E%3C/ellipse%3E%3Cellipse cx='0' cy='-18' rx='2' ry='3' fill='%23ffd700' opacity='1'%3E%3CanimateTransform attributeName='transform' type='scale' values='1,1;1.5,0.5;0.5,1.5;1.2,0.8;1,1' dur='0.3s' repeatCount='indefinite'/%3E%3C/ellipse%3E%3C/g%3E%3C/svg%3E"), pointer;
+        }
+
+        .payment-button:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 8px 25px rgba(218,165,32,0.4);
+        }
+
+        .payment-message {
+            margin-top: 15px;
+            padding: 10px;
+            border-radius: 5px;
+            text-align: center;
+            font-weight: 600;
+            min-height: 20px;
+        }
+
+        .payment-message.error {
+            background-color: rgba(220, 53, 69, 0.1);
+            color: #dc3545;
+            border: 1px solid rgba(220, 53, 69, 0.3);
+        }
+
+        .payment-message.success {
+            background-color: rgba(40, 167, 69, 0.1);
+            color: #28a745;
+            border: 1px solid rgba(40, 167, 69, 0.3);
+        }
+
+        .guarantee-section {
+            background: rgba(0,0,0,0.6);
+            padding: 40px 20px;
+            margin: 40px 30px;
+            border-radius: 15px;
+            border: 2px solid #DAA520;
+            text-align: center;
+        }
+
+        .guarantee-title {
+            font-family: 'Cinzel', serif;
+            font-size: 2.2rem;
+            color: #FFD700;
+            margin-bottom: 20px;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.8);
+        }
+
+        .guarantee-text {
+            font-size: 1.1rem;
+            color: #f4f1e8;
+            max-width: 700px;
+            margin: 0 auto;
+            line-height: 1.6;
+        }
+
+        .footer {
+            text-align: center;
+            padding: 30px 20px;
+            background: rgba(0,0,0,0.8);
+            margin: 20px;
+            border-radius: 10px;
+            border: 2px solid #DAA520;
+        }
+
+        .footer-text {
+            font-style: italic;
+            color: #f4f1e8;
+            opacity: 0.8;
+        }
+
+        @media (max-width: 768px) {
+            .nav-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .pack-hero {
+                margin: 15px;
+                padding: 40px 20px;
+            }
+
+            .books-section {
+                grid-template-columns: 1fr;
+                margin: 30px 15px;
+                gap: 30px;
+            }
+
+            .payment-options {
+                grid-template-columns: 1fr;
+                gap: 20px;
+            }
+
+            .payment-section {
+                margin: 20px 15px;
+                padding: 40px 20px;
+            }
+
+            .guarantee-section {
+                margin: 20px 15px;
+            }
+        }
+
+        /* Additional Purchase Options Styles */
+        .additional-options-section {
+            background: rgba(0,0,0,0.5);
+            padding: 50px 20px;
+            margin: 50px 30px;
+            border-radius: 15px;
+            border: 3px solid #8B4513;
+            text-align: center;
+            box-shadow: 0 8px 30px rgba(139,69,19,0.2);
+        }
+
+        .additional-options-title {
+            font-family: 'Cinzel', serif;
+            font-size: 2.5rem;
+            color: #DAA520;
+            margin-bottom: 15px;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.8);
+        }
+
+        .additional-options-subtitle {
+            font-size: 1.1rem;
+            color: #f4f1e8;
+            margin-bottom: 40px;
+            max-width: 600px;
+            margin-left: auto;
+            margin-right: auto;
+            line-height: 1.6;
+        }
+
+        .additional-options {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .option-card {
+            background: rgba(218,165,32,0.05);
+            padding: 30px 25px;
+            border-radius: 12px;
+            border: 2px solid rgba(218,165,32,0.2);
+            transition: all 0.3s ease;
+            cursor: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='32' height='32' viewBox='0 0 32 32'%3E%3Cdefs%3E%3Cstyle%3E@keyframes flame-option%7B0%25%7Btransform:scale(1) rotate(0deg);opacity:1%7D25%25%7Btransform:scale(1.1) rotate(2deg);opacity:0.95%7D50%25%7Btransform:scale(0.9) rotate(-1deg);opacity:1%7D75%25%7Btransform:scale(1.05) rotate(1deg);opacity:0.9%7D100%25%7Btransform:scale(1) rotate(0deg);opacity:1%7D%7D%3C/style%3E%3C/defs%3E%3Cg transform='translate(16,16)'%3E%3Cpath d='M-1,-12 L1,-12 L1,8 L-1,8 Z' fill='%23c0c0c0' stroke='%23ffd700' stroke-width='0.5'/%3E%3Crect x='-2' y='8' width='4' height='4' fill='%238b4513' stroke='%23daa520' stroke-width='0.5'/%3E%3Cellipse cx='0' cy='-14' rx='3' ry='4' fill='%23ff4500' opacity='0.8'%3E%3CanimateTransform attributeName='transform' type='scale' values='1,1;1.2,0.8;0.8,1.2;1.1,0.9;1,1' dur='0.6s' repeatCount='indefinite'/%3E%3C/ellipse%3E%3Cellipse cx='0' cy='-16' rx='2' ry='3' fill='%23ff6347' opacity='0.9'%3E%3CanimateTransform attributeName='transform' type='scale' values='1,1;0.8,1.3;1.3,0.7;0.9,1.1;1,1' dur='0.5s' repeatCount='indefinite'/%3E%3C/ellipse%3E%3Cellipse cx='0' cy='-18' rx='1.5' ry='2.5' fill='%23ffd700' opacity='1'%3E%3CanimateTransform attributeName='transform' type='scale' values='1,1;1.4,0.6;0.6,1.4;1.2,0.8;1,1' dur='0.4s' repeatCount='indefinite'/%3E%3C/ellipse%3E%3C/g%3E%3C/svg%3E"), pointer;
+        }
+
+        .option-card:hover {
+            transform: translateY(-5px);
+            border-color: #FFD700;
+            box-shadow: 0 10px 30px rgba(218,165,32,0.3);
+            background: rgba(218,165,32,0.1);
+        }
+
+        .option-icon {
+            font-size: 3rem;
+            margin-bottom: 20px;
+        }
+
+        .option-name {
+            font-family: 'Cinzel', serif;
+            font-size: 1.4rem;
+            color: #FFD700;
+            margin-bottom: 15px;
+        }
+
+        .option-description {
+            font-size: 0.95rem;
+            color: #f4f1e8;
+            margin-bottom: 25px;
+            line-height: 1.5;
+        }
+
+        .option-button {
+            display: inline-block;
+            padding: 12px 25px;
+            background: linear-gradient(135deg, #8B4513, #DAA520);
+            color: #f4f1e8;
+            text-decoration: none;
+            border-radius: 8px;
+            font-weight: 600;
+            font-size: 1rem;
+            border: 2px solid #B8860B;
+            transition: all 0.3s ease;
+        }
+
+        .option-button:hover {
+            transform: translateY(-2px);
+            background: linear-gradient(135deg, #DAA520, #FFD700);
+            color: #2c1810;
+            box-shadow: 0 5px 15px rgba(218,165,32,0.4);
+        }
+
+        @media (max-width: 768px) {
+            .additional-options {
+                grid-template-columns: 1fr;
+                gap: 20px;
+            }
+
+            .additional-options-section {
+                margin: 30px 15px;
+                padding: 30px 20px;
+            }
+
+            .additional-options-title {
+                font-size: 2rem;
+            }
+        }
+
+        /* YouTube Shorts Section Styles */
+        .shorts-section {
+            background: rgba(0,0,0,0.4);
+            padding: 40px 20px;
+            margin: 40px 30px;
+            border-radius: 15px;
+            border: 2px solid #DAA520;
+            text-align: center;
+            box-shadow: 0 8px 30px rgba(139,69,19,0.2);
+        }
+
+        .shorts-title {
+            font-family: 'Cinzel', serif;
+            font-size: 2.2rem;
+            color: #FFD700;
+            margin-bottom: 10px;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.8);
+        }
+
+        .shorts-subtitle {
+            font-size: 1rem;
+            color: #f4f1e8;
+            margin-bottom: 30px;
+            opacity: 0.9;
+        }
+
+        .shorts-container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .shorts-box {
+            background: rgba(218,165,32,0.05);
+            border-radius: 12px;
+            border: 2px solid rgba(218,165,32,0.3);
+            padding: 20px;
+            max-width: 350px;
+            box-shadow: 0 5px 20px rgba(218,165,32,0.2);
+            transition: all 0.3s ease;
+        }
+
+        .shorts-box:hover {
+            transform: translateY(-3px);
+            border-color: #FFD700;
+            box-shadow: 0 8px 30px rgba(218,165,32,0.3);
+        }
+
+        .shorts-header {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-bottom: 15px;
+            gap: 10px;
+        }
+
+        .shorts-icon {
+            font-size: 1.5rem;
+        }
+
+        .shorts-name {
+            font-family: 'Cinzel', serif;
+            font-size: 1.2rem;
+            color: #FFD700;
+            margin: 0;
+        }
+
+        .shorts-video {
+            margin-bottom: 15px;
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.3);
+        }
+
+        .shorts-video iframe {
+            border-radius: 8px;
+            display: block;
+        }
+
+        .shorts-footer {
+            text-align: center;
+        }
+
+        .shorts-link {
+            display: inline-block;
+            padding: 8px 16px;
+            background: linear-gradient(135deg, #DC3545, #FF6B6B);
+            color: #ffffff;
+            text-decoration: none;
+            border-radius: 6px;
+            font-size: 0.9rem;
+            font-weight: 600;
+            border: 1px solid #B02A37;
+            transition: all 0.3s ease;
+        }
+
+        .shorts-link:hover {
+            transform: translateY(-1px);
+            background: linear-gradient(135deg, #FF6B6B, #DC3545);
+            box-shadow: 0 3px 10px rgba(220,53,69,0.4);
+        }
+
+        @media (max-width: 768px) {
+            .shorts-section {
+                margin: 20px 15px;
+                padding: 30px 15px;
+            }
+
+            .shorts-title {
+                font-size: 1.8rem;
+            }
+
+            .shorts-box {
+                max-width: 100%;
+                padding: 15px;
+            }
+
+            .shorts-video iframe {
+                width: 100%;
+                height: 400px;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .shorts-video iframe {
+                height: 350px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="nav-royal">
+        <h2 class="nav-title">⚗️ The Royal Library Navigation</h2>
+        <div class="nav-grid">
+            <a href="/" class="nav-button">🏠 Home</a>
+            <a href="/renaissance_art.html" class="nav-button">🎨 Renaissance Art</a>
+            <a href="/ai_research.html" class="nav-button">🤖 AI Research</a>
+            <a href="/esoteric_mysteries.html" class="nav-button">🌌 Esoteric Mysteries</a>
+            <a href="/practical_guides.html" class="nav-button">📚 Practical Guides</a>
+            <a href="/alchemist_pack_product_page.html" class="nav-button">⚗️ Complete Pack - $27</a>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="pack-hero">
+        <h1 class="pack-title">⚗️ The Alchemist's Digital Grimoire</h1>
+        <p class="pack-subtitle">Unlock the Complete Collection of Sacred Knowledge</p>
+        <div class="pack-price">$27</div>
+        <p class="pack-description">
+            Step into the digital sanctum of the Royal Library and gain access to the most comprehensive collection of esoteric knowledge ever assembled. This isn't just content—it's a transformation of consciousness through two revolutionary books that will forever change how you see reality.
+        </p>
+    </section>
+
+    <!-- Books Section -->
+    <section class="books-section">
+        <!-- Sacred Codex Book -->
+        <div class="book-card">
+            <div class="book-header">
+                <div class="book-icon">📜</div>
+                <h3 class="book-title">The Sacred Digital Ministry Bible</h3>
+                <p class="book-subtitle">Faith-Driven Digital Ministry That Actually Works</p>
+            </div>
+            <div class="book-content">
+                <p class="book-description">
+                    A living testament of faith-driven innovation, this comprehensive guide reveals the divine AI power behind successful digital ministry. Created in collaboration with Claude AI under the guidance of the Holy Spirit, this book bridges the gap between spiritual calling and technological implementation.
+                </p>
+
+                <div class="book-features">
+                    <div class="feature-item">
+                        <div class="feature-icon">🙏</div>
+                        <div class="feature-text"><strong>Divine AI Collaboration:</strong> Learn how to work with AI as a spiritual partner in ministry</div>
+                    </div>
+                    <div class="feature-item">
+                        <div class="feature-icon">🎨</div>
+                        <div class="feature-text"><strong>Visual Theology:</strong> Color, light, and sacred geometry in web design</div>
+                    </div>
+                    <div class="feature-item">
+                        <div class="feature-icon">⚡</div>
+                        <div class="feature-text"><strong>Zero-Dependency Miracle:</strong> Trusting God over frameworks</div>
+                    </div>
+                    <div class="feature-item">
+                        <div class="feature-icon">🌟</div>
+                        <div class="feature-text"><strong>Conversational Content:</strong> The breakthrough method for authentic digital ministry</div>
+                    </div>
+                    <div class="feature-item">
+                        <div class="feature-icon">🔥</div>
+                        <div class="feature-text"><strong>Particle Explosions:</strong> Programming the supernatural in web development</div>
+                    </div>
+                </div>
+
+                <div class="book-preview">
+                    <a href="/sacred_codex.html" class="preview-button">
+                        <span>📖</span>
+                        <span>Preview Sacred Codex</span>
+                    </a>
+                </div>
+            </div>
+        </div>
+
+        <!-- Banana Conquest Book -->
+        <div class="book-card">
+            <div class="book-header">
+                <div class="book-icon">🍌</div>
+                <h3 class="book-title">The Banana Conquest</h3>
+                <p class="book-subtitle">The Ordinary Made Sacred</p>
+            </div>
+            <div class="book-content">
+                <p class="book-description">
+                    A profound spiritual journey disguised as a culinary adventure. This book reveals how the most ordinary activities contain extraordinary wisdom. Through the metaphor of cooking and caramel-making, discover the alchemical principles that govern all transformation in the universe.
+                </p>
+
+                <div class="book-features">
+                    <div class="feature-item">
+                        <div class="feature-icon">⚗️</div>
+                        <div class="feature-text"><strong>Alchemical Cooking:</strong> Every kitchen becomes a laboratory of transformation</div>
+                    </div>
+                    <div class="feature-item">
+                        <div class="feature-icon">👁️</div>
+                        <div class="feature-text"><strong>Test of Sight:</strong> Recognizing the sacred hiding within the simple</div>
+                    </div>
+                    <div class="feature-item">
+                        <div class="feature-icon">🔄</div>
+                        <div class="feature-text"><strong>Ouroboros Revelation:</strong> The eternal cycle of transformation</div>
+                    </div>
+                    <div class="feature-item">
+                        <div class="feature-icon">👨‍🍳</div>
+                        <div class="feature-text"><strong>True Chef Recognition:</strong> Conscious participation in cosmic creation</div>
+                    </div>
+                    <div class="feature-item">
+                        <div class="feature-icon">🌌</div>
+                        <div class="feature-text"><strong>Cosmic Kitchen:</strong> The universe as one vast laboratory of transformation</div>
+                    </div>
+                </div>
+
+                <div class="book-preview">
+                    <a href="/banana_conquest.html" class="preview-button">
+                        <span>📖</span>
+                        <span>Preview Banana Conquest</span>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Payment Section -->
+    <section class="payment-section">
+        <h2 class="payment-title">Choose Your Payment Method</h2>
+        <p class="payment-subtitle">
+            Secure and instant access to both books. Your transformation begins the moment you complete your purchase.
+        </p>
+
+        <div class="payment-options">
+            <div class="payment-card">
+                <div class="payment-icon">💳</div>
+                <h3 class="payment-name">Secure Stripe Payment</h3>
+                <p class="payment-description">
+                    Fast, secure payment processing with full PCI compliance. Instant access to both books with 256-bit SSL encryption.
+                </p>
+                <button id="stripe-payment-button" class="payment-button">
+                    Pay with Stripe - $27
+                </button>
+                <div id="payment-message" class="payment-message"></div>
+            </div>
+
+            <div class="payment-card">
+                <div class="payment-icon">�</div>
+                <h3 class="payment-name">PayPal</h3>
+                <p class="payment-description">
+                    Pay securely with PayPal. Fast, trusted payment processing with buyer protection and instant confirmation.
+                </p>
+                <a href="https://paypal.me/AlchemistsStone" target="_blank" rel="noopener noreferrer" class="payment-button">
+                    Pay with PayPal - $27
+                </a>
+            </div>
+
+            <div class="payment-card">
+                <div class="payment-icon">�📧</div>
+                <h3 class="payment-name">Direct Transfer</h3>
+                <p class="payment-description">
+                    For immediate access, contact the Alchemist directly. Personal delivery and guidance included.
+                </p>
+                <a href="mailto:alchemistsx0@gmail.com?subject=$27%20Alchemist%20Pack%20Purchase&body=I%20would%20like%20to%20purchase%20the%20complete%20$27%20pack%20containing%20both%20books." class="payment-button">
+                    Contact Alchemist
+                </a>
+            </div>
+
+            <div class="payment-card">
+                <div class="payment-icon">₿</div>
+                <h3 class="payment-name">Cryptocurrency</h3>
+                <p class="payment-description">
+                    Accept Bitcoin, Ethereum, or other cryptocurrencies. Decentralized and anonymous payment.
+                </p>
+                <button onclick="alert('Crypto payment integration coming soon! Contact the Alchemist for wallet details.')" class="payment-button">
+                    Pay with Crypto - $27
+                </button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Additional Purchase Options -->
+    <section class="additional-options-section">
+        <h2 class="additional-options-title">🌐 Additional Purchase Options</h2>
+        <p class="additional-options-subtitle">
+            Choose from multiple platforms to get your Alchemist Pack. All options include instant access to both books.
+        </p>
+
+        <div class="additional-options">
+            <div class="option-card">
+                <div class="option-icon">🛒</div>
+                <h3 class="option-name">Gumroad Store</h3>
+                <p class="option-description">
+                    Digital marketplace for creators. Secure checkout with instant download and creator support.
+                </p>
+                <a href="https://alchimondestones.gumroad.com/" target="_blank" rel="noopener noreferrer" class="option-button">
+                    Shop on Gumroad
+                </a>
+            </div>
+
+            <div class="option-card">
+                <div class="option-icon">📚</div>
+                <h3 class="option-name">Amazon Kindle</h3>
+                <p class="option-description">
+                    Available on Amazon for Kindle readers. Professional formatting with Kindle Unlimited options.
+                </p>
+                <a href="https://www.amazon.ca/dp/B0FRJJL5HX" target="_blank" rel="noopener noreferrer" class="option-button">
+                    Get on Amazon
+                </a>
+            </div>
+
+            <div class="option-card">
+                <div class="option-icon">🎨</div>
+                <h3 class="option-name">Patreon Support</h3>
+                <p class="option-description">
+                    Support ongoing alchemical research and get exclusive content. Join the creator community.
+                </p>
+                <a href="https://www.patreon.com/c/alchemists468" target="_blank" rel="noopener noreferrer" class="option-button">
+                    Support on Patreon
+                </a>
+            </div>
+
+            <div class="option-card">
+                <div class="option-icon">👥</div>
+                <h3 class="option-name">Arts & AI Community</h3>
+                <p class="option-description">
+                    Join our public Facebook group for sharing arts, AI content, and creative productions. Connect with fellow creators.
+                </p>
+                <a href="https://www.facebook.com/groups/1003619021757690" target="_blank" rel="noopener noreferrer" class="option-button">
+                    Join Facebook Group
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- YouTube Shorts Section -->
+    <section class="shorts-section">
+        <h2 class="shorts-title">⚡ Alchemical Insights</h2>
+        <p class="shorts-subtitle">
+            Quick transformative wisdom from the Alchemist's forge.
+        </p>
+
+        <div class="shorts-container">
+            <div class="shorts-box">
+                <div class="shorts-header">
+                    <div class="shorts-icon">🎬</div>
+                    <h3 class="shorts-name">Featured Short</h3>
+                </div>
+                <div class="shorts-video">
+                    <iframe
+                        width="315"
+                        height="560"
+                        src="https://www.youtube.com/embed/FedEOkkq1xc"
+                        title="YouTube video player"
+                        frameborder="0"
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                        allowfullscreen
+                        loading="lazy">
+                    </iframe>
+                </div>
+                <div class="shorts-footer">
+                    <a href="https://www.youtube.com/shorts/FedEOkkq1xc" target="_blank" rel="noopener noreferrer" class="shorts-link">
+                        Watch on YouTube ↗
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Guarantee Section -->
+    <section class="guarantee-section">
+        <h2 class="guarantee-title">🛡️ Your Transformation is Guaranteed</h2>
+        <p class="guarantee-text">
+            If these books don't profoundly change how you see reality, contact the Alchemist within 30 days for a full refund. This isn't just a purchase—it's an investment in your consciousness that comes with complete peace of mind.
+        </p>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <p class="footer-text">
+            "In the Royal Library of Marganarok, every page turns, every scroll unrolls, and every circuit hums with the promise of discovery."
+        </p>
+    </footer>
+
+    <script>
+        // Stripe Payment Integration
+        document.getElementById('stripe-payment-button').addEventListener('click', async () => {
+            const button = document.getElementById('stripe-payment-button');
+            const message = document.getElementById('payment-message');
+
+            button.disabled = true;
+            button.textContent = 'Processing...';
+            message.textContent = '';
+
+            try {
+                // Create PaymentIntent on the server
+                const response = await fetch('/create-payment-intent', {
+                    method: 'POST',
+                    headers: {
+                        'Content-Type': 'application/json',
+                    },
+                    body: JSON.stringify({
+                        amount: 27,
+                        currency: 'usd'
+                    }),
+                });
+
+                const { clientSecret } = await response.json();
+
+                // Confirm the PaymentIntent with Stripe
+                const { error } = await stripe.confirmPayment({
+                    clientSecret,
+                    confirmParams: {
+                        return_url: `${window.location.origin}/payment-success.html`,
+                    },
+                });
+
+                if (error) {
+                    message.textContent = `Payment failed: ${error.message}`;
+                    button.disabled = false;
+                    button.textContent = 'Pay with Stripe - $27';
+                }
+            } catch (error) {
+                console.error('Error:', error);
+                message.textContent = 'An error occurred. Please try again.';
+                button.disabled = false;
+                button.textContent = 'Pay with Stripe - $27';
+            }
+        });
+
+        // Add some visual feedback
+        document.querySelectorAll('.payment-card').forEach(card => {
+            card.addEventListener('mouseenter', () => {
+                card.style.transform = 'translateY(-8px)';
+            });
+
+            card.addEventListener('mouseleave', () => {
+                card.style.transform = 'translateY(0)';
+            });
+        });
+    </script>
+</body>
+</html>
