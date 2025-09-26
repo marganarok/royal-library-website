@@ -336,6 +336,204 @@
                 grid-template-columns: 1fr;
             }
         }
+
+        /* Mirror Writing Studio Styles */
+        .mirror-studio {
+            background: linear-gradient(135deg, rgba(138, 43, 226, 0.1), rgba(75, 0, 130, 0.1));
+            border: 2px solid #8a2be2;
+            border-radius: 15px;
+            padding: 35px;
+            margin: 30px 0;
+        }
+
+        .mirror-input {
+            width: 100%;
+            padding: 15px;
+            background: rgba(0, 0, 0, 0.8);
+            border: 1px solid #8a2be2;
+            border-radius: 8px;
+            color: #dda0dd;
+            font-family: 'Courier New', monospace;
+            font-size: 1.1em;
+            margin: 10px 0;
+            resize: vertical;
+        }
+
+        .mirror-output {
+            background: rgba(138, 43, 226, 0.1);
+            border: 1px solid #8a2be2;
+            border-radius: 8px;
+            padding: 20px;
+            margin: 15px 0;
+            min-height: 100px;
+            font-family: 'Times New Roman', serif;
+            font-size: 1.2em;
+            color: #dda0dd;
+            text-align: center;
+            transform: scaleX(-1);
+        }
+
+        .mirror-button {
+            background: linear-gradient(45deg, #8a2be2, #dda0dd);
+            border: none;
+            color: white;
+            padding: 12px 25px;
+            border-radius: 8px;
+            cursor: pointer;
+            font-size: 1em;
+            margin: 5px;
+            transition: all 0.3s ease;
+        }
+
+        .mirror-button:hover {
+            transform: scale(1.05);
+            box-shadow: 0 0 20px rgba(138, 43, 226, 0.5);
+        }
+
+        /* Geometric Shapes Studio Styles */
+        .shapes-studio {
+            background: linear-gradient(135deg, rgba(255, 140, 0, 0.1), rgba(255, 69, 0, 0.1));
+            border: 2px solid #ff8c00;
+            border-radius: 15px;
+            padding: 35px;
+            margin: 30px 0;
+        }
+
+        .shape-canvas {
+            background: white;
+            border: 2px solid #ff8c00;
+            border-radius: 10px;
+            margin: 20px 0;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .shape-button {
+            background: linear-gradient(45deg, #ff8c00, #ff4500);
+            border: none;
+            color: white;
+            padding: 10px 20px;
+            border-radius: 6px;
+            cursor: pointer;
+            font-size: 0.9em;
+            margin: 5px;
+            transition: all 0.3s ease;
+        }
+
+        .shape-button:hover {
+            transform: scale(1.05);
+            box-shadow: 0 0 15px rgba(255, 140, 0, 0.5);
+        }
+
+        .shape-controls {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 10px;
+            margin: 15px 0;
+        }
+
+        /* Anatomy Studio Styles */
+        .anatomy-studio {
+            background: linear-gradient(135deg, rgba(220, 20, 60, 0.1), rgba(178, 34, 52, 0.1));
+            border: 2px solid #dc143c;
+            border-radius: 15px;
+            padding: 35px;
+            margin: 30px 0;
+        }
+
+        .anatomy-diagram {
+            background: rgba(255, 255, 255, 0.95);
+            border-radius: 10px;
+            padding: 20px;
+            margin: 20px 0;
+            text-align: center;
+            position: relative;
+        }
+
+        .anatomy-button {
+            background: linear-gradient(45deg, #dc143c, #b22222);
+            border: none;
+            color: white;
+            padding: 10px 20px;
+            border-radius: 6px;
+            cursor: pointer;
+            font-size: 0.9em;
+            margin: 5px;
+            transition: all 0.3s ease;
+        }
+
+        .anatomy-button:hover {
+            transform: scale(1.05);
+            box-shadow: 0 0 15px rgba(220, 20, 60, 0.5);
+        }
+
+        /* Invention Workshop Styles */
+        .invention-studio {
+            background: linear-gradient(135deg, rgba(0, 191, 255, 0.1), rgba(30, 144, 255, 0.1));
+            border: 2px solid #00bfff;
+            border-radius: 15px;
+            padding: 35px;
+            margin: 30px 0;
+        }
+
+        .invention-model {
+            background: rgba(255, 255, 255, 0.95);
+            border-radius: 10px;
+            padding: 20px;
+            margin: 20px 0;
+            text-align: center;
+            position: relative;
+        }
+
+        .invention-button {
+            background: linear-gradient(45deg, #00bfff, #1e90ff);
+            border: none;
+            color: white;
+            padding: 10px 20px;
+            border-radius: 6px;
+            cursor: pointer;
+            font-size: 0.9em;
+            margin: 5px;
+            transition: all 0.3s ease;
+        }
+
+        .invention-button:hover {
+            transform: scale(1.05);
+            box-shadow: 0 0 15px rgba(0, 191, 255, 0.5);
+        }
+
+        .studio-title {
+            color: #333;
+            font-size: 1.8em;
+            margin-bottom: 20px;
+            text-align: center;
+        }
+
+        .studio-description {
+            color: #555;
+            text-align: center;
+            margin-bottom: 25px;
+            line-height: 1.6;
+        }
+
+        .center-text {
+            text-align: center;
+        }
+
+        .margin-top-20 {
+            margin-top: 20px;
+        }
+
+        .shape-canvas-full {
+            width: 100%;
+            height: 400px;
+        }
+
+        .canvas-block-center {
+            display: block;
+            margin: 0 auto;
+        }
     </style>
 </head>
 <body>
@@ -493,6 +691,83 @@
             <button class="demo-button" onclick="showInventionDemo()">⚙️ Invention Gallery</button>
         </div>
 
+        <!-- Mirror Writing Studio -->
+        <div class="mirror-studio">
+            <h2 class="section-title">🔄 Mirror Writing Studio</h2>
+            <p class="studio-description">Experience Leonardo's famous mirror writing technique. Write normally and see it transform into mirror script, just as Leonardo did in his notebooks.</p>
+
+            <div class="crypto-input-section">
+                <label class="crypto-label">Your Text:</label>
+                <textarea id="mirrorInput" class="mirror-input" rows="3" placeholder="Write your message here..."></textarea>
+            </div>
+
+            <div class="mirror-output" id="mirrorOutput">
+                Your mirror text will appear here...
+            </div>
+
+            <div class="center-text">
+                <button class="mirror-button" onclick="convertToMirror()">🔄 Create Mirror Text</button>
+                <button class="mirror-button" onclick="clearMirror()">🗑️ Clear</button>
+                <button class="mirror-button" onclick="copyMirrorText()">📋 Copy Mirror Text</button>
+            </div>
+        </div>
+
+        <!-- Geometric Shapes Studio -->
+        <div class="shapes-studio">
+            <h2 class="section-title">📐 Geometric Shapes & Perspective</h2>
+            <p class="studio-description">Explore Leonardo's mastery of geometry and perspective. Draw perfect shapes and understand the mathematical principles behind Renaissance art.</p>
+
+            <div class="shape-canvas shape-canvas-full" id="shapeCanvas">
+                <canvas id="drawingCanvas" width="800" height="400" class="canvas-block-center"></canvas>
+            </div>
+
+            <div class="shape-controls">
+                <button class="shape-button" onclick="drawCircle()">⭕ Circle</button>
+                <button class="shape-button" onclick="drawSquare()">▢ Square</button>
+                <button class="shape-button" onclick="drawTriangle()">△ Triangle</button>
+                <button class="shape-button" onclick="drawPentagon()">⬟ Pentagon</button>
+                <button class="shape-button" onclick="drawHexagon()">⬡ Hexagon</button>
+                <button class="shape-button" onclick="drawGoldenRatio()">✨ Golden Ratio</button>
+                <button class="shape-button" onclick="clearCanvas()">🗑️ Clear Canvas</button>
+            </div>
+        </div>
+
+        <!-- Anatomy Studies -->
+        <div class="anatomy-studio">
+            <h2 class="section-title">🫀 Anatomical Studies</h2>
+            <p class="studio-description">Discover Leonardo's groundbreaking anatomical research. Through meticulous dissection, he created the most accurate anatomical drawings of the Renaissance era.</p>
+
+            <div class="anatomy-diagram" id="anatomyDiagram">
+                <h3>Leonardo's Anatomical Precision</h3>
+                <p>Click the systems below to explore Leonardo's anatomical discoveries:</p>
+                <div class="margin-top-20">
+                    <button class="anatomy-button" onclick="showSkeletalSystem()">🦴 Skeletal System</button>
+                    <button class="anatomy-button" onclick="showMuscularSystem()">💪 Muscular System</button>
+                    <button class="anatomy-button" onclick="showCardiovascular()">❤️ Cardiovascular System</button>
+                    <button class="anatomy-button" onclick="showNervousSystem()">🧠 Nervous System</button>
+                    <button class="anatomy-button" onclick="showRespiratory()">🫁 Respiratory System</button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Invention Workshop -->
+        <div class="invention-studio">
+            <h2 class="section-title">⚙️ Invention Workshop</h2>
+            <p class="studio-description">Explore Leonardo's visionary inventions that were centuries ahead of their time. From flying machines to armored vehicles, witness the genius of the Renaissance inventor.</p>
+
+            <div class="invention-model" id="inventionModel">
+                <h3>Leonardo's Visionary Machines</h3>
+                <p>Discover inventions designed 400 years before their time:</p>
+                <div class="margin-top-20">
+                    <button class="invention-button" onclick="showHelicopter()">🚁 Aerial Screw (Helicopter)</button>
+                    <button class="invention-button" onclick="showTank()">🚗 Armored Car (Tank)</button>
+                    <button class="invention-button" onclick="showParachute()">🪂 Parachute</button>
+                    <button class="invention-button" onclick="showSubmarine()">🚤 Submarine</button>
+                    <button class="invention-button" onclick="showRobot()">🤖 Mechanical Lion</button>
+                </div>
+            </div>
+        </div>
+
         <div class="center-text">
             <a href="/" class="back-link">← Return to Royal Library</a>
         </div>
@@ -565,9 +840,350 @@
             alert('⚙️ Invention Gallery: Leonardo designed the helicopter, tank, and parachute - concepts centuries ahead of their time!');
         }
 
+        // Mirror Writing Functions
+        function convertToMirror() {
+            const input = document.getElementById('mirrorInput').value;
+            if (!input.trim()) {
+                alert('Please enter some text to convert to mirror writing.');
+                return;
+            }
+            const mirrored = input.split('').reverse().join('');
+            document.getElementById('mirrorOutput').textContent = mirrored;
+        }
+
+        function clearMirror() {
+            document.getElementById('mirrorInput').value = '';
+            document.getElementById('mirrorOutput').textContent = 'Your mirror text will appear here...';
+        }
+
+        function copyMirrorText() {
+            const mirrorText = document.getElementById('mirrorOutput').textContent;
+            if (mirrorText === 'Your mirror text will appear here...') {
+                alert('No mirror text to copy. Please create some mirror text first.');
+                return;
+            }
+            navigator.clipboard.writeText(mirrorText).then(() => {
+                alert('Mirror text copied to clipboard!');
+            });
+        }
+
+        // Geometric Shapes Functions
+        let canvas, ctx;
+
+        function initCanvas() {
+            canvas = document.getElementById('drawingCanvas');
+            ctx = canvas.getContext('2d');
+            ctx.strokeStyle = '#ff073a';
+            ctx.lineWidth = 3;
+            ctx.lineCap = 'round';
+            ctx.lineJoin = 'round';
+        }
+
+        function drawCircle() {
+            if (!canvas) initCanvas();
+            const centerX = canvas.width / 2;
+            const centerY = canvas.height / 2;
+            const radius = 80;
+
+            ctx.beginPath();
+            ctx.arc(centerX, centerY, radius, 0, 2 * Math.PI);
+            ctx.stroke();
+        }
+
+        function drawSquare() {
+            if (!canvas) initCanvas();
+            const size = 120;
+            const x = (canvas.width - size) / 2;
+            const y = (canvas.height - size) / 2;
+
+            ctx.beginPath();
+            ctx.rect(x, y, size, size);
+            ctx.stroke();
+        }
+
+        function drawTriangle() {
+            if (!canvas) initCanvas();
+            const centerX = canvas.width / 2;
+            const centerY = canvas.height / 2;
+            const size = 80;
+
+            ctx.beginPath();
+            ctx.moveTo(centerX, centerY - size);
+            ctx.lineTo(centerX - size, centerY + size);
+            ctx.lineTo(centerX + size, centerY + size);
+            ctx.closePath();
+            ctx.stroke();
+        }
+
+        function drawPentagon() {
+            if (!canvas) initCanvas();
+            const centerX = canvas.width / 2;
+            const centerY = canvas.height / 2;
+            const radius = 70;
+            const sides = 5;
+
+            ctx.beginPath();
+            for (let i = 0; i < sides; i++) {
+                const angle = (i * 2 * Math.PI) / sides - Math.PI / 2;
+                const x = centerX + radius * Math.cos(angle);
+                const y = centerY + radius * Math.sin(angle);
+                if (i === 0) ctx.moveTo(x, y);
+                else ctx.lineTo(x, y);
+            }
+            ctx.closePath();
+            ctx.stroke();
+        }
+
+        function drawHexagon() {
+            if (!canvas) initCanvas();
+            const centerX = canvas.width / 2;
+            const centerY = canvas.height / 2;
+            const radius = 70;
+            const sides = 6;
+
+            ctx.beginPath();
+            for (let i = 0; i < sides; i++) {
+                const angle = (i * 2 * Math.PI) / sides;
+                const x = centerX + radius * Math.cos(angle);
+                const y = centerY + radius * Math.sin(angle);
+                if (i === 0) ctx.moveTo(x, y);
+                else ctx.lineTo(x, y);
+            }
+            ctx.closePath();
+            ctx.stroke();
+        }
+
+        function drawGoldenRatio() {
+            if (!canvas) initCanvas();
+            const phi = (1 + Math.sqrt(5)) / 2; // Golden ratio ≈ 1.618
+            const size = 100;
+            const x = (canvas.width - size * phi) / 2;
+            const y = (canvas.height - size) / 2;
+
+            // Draw golden rectangle
+            ctx.strokeStyle = '#daa520';
+            ctx.beginPath();
+            ctx.rect(x, y, size * phi, size);
+            ctx.stroke();
+
+            // Draw golden spiral (approximated)
+            ctx.strokeStyle = '#ff073a';
+            ctx.beginPath();
+            let angle = 0;
+            let radius = 5;
+            ctx.moveTo(x + radius, y + radius);
+
+            for (let i = 0; i < 100; i++) {
+                angle += 0.1;
+                radius += 0.5;
+                const spiralX = x + radius * Math.cos(angle);
+                const spiralY = y + radius * Math.sin(angle);
+                ctx.lineTo(spiralX, spiralY);
+            }
+            ctx.stroke();
+        }
+
+        function clearCanvas() {
+            if (!canvas) initCanvas();
+            ctx.clearRect(0, 0, canvas.width, canvas.height);
+        }
+
+        // Anatomy Functions
+        function showSkeletalSystem() {
+            const diagram = document.getElementById('anatomyDiagram');
+            diagram.innerHTML = `
+                <h3>🦴 Skeletal System</h3>
+                <p>Leonardo dissected numerous skeletons to understand bone structure. He was the first to correctly identify that the human spine has 24 vertebrae (not 23 as previously thought).</p>
+                <p><strong>Key Discoveries:</strong></p>
+                <ul>
+                    <li>• Corrected spinal vertebra count</li>
+                    <li>• Detailed skull anatomy drawings</li>
+                    <li>• Understanding of bone density variations</li>
+                    <li>• Comparative anatomy with animals</li>
+                </ul>
+                <button class="anatomy-button" onclick="resetAnatomyDiagram()">🔄 Back to Overview</button>
+            `;
+        }
+
+        function showMuscularSystem() {
+            const diagram = document.getElementById('anatomyDiagram');
+            diagram.innerHTML = `
+                <h3>💪 Muscular System</h3>
+                <p>Leonardo's muscle drawings showed unprecedented accuracy, depicting how muscles attach to bones and work together in movement.</p>
+                <p><strong>Key Discoveries:</strong></p>
+                <ul>
+                    <li>• Muscle insertion points and functions</li>
+                    <li>• Facial muscle expressions</li>
+                    <li>• Hand muscle complexity</li>
+                    <li>• Comparative muscle studies</li>
+                </ul>
+                <button class="anatomy-button" onclick="resetAnatomyDiagram()">🔄 Back to Overview</button>
+            `;
+        }
+
+        function showCardiovascular() {
+            const diagram = document.getElementById('anatomyDiagram');
+            diagram.innerHTML = `
+                <h3>❤️ Cardiovascular System</h3>
+                <p>Leonardo was the first to understand that the heart acts as a pump and correctly described the heart valves and major blood vessels.</p>
+                <p><strong>Key Discoveries:</strong></p>
+                <ul>
+                    <li>• Heart as a muscular pump</li>
+                    <li>• Correct valve function description</li>
+                    <li>• Blood flow direction</li>
+                    <li>• Coronary artery circulation</li>
+                </ul>
+                <button class="anatomy-button" onclick="resetAnatomyDiagram()">🔄 Back to Overview</button>
+            `;
+        }
+
+        function showNervousSystem() {
+            const diagram = document.getElementById('anatomyDiagram');
+            diagram.innerHTML = `
+                <h3>🧠 Nervous System</h3>
+                <p>Leonardo studied the brain extensively, making detailed drawings of the cerebral ventricles and attempting to understand consciousness.</p>
+                <p><strong>Key Discoveries:</strong></p>
+                <ul>
+                    <li>• Brain ventricle mapping</li>
+                    <li>• Optic nerve pathways</li>
+                    <li>• Spinal cord structure</li>
+                    <li>• Sensory nerve functions</li>
+                </ul>
+                <button class="anatomy-button" onclick="resetAnatomyDiagram()">🔄 Back to Overview</button>
+            `;
+        }
+
+        function showRespiratory() {
+            const diagram = document.getElementById('anatomyDiagram');
+            diagram.innerHTML = `
+                <h3>🫁 Respiratory System</h3>
+                <p>Leonardo studied lung function and was one of the first to understand the relationship between breathing and blood oxygenation.</p>
+                <p><strong>Key Discoveries:</strong></p>
+                <ul>
+                    <li>• Lung lobe structure</li>
+                    <li>• Diaphragm function</li>
+                    <li>• Air pathway mapping</li>
+                    <li>• Breathing mechanics</li>
+                </ul>
+                <button class="anatomy-button" onclick="resetAnatomyDiagram()">🔄 Back to Overview</button>
+            `;
+        }
+
+        function resetAnatomyDiagram() {
+            const diagram = document.getElementById('anatomyDiagram');
+            diagram.innerHTML = `
+                <h3>Leonardo's Anatomical Precision</h3>
+                <p>Click the systems below to explore Leonardo's anatomical discoveries:</p>
+                <div class="margin-top-20">
+                    <button class="anatomy-button" onclick="showSkeletalSystem()">🦴 Skeletal System</button>
+                    <button class="anatomy-button" onclick="showMuscularSystem()">💪 Muscular System</button>
+                    <button class="anatomy-button" onclick="showCardiovascular()">❤️ Cardiovascular System</button>
+                    <button class="anatomy-button" onclick="showNervousSystem()">🧠 Nervous System</button>
+                    <button class="anatomy-button" onclick="showRespiratory()">🫁 Respiratory System</button>
+                </div>
+            `;
+        }
+
+        // Invention Functions
+        function showHelicopter() {
+            const model = document.getElementById('inventionModel');
+            model.innerHTML = `
+                <h3>🚁 Aerial Screw (Helicopter)</h3>
+                <p>Leonardo's helicopter design from 1480s featured a helical screw that could lift a person into the air. It was the first practical design for vertical flight.</p>
+                <p><strong>Technical Details:</strong></p>
+                <ul>
+                    <li>• Helical screw design</li>
+                    <li>• Spring-powered mechanism</li>
+                    <li>• Vertical lift principle</li>
+                    <li>• Built 400 years before first flight</li>
+                </ul>
+                <button class="invention-button" onclick="resetInventionModel()">🔄 Back to Overview</button>
+            `;
+        }
+
+        function showTank() {
+            const model = document.getElementById('inventionModel');
+            model.innerHTML = `
+                <h3>🚗 Armored Car (Tank)</h3>
+                <p>Leonardo designed an armored vehicle with cannons that could move in any direction. This precursor to the modern tank was designed for siege warfare.</p>
+                <p><strong>Technical Details:</strong></p>
+                <ul>
+                    <li>• 360-degree cannon rotation</li>
+                    <li>• Armored shell protection</li>
+                    <li>• Hand-cranked propulsion</li>
+                    <li>• Multi-directional movement</li>
+                </ul>
+                <button class="invention-button" onclick="resetInventionModel()">🔄 Back to Overview</button>
+            `;
+        }
+
+        function showParachute() {
+            const model = document.getElementById('inventionModel');
+            model.innerHTML = `
+                <h3>🪂 Parachute</h3>
+                <p>Leonardo's parachute design used a rigid pyramid-shaped canopy made of linen. He correctly understood that a large surface area could slow descent.</p>
+                <p><strong>Technical Details:</strong></p>
+                <ul>
+                    <li>• Pyramid-shaped canopy</li>
+                    <li>• Linen material construction</li>
+                    <li>• Surface area calculations</li>
+                    <li>• Safe descent principle</li>
+                </ul>
+                <button class="invention-button" onclick="resetInventionModel()">🔄 Back to Overview</button>
+            `;
+        }
+
+        function showSubmarine() {
+            const model = document.getElementById('inventionModel');
+            model.innerHTML = `
+                <h3>🚤 Submarine</h3>
+                <p>Leonardo designed a submersible vessel that could operate underwater. The design included leather seals and hand-powered propulsion.</p>
+                <p><strong>Technical Details:</strong></p>
+                <ul>
+                    <li>• Leather-sealed hull</li>
+                    <li>• Hand-cranked propulsion</li>
+                    <li>• Air renewal system</li>
+                    <li>• Underwater navigation</li>
+                </ul>
+                <button class="invention-button" onclick="resetInventionModel()">🔄 Back to Overview</button>
+            `;
+        }
+
+        function showRobot() {
+            const model = document.getElementById('inventionModel');
+            model.innerHTML = `
+                <h3>🤖 Mechanical Lion</h3>
+                <p>Leonardo created an automated lion that could walk and open its mouth to reveal a bouquet of lilies. This was a robotic entertainment device.</p>
+                <p><strong>Technical Details:</strong></p>
+                <ul>
+                    <li>• Gear-driven walking mechanism</li>
+                    <li>• Jaw opening automation</li>
+                    <li>• Internal flower storage</li>
+                    <li>• Clockwork precision</li>
+                </ul>
+                <button class="invention-button" onclick="resetInventionModel()">🔄 Back to Overview</button>
+            `;
+        }
+
+        function resetInventionModel() {
+            const model = document.getElementById('inventionModel');
+            model.innerHTML = `
+                <h3>Leonardo's Visionary Machines</h3>
+                <p>Discover inventions designed 400 years before their time:</p>
+                <div class="margin-top-20">
+                    <button class="invention-button" onclick="showHelicopter()">🚁 Aerial Screw (Helicopter)</button>
+                    <button class="invention-button" onclick="showTank()">🚗 Armored Car (Tank)</button>
+                    <button class="invention-button" onclick="showParachute()">🪂 Parachute</button>
+                    <button class="invention-button" onclick="showSubmarine()">🚤 Submarine</button>
+                    <button class="invention-button" onclick="showRobot()">🤖 Mechanical Lion</button>
+                </div>
+            `;
+        }
+
         // Initialize
         document.addEventListener('DOMContentLoaded', function() {
             console.log('🎨 Leonardo da Vinci Master Collection initialized');
+            initCanvas(); // Initialize the drawing canvas
         });
     </script>
 </body>
