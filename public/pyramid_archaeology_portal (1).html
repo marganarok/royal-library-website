@@ -19,12 +19,19 @@
             --papyrus: #f4f1e8;
             --shadow: rgba(0,0,0,0.3);
             --accent-blue: #2563eb;
+            /* Enhanced readable text colors */
+            --text-primary: #ffffff;
+            --text-secondary: #e8f4f8;
+            --text-accent: #ffeb3b;
+            --text-glow: 0 0 8px rgba(255, 235, 59, 0.6);
         }
 
         .pyramid-container {
             max-width: 1400px;
             margin: 0 auto;
             padding: 20px;
+            color: var(--text-primary);
+            text-shadow: 0 0 3px rgba(255, 255, 255, 0.3);
         }
 
         .pyramid-header {
@@ -56,7 +63,7 @@
             margin-bottom: 20px;
             position: relative;
             z-index: 2;
-            text-shadow: 2px 2px 4px var(--shadow);
+            text-shadow: 0 0 10px rgba(255, 215, 0, 1), 0 0 20px rgba(255, 215, 0, 0.8), 0 0 30px rgba(255, 215, 0, 0.6), 0 0 40px rgba(255, 215, 0, 0.4);
             color: var(--gold);
         }
 
@@ -66,6 +73,8 @@
             font-style: italic;
             position: relative;
             z-index: 2;
+            color: var(--text-secondary);
+            text-shadow: 0 0 8px rgba(232, 244, 248, 0.8);
         }
 
         .civilization-section {
@@ -117,18 +126,19 @@
         }
 
         .civilization-title {
-            color: var(--sandstone);
+            color: var(--text-accent);
             font-size: 1.4em;
             margin-bottom: 15px;
-            text-shadow: 0 0 8px var(--sandstone);
+            text-shadow: 0 0 12px rgba(255, 235, 59, 1), 0 0 24px rgba(255, 235, 59, 0.8), 0 0 36px rgba(255, 235, 59, 0.6);
             text-align: center;
             font-family: 'Cinzel', serif;
         }
 
         .civilization-content {
-            color: #2d1b2e;
+            color: var(--text-primary);
             line-height: 1.7;
             font-size: 1em;
+            text-shadow: var(--text-glow);
         }
 
         .technique-section {
@@ -234,9 +244,10 @@
         }
 
         .site-description {
-            color: #2d1b2e;
+            color: var(--text-primary);
             line-height: 1.6;
             margin-bottom: 15px;
+            text-shadow: var(--text-glow);
         }
 
         .fact-list {
@@ -277,11 +288,12 @@
         .section-title {
             font-family: 'Cinzel', serif;
             font-size: 2.5rem;
-            color: var(--obsidian);
+            color: var(--text-primary);
             margin-bottom: 30px;
             text-align: center;
-            border-bottom: 2px solid var(--copper);
+            border-bottom: 2px solid var(--gold);
             padding-bottom: 15px;
+            text-shadow: 0 0 15px rgba(255, 215, 0, 0.8), 0 0 30px rgba(255, 215, 0, 0.4), 0 0 45px rgba(255, 215, 0, 0.2);
         }
 
         .comparison-table {
@@ -520,6 +532,7 @@
             color: var(--gold);
             margin-bottom: 15px;
             font-family: 'Cinzel', serif;
+            text-shadow: 0 0 10px rgba(255, 215, 0, 0.8), 0 0 20px rgba(255, 215, 0, 0.4);
         }
 
         .chamber-facts {
@@ -527,10 +540,11 @@
         }
 
         .fact-title {
-            color: var(--copper);
+            color: var(--text-accent);
             font-weight: bold;
             margin-bottom: 10px;
             font-family: 'Cinzel', serif;
+            text-shadow: var(--text-glow);
         }
     </style>
 </head>
